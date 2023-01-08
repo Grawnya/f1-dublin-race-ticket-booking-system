@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Formula1-Black;
+    src: url('static/css/Formula1-Black.ttf');
+}
+
+@font-face {
+    font-family: Formula1-Bold;
+    src: url('static/css/Formula1-Bold.ttf');
+}
+
+@font-face {
+    font-family: Formula1-Regular;
+    src: url('static/css/Formula1-Regular.ttf');
+}
+
+@font-face {
+    font-family: Formula1-Wide;
+    src: url('static/css/Formula1-Wide.ttf');
+}
