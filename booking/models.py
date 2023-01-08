@@ -285,3 +285,16 @@ class User(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
+class Seat(models.Model):
+    '''Seats Booked Model'''
+    seat_number = models.IntegerField()
+    row = models.IntegerField()
+    stand = models.CharField(max_length=1)
+
+    class Meta:
+        ordering = ['stand', 'row', 'seat_number']
+        unique_together = ['stand', 'row', 'seat_number']
+
+    def __str__(self):
+        return f'Ticket: {self.stand} {self.row} {self.seat_number}'
