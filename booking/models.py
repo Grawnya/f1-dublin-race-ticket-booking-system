@@ -278,14 +278,15 @@ country_choices = (
 class WebsiteUser(models.Model):
     '''WebsiteUser Information Model'''
     username = models.CharField(max_length=50, unique=True)
-    first_name = models.CharField(max_length=50, unique=True)
-    last_name = models.CharField(max_length=50, unique=True)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=250, default="")
     fave_team = models.IntegerField(choices=team_choices, default=1)
     nationality = models.CharField(max_length=250, choices=country_choices, default='Ireland')
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
 
 class Seat(models.Model):
     '''Seats Booked Model'''
@@ -299,3 +300,22 @@ class Seat(models.Model):
 
     def __str__(self):
         return f'Ticket: {self.stand} {self.row} {self.seat_number}'
+
+
+class Ticket(models.Model):
+    '''Tickets Booked Model'''
+    booked_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    booked_on = models.DateTimeField(auto_now_add=True)
+    nickname = models.CharField(max_length=50)
+    fave_team = models.IntegerField(choices=team_choices, default=1)
+    nationality = models.CharField(max_length=250, choices=country_choices, default='Ireland')
+    seat_number = models.IntegerField()
+    row = models.IntegerField()
+    stand = models.CharField(max_length=1)
+    show = model.BooleanField(default=True)
+
+    def __str__(self):
+        return f'Ticket for {self.nickname} booked by {self.booked_by}'
+
