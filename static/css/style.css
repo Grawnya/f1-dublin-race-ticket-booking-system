@@ -1,19 +1,54 @@
+:root {
+    --f1-red: #E13726;
+}
+
 @font-face {
     font-family: Formula1-Black;
-    src: url('static/css/Formula1-Black.ttf');
+    src: url('Formula1-Black.ttf');
 }
 
 @font-face {
     font-family: Formula1-Bold;
-    src: url('static/css/Formula1-Bold.ttf');
+    src: url('Formula1-Bold.ttf');
 }
 
 @font-face {
     font-family: Formula1-Regular;
-    src: url('static/css/Formula1-Regular.ttf');
+    src: url('Formula1-Regular.ttf');
 }
 
 @font-face {
     font-family: Formula1-Wide;
-    src: url('static/css/Formula1-Wide.ttf');
+    src: url('Formula1-Wide.ttf');
 }
+
+
+/* header */
+
+#logo-image {
+    height: 100%;
+}
+
+.container-fluid {
+    margin: 0 auto;
+}
+
+/* navbar */
+
+.navbar-toggler {
+    background-color: var(--f1-red);
+    margin: 0 auto;
+}
+
+.navbar-toggler-icon .fa-bars {
+    color:#fff; 
+    font-size: 1.75rem;
+}
+
+
+/* delete later */
+#test {
+        font-family: 'Formula1-Regular';
+        color: purple;
+        /* background-color: brown; */
+    }
