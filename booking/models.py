@@ -304,7 +304,7 @@ class Seat(models.Model):
 
 class Ticket(models.Model):
     '''Tickets Booked Model'''
-    booked_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    booked_by = models.ForeignKey(WebsiteUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     booked_on = models.DateTimeField(auto_now_add=True)
@@ -314,7 +314,7 @@ class Ticket(models.Model):
     seat_number = models.IntegerField()
     row = models.IntegerField()
     stand = models.CharField(max_length=1)
-    show = model.BooleanField(default=True)
+    show = models.BooleanField(default=True)
 
     def __str__(self):
         return f'Ticket for {self.nickname} booked by {self.booked_by}'
