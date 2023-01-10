@@ -51,7 +51,7 @@
                             <a class="nav-link" href="{% url 'home' %}#how-to-book-section">How to Book Tickets</a>
                         </li>
                         <li class="nav-item mx-1">
-                            <a class="nav-link" href="{% url 'home' %}">Tickets Sold</a>
+                            <a class="nav-link" href="">Tickets Sold</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item mx-1">
@@ -80,6 +80,63 @@
 
     {% endblock %}
     <!-- footer -->
+    
+    <footer class="red-section fixed-bottom">
+        <ul class="socials">
+            <li>
+                <a href="https://www.facebook.com/Formula1" target="_blank" rel="noopener" aria-label="Visit F1's Facebook page in a new tab">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/f1" target="_blank" rel="noopener" aria-label="Visit F1's Instagram page in a new tab">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/grainne-donegan/" target="_blank" rel="noopener" aria-label="Visit LinkedIn page of website developer in a new tab">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Grawnya/f1-dublin-race-ticket-booking-system" target="_blank" rel="noopener" aria-label="Visit the GitHub repository for this website in a new tab">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="section-links">
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'home' %}#race-section">Race</a>
+            </li>
+            <li>
+                <a href="{% url 'home' %}#how-to-book-section">How to Book Tickets</a>
+            </li>
+            <li>
+                <a href="">Tickets Sold</a>
+            </li>
+            {% if user.isauthenticated  %}
+            <li>
+                <a href="">My Tickets</a>
+            </li>
+            <li>
+                <a href="">Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="">Buy Tickets</a>
+            </li>
+            <li>
+                <a href="">Register</a>
+            </li>
+            <li>
+                <a href="">Login</a>
+            </li>
+        </ul>
+        {% endif %}
+    </footer>
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/f89c3266fa.js" crossorigin="anonymous"></script>

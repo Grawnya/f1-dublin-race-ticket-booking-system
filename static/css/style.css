@@ -44,7 +44,7 @@ header {
 }
 
 .nav-link {
-    font-family: 'Formula1-Black';
+    font-family: 'Formula1-Regular';
     color: var(--black);
     text-align: center;
     align-items: center;
@@ -80,6 +80,50 @@ header {
 .btn-f1:hover {
     background-color: var(--black);
     color: var(--f1-red);
+}
+
+.red-section {
+    color: var(--white);
+    background-color: var(--f1-red);
+    padding-bottom: 1.75rem;
+}
+
+/* footer */
+
+footer ul {
+    padding: 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.socials li {
+    display: inline;
+}
+
+.socials i {
+    color: var(--white);
+    font-size: 2.5rem;
+    width: 24.5%;
+    text-align: center;
+    padding: 1.75rem 0 1rem;
+    transition-delay: 0.2s;
+}
+
+.socials i:hover, .section-links li a:hover {
+    color: var(--black);
+}
+
+.section-links li {
+    text-align: center;
+}
+
+.section-links a {
+    color: var(--white);
+    font-weight: bold;
+    padding: 0.5rem 0;
+    font-family: 'Formula1-Regular';
 }
 
 /* delete later */
