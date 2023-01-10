@@ -1,5 +1,7 @@
 :root {
     --f1-red: #E13726;
+    --white: #fff;
+    --black: #000;
 }
 
 @font-face {
@@ -31,16 +33,54 @@
 
 /* navbar */
 
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    border-bottom: 1.75rem solid var(--f1-red);
+    padding: 0;
+}
+
+.nav-link {
+    font-family: 'Formula1-Black';
+    color: var(--black);
+    text-align: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.nav-link:hover {
+    color: var(--f1-red);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-toggler {
     background-color: var(--f1-red);
     margin: 0 auto;
 }
 
 .navbar-toggler-icon .fa-bars {
-    color:#fff; 
+    color:var(--white); 
     font-size: 1.75rem;
 }
 
+.btn-f1 {
+    font-family: 'Formula1-Bold';
+    background-color: var(--f1-red);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.btn-f1:hover {
+    background-color: var(--black);
+    color: var(--f1-red);
+}
 
 /* delete later */
 #test {
