@@ -24,6 +24,10 @@
     src: url('Formula1-Wide.ttf');
 }
 
+body {
+    font-family: 'Formula1-Regular';
+}
+
 .min-section-height {
     min-height: 15rem;
 }
