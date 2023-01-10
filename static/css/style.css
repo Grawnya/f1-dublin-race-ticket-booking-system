@@ -28,10 +28,6 @@
     min-height: 15rem;
 }
 
-.section {
-    clear: both;
-}
-
 .white-section {
     color: var(--black);
     background-color: var(--white);
@@ -42,6 +38,11 @@
     color: var(--white);
     background-color: var(--black);
     padding-bottom: 1.75rem;
+}
+
+.section-heading {
+    font-family: 'Formula1-Bold';
+    font-size: 1.75rem;
 }
 
 /* header */
