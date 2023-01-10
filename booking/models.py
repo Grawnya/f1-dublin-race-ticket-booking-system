@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import MaxValueValidator
 
 team_choices = (
     (1, 'Red Bull'),
