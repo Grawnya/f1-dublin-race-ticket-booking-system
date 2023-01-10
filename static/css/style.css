@@ -26,7 +26,6 @@
 
 .min-section-height {
     min-height: 15rem;
-    max-height: 35rem;
 }
 
 .section {
@@ -108,11 +107,22 @@ header {
     padding-bottom: 1.75rem;
 }
 
+/* carousel */
+.carousel-inner {
+    max-height: 35rem;
+}
+
+
 /* race details */
 
 /* cards how to book */
 .card-text {
     color: var(--black);
+}
+
+.card {
+    width: 75%;
+    text-align: center;
 }
 
 /* footer */
