@@ -24,6 +24,9 @@
     src: url('Formula1-Wide.ttf');
 }
 
+.section {
+    clear: both;
+}
 
 /* header */
 
