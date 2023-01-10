@@ -24,8 +24,25 @@
     src: url('Formula1-Wide.ttf');
 }
 
+.min-section-height {
+    min-height: 15rem;
+    max-height: 35rem;
+}
+
 .section {
     clear: both;
+}
+
+.white-section {
+    color: var(--black);
+    background-color: var(--white);
+    padding-bottom: 1.75rem;
+}
+
+.black-section {
+    color: var(--white);
+    background-color: var(--black);
+    padding-bottom: 1.75rem;
 }
 
 /* header */
@@ -91,6 +108,13 @@ header {
     padding-bottom: 1.75rem;
 }
 
+/* race details */
+
+/* cards how to book */
+.card-text {
+    color: var(--black);
+}
+
 /* footer */
 footer ul {
     padding: 0;
@@ -127,10 +151,4 @@ footer a {
     font-weight: bold;
     padding: 0.5rem 0;
     font-family: 'Formula1-Regular';
-}
-
-/* carousel */
-
-.carousel-inner {
-    max-height: 35rem;
 }
