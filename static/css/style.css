@@ -129,9 +129,8 @@ footer a {
     font-family: 'Formula1-Regular';
 }
 
-/* delete later */
-#test {
-        font-family: 'Formula1-Regular';
-        color: purple;
-        /* background-color: brown; */
-    }
+/* carousel */
+
+.carousel-inner {
+    max-height: 35rem;
+}
