@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="carouselExampleIndicators" class="carousel slide section" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner min-section-height">
+        <div class="carousel-item active">
+            <div class="promote-race black-section">
+                <div class="promote-race-text col-md-4 mx-auto">
+                    <h3 class="section-heading">Test</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
+                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
+                        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
+                        ac
+                        sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
+                        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663480/cld-sample-4.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663479/cld-sample-3.jpg"
+                class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div id="race-section" class="container-fluid text-center section white-section">
+    <div class="row min-section-height">
+        <div class="col-12 col-md-4">
+            Track Image
+        </div>
+        <div class="col-12 col-md-8">
+            <h3 class="section-heading py-5">Race Details</h3>
+            <div>
+                <p>lorem ipsum re race</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-center section min-section-height black-section" id="how-to-book-section">
+    <h3 class="section-heading py-5">How to Book</h3>
+    <div class="row">
+        <div class="col-12 col-md-4 pb-2">
+            <div class="card mx-auto">
+                <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663479/cld-sample-2.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 pb-2">
+            <div class="card mx-auto">
+                <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663479/cld-sample-2.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 pb-2">
+            <div class="card mx-auto">
+                <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663479/cld-sample-2.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
