@@ -8,7 +8,6 @@ class CreateProfile(View):
     
     def get(self, request):
         queryset = WebsiteUser.objects.filter(username=request.user.username).exists()
-        print(queryset)
         if queryset:
             website_user = WebsiteUser.objects.filter(username=request.user.username).first()
             profile_form = WebsiteUserForm(instance=website_user)
@@ -35,9 +34,10 @@ class CreateProfile(View):
             profile_email = request.POST.get('email')
             profile_fave_team = request.POST.get('fave_team')
             profile_nationality = request.POST.get('nationality')
-            profile_form.save()
         else:
             profile_form = WebsiteUserForm()
+        profile_form.save(commit=False)
+        profile_form.save()
         return render(request,
                       'index.html',
                       {
