@@ -12,13 +12,18 @@ class CreateProfile(View):
         if queryset:
             website_user = WebsiteUser.objects.filter(username=request.user.username).first()
             profile_form = WebsiteUserForm(instance=website_user)
+            return render(request,
+                        'profile.html',
+                        {
+                            'profile_form': profile_form
+                        })
         else:
             profile_form = WebsiteUserForm()
-        return render(request,
-                      'profile.html',
-                      {
-                        'profile_form': WebsiteUserForm()
-                      })
+            return render(request,
+                        'profile.html',
+                        {
+                            'profile_form': profile_form
+                        })
 
     def post(self, request):
         profile_form = WebsiteUserForm(data=request.POST)
