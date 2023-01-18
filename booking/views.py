@@ -126,3 +126,6 @@ class NewTicket(View):
                       {
                         'ticket_form': ticket_form
                       })
+
+class EditTicket(View):
+    pass
