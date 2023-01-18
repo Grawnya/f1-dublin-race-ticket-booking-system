@@ -1,10 +1,5 @@
 from django.db import models
 
-ticket_for_self_choices = (
-    (0, True),
-    (1, False)
-)
-
 team_choices = (
     ('red_bull', 'Red Bull'),
     ('ferrari', 'Ferrari'),
