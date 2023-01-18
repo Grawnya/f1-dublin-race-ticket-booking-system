@@ -21,11 +21,18 @@
 
             {% csrf_token %}
 
-            <!-- Profile form -->
-            {{ profile_form | crispy }}
+            <p>Is this ticket for you personally?</p>
+            <input type="radio" id="personal_ticket" name="personal_ticket" value="yes">
+            <label for="personal_ticket">Yes</label>
+            <input type="radio" id="not_personal_ticket" name="not_personal_ticket" value="no">
+            <label for="not_personal_ticket">No</label>
 
-            <button type="submit" class="button mt-4 text-center submit-button">Send
-                enquiry</button>
+            <!-- Profile form -->
+            {{ ticket_form | crispy }}
+
+            <!-- SVG Tickets -->
+
+            <button type="submit" class="button mt-4 text-center submit-button">Submit</button>
 
         </form>
     </div>

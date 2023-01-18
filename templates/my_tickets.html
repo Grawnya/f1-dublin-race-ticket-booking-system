@@ -13,9 +13,12 @@
         ac sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
         vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
     </p>
-
+    <p>Please complete your profile before buying a ticket</p>
     <button type="button" class="button mt-4 text-center submit-button">
-        <a href="{% url 'new_ticket' %}">Register</a>
+        <a href="{% url 'profile' %}">Profile</a>
+    </button><br>
+    <button type="button" class="button mt-4 text-center submit-button">
+        <a href="{% url 'new_ticket' %}">Buy a Ticket</a>
     </button>
 </div>
 <div class="row justify-content-center">

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic, View
 from .models import WebsiteUser, Ticket
-from .forms import WebsiteUserForm
+from .forms import WebsiteUserForm, TicketForm
 
 # Create your views here.
 class CreateProfile(View):
@@ -69,10 +69,16 @@ class SeeTickets(generic.ListView):
     # def get_queryset(self):
     #    return super(SeeTickets, self).get_queryset().filter(booked_by=self.request.user.username)
 
-class NewTicket(view):
+class NewTicket(View):
 
-    def get():
-        pass
+    def get(self, request):
+        if request.user.is_authenticated:
+            ticket_form = TicketForm()
+            return render(request,
+                        'new_ticket.html',
+                        {
+                            'ticket_form': ticket_form
+                        })
 
     def post():
         pass
