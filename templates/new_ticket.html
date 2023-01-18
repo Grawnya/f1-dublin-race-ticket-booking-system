@@ -21,12 +21,6 @@
 
             {% csrf_token %}
 
-            <p>Is this ticket for you personally?</p>
-            <input type="radio" id="personal_ticket" name="personal_ticket" value="yes">
-            <label for="personal_ticket">Yes</label>
-            <input type="radio" id="not_personal_ticket" name="not_personal_ticket" value="no">
-            <label for="not_personal_ticket">No</label>
-
             <!-- Profile form -->
             {{ ticket_form | crispy }}
 

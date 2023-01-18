@@ -1,5 +1,10 @@
 from django.db import models
 
+ticket_for_self_choices = (
+    (0, True),
+    (1, False)
+)
+
 team_choices = (
     ('red_bull', 'Red Bull'),
     ('ferrari', 'Ferrari'),
@@ -303,6 +308,7 @@ class Seat(models.Model):
 
 class Ticket(models.Model):
     '''Tickets Booked Model'''
+    for_self = models.BooleanField(default=True)
     booked_by = models.ForeignKey(WebsiteUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
