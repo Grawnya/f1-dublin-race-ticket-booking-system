@@ -18,7 +18,6 @@
     <div>
         <!-- Display both forms together -->
         <form method="POST">
-
             {% csrf_token %}
 
             <!-- Profile form -->
@@ -28,11 +27,6 @@
             
             <!-- ticket shape with details to post -->
 
-            <p>Do you want to post this tickets to the Tickets Sold page?</p>
-            <input type="radio" id="share_ticket" name="share_ticket" value="yes">
-            <label for="share_ticket">Yes</label>
-            <input type="radio" id="dont_share_ticket" name="dont_share_ticket" value="no">
-            <label for="dont_share_ticket">No</label>
 
             <button type="submit" class="button mt-4 text-center submit-button">Submit</button>
 
