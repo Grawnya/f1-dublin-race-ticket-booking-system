@@ -107,4 +107,22 @@ class NewTicket(View):
             return HttpResponseRedirect(url)
 
     def post():
-        pass
+        ticket_form = Ticket(data=request.POST)
+
+        if ticket_form.is_valid():
+            ticket_form_for_self = request.POST.get('for_self')
+            ticket_form.instance.booked_by = request.user.username
+            ticket_form_first_name = request.POST.get('first_name')
+            ticket_form_last_name = request.POST.get('last_name')
+            ticket_form_nickname = request.POST.get('nickname')
+            ticket_form_fave_team = request.POST.get('fave_team')
+            ticket_form_nationality = request.POST.get('nationality')
+            ticket_form_show = request.POST.get('show')
+        else:
+            ticket_form = WebsiteUserForm()
+        ticket_form.save()
+        return render(request,
+                      'my_tickets.html',
+                      {
+                        'ticket_form': ticket_form
+                      })
