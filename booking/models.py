@@ -1,16 +1,16 @@
 from django.db import models
 
 team_choices = (
-    (1, 'Red Bull'),
-    (2, 'Ferrari'),
-    (3, 'Mercedes'),
-    (4, 'Alpine'),
-    (5, 'McLaren'),
-    (6, 'Alfa Romeo'),
-    (7, 'Aston Martin'),
-    (8, 'Haas'),
-    (9, 'AlphaTauri'),
-    (10, 'Williams'),
+    ('red_bull', 'Red Bull'),
+    ('ferrari', 'Ferrari'),
+    ('mercedes', 'Mercedes'),
+    ('alpine', 'Alpine'),
+    ('mclaren', 'McLaren'),
+    ('alfa_romeo', 'Alfa Romeo'),
+    ('aston_martin', 'Aston Martin'),
+    ('haas', 'Haas'),
+    ('alphatauri', 'AlphaTauri'),
+    ('williams', 'Williams'),
     )
 
 country_choices = (
