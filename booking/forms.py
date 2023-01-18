@@ -6,9 +6,16 @@ class WebsiteUserForm(forms.ModelForm):
         model = WebsiteUser
         fields = ('first_name', 'last_name', 'email', 'fave_team',
                   'nationality')
+        labels = {
+         'first_name': 'First Name',
+         'last_name': 'Last Name',
+         'fave_team': 'Favourite Team'
+        }
+
 
 class TicketForm(forms.ModelForm):
    class Meta:
         model = Ticket
-        fields = ('first_name', 'last_name', 'nickname', 'fave_team',
+        fields = ('for_self','first_name', 'last_name', 'nickname', 'fave_team',
                   'nationality')
+
