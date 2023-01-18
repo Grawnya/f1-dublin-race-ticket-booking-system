@@ -68,3 +68,11 @@ class SeeTickets(generic.ListView):
 
     # def get_queryset(self):
     #    return super(SeeTickets, self).get_queryset().filter(booked_by=self.request.user.username)
+
+class NewTicket(view):
+
+    def get():
+        pass
+
+    def post():
+        pass
