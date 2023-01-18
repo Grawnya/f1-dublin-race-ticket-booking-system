@@ -51,7 +51,7 @@
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item mx-1">
-                                <a class="nav-link" href="">My Tickets</a>
+                                <a class="nav-link" href="{% url 'my_tickets' %}">My Tickets</a>
                             </li>
                                 {% if user.username == website_user.username %}
                                 <li class="nav-item mx-1">
