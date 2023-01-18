@@ -65,7 +65,8 @@ class EditProfile(View):
 
 
     def post(self, request):
-        profile_form = get_object_or_404(WebsiteUser, username=request.user.username)
+        profile = get_object_or_404(WebsiteUser, username=request.user.username)
+        profile_form = WebsiteUser(data=request.POST, instance=profile)
         profile_first_name = request.POST.get('first_name')
         profile_last_name = request.POST.get('last_name')
         profile_email = request.POST.get('email')
@@ -127,3 +128,42 @@ class NewTicket(View):
                       {
                         'ticket_form': ticket_form
                       })
+
+
+class EditTicket(View):
+
+    def get(self, request, item_id):
+        if request.user.is_authenticated:
+            item = get_object_or_404(WebsiteUser, id=item_id)
+            
+            ticket_form = TicketForm(data=request.POST)
+            return render(request,
+                        'edit_ticket.html',
+                        {
+                            'ticket_form': ticket_form
+                        })
+        else:
+            return render(request,
+                        'profile.html',)
+
+    def post(self, request, item_id):
+        item = get_object_or_404(WebsiteUser, id=item_id)
+        ticket_form = Ticket(data=request.POST)
+
+        if ticket_form.is_valid():
+            ticket_form_for_self = request.POST.get('for_self')
+            ticket_form.instance.booked_by = request.user.username
+            ticket_form_first_name = request.POST.get('first_name')
+            ticket_form_last_name = request.POST.get('last_name')
+            ticket_form_nickname = request.POST.get('nickname')
+            ticket_form_fave_team = request.POST.get('fave_team')
+            ticket_form_nationality = request.POST.get('nationality')
+            ticket_form_show = request.POST.get('show')
+        else:
+            ticket_form = TicketForm()
+        ticket_form.save()
+        return render(request,
+                        'my_tickets.html',
+                        {
+                        'ticket_form': ticket_form
+                        })
