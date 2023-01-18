@@ -308,7 +308,7 @@ class Seat(models.Model):
 
 class Ticket(models.Model):
     '''Tickets Booked Model'''
-    for_self = models.BooleanField(default=True)
+    for_self = models.BooleanField(default=False)
     booked_by = models.ForeignKey(WebsiteUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
