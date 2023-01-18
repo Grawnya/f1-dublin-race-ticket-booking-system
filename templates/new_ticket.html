@@ -21,12 +21,19 @@
             {% csrf_token %}
 
             <!-- Profile form -->
-            {{ ticket_form | crispy }}
-
+            <!-- {{ ticket_form | crispy }} -->
+            {{ ticket_form.for_self | as_crispy_field }}
+            {{ ticket_form.first_name | as_crispy_field }}
+            {{ ticket_form.last_name | as_crispy_field }}
+            {{ ticket_form.nickname | as_crispy_field }}
+            {{ ticket_form.fave_team | as_crispy_field }}
+            {{ ticket_form.nationality | as_crispy_field }}
+            
             <!-- SVG to select seat -->
             
             <!-- ticket shape with details to post -->
-
+            
+            {{ ticket_form.show | as_crispy_field }}
 
             <button type="submit" class="button mt-4 text-center submit-button">Submit</button>
 

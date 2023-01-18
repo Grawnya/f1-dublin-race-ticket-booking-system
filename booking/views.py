@@ -100,7 +100,8 @@ class NewTicket(View):
                                 'ticket_form': ticket_form
                             })
             else:
-                pass
+                return render(request,
+                            'profile.html',)
         else:
             url = reverse('index.html')
             return HttpResponseRedirect(url)
