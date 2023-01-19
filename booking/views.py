@@ -73,22 +73,15 @@ class NewTicket(View):
 
     def get(self, request):
         if request.user.is_authenticated:
-            website_user = WebsiteUser.objects.filter(username=request.user.username).exists()
-            if website_user:
-                item = get_object_or_404(WebsiteUser, username=request.user.username)
-                
-                ticket_form = TicketForm(instance=item)
-                return render(request,
-                            'new_ticket.html',
-                            {
-                                'ticket_form': ticket_form
-                            })
-            else:
-                return render(request,
-                            'profile.html',)
+            ticket_form = TicketForm()
+            return render(request,
+                        'new_ticket.html',
+                        {
+                            'ticket_form': ticket_form
+                        })
         else:
-            url = reverse('index.html')
-            return HttpResponseRedirect(url)
+            return render(request,
+                        'profile.html',)
 
     def post(self, request):
         ticket_form = Ticket(data=request.POST)

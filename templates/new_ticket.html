@@ -21,7 +21,6 @@
             {% csrf_token %}
 
             <!-- Profile form -->
-            <!-- {{ ticket_form | crispy }} -->
             {{ ticket_form.for_self | as_crispy_field }}
             {{ ticket_form.first_name | as_crispy_field }}
             {{ ticket_form.last_name | as_crispy_field }}
