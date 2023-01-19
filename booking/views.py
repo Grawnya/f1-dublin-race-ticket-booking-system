@@ -49,12 +49,27 @@ class CreateProfile(View):
                     return render(request,
                                 'index.html',
                                 {
-                                    'current_profile': current_profile,
                                     'profile_form': profile_form
                                 })
                 else:
                     return render(request,
                                 'profile.html',)
+            else:
+                profile_form = WebsiteUser(data=request.POST)
+                profile = profile_form.save(commit=False)
+                if profile_form.is_valid():
+                    profile.username = request.user.username
+                    profile.first_name = request.POST.get('first_name')
+                    profile.last_name = request.POST.get('last_name')
+                    profile.email = request.POST.get('email')
+                    profile.fave_team = request.POST.get('fave_team')
+                    profile.nationality = request.POST.get('nationality')
+                    profile_form.save()
+                    return render(request,
+                                'index.html',
+                                {
+                                    'profile_form': profile_form
+                                })
 
 
 class EditProfile(View):
