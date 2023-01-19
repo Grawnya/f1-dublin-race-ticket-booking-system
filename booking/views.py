@@ -12,10 +12,10 @@ class CreateProfile(View):
         if request.user.is_authenticated:
             website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
             if website_users:
-                user_exists = get_object_or_404(WebsiteUser, username=request.user.username)
+                user_exists = WebsiteUser.objects.filter(username=request.user.username).first()
                 profile_form = WebsiteUserForm(instance=user_exists)
                 return render(request,
-                            'edit_profile.html',
+                            'profile.html',
                             {
                                 'profile_form': profile_form
                             })
@@ -32,22 +32,29 @@ class CreateProfile(View):
 
     def post(self, request):
         profile_form = WebsiteUserForm(request.POST)
-
-        if profile_form.is_valid():
-            profile_form.instance.username = request.user.username
-            profile_form_first_name = request.POST.get('first_name')
-            profile_form_last_name = request.POST.get('last_name')
-            profile_form_email = request.POST.get('email')
-            profile_form_fave_team = request.POST.get('fave_team')
-            profile_form_nationality = request.POST.get('nationality')
-            profile_form.save()
-        else:
-            profile_form = WebsiteUserForm()
-        return render(request,
-                      'index.html',
-                      {
-                        'profile_form': profile_form
-                      })
+        if request.user.is_authenticated:
+            website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
+            if website_users:
+                current_profile = get_object_or_404(WebsiteUser, username=request.user.username)
+                profile_form = WebsiteUser(data=request.POST, instance=current_profile)
+                if profile_form.is_valid():
+                    current_profile.username = request.user.username
+                    current_profile.first_name = request.POST.get('first_name')
+                    current_profile.last_name = request.POST.get('last_name')
+                    current_profile.email = request.POST.get('email')
+                    current_profile.fave_team = request.POST.get('fave_team')
+                    current_profile.nationality = request.POST.get('nationality')
+                    profile_form.save(commit=False)
+                    profile_form.save()
+                    return render(request,
+                                'index.html',
+                                {
+                                    'current_profile': current_profile,
+                                    'profile_form': profile_form
+                                })
+                else:
+                    return render(request,
+                                'profile.html',)
 
 
 class EditProfile(View):
@@ -83,8 +90,8 @@ class SeeMyTickets(generic.ListView):
     model = Ticket
     template_name = 'my_tickets.html'
 
-    def get_queryset(self):
-       return super(SeeMyTickets, self).get_queryset().filter(booked_by=self.request.user.username).order_by('booked_on')
+    # def get_queryset(self):
+    #    return super(SeeMyTickets, self).get_queryset().filter(booked_by=self.request.user.username).order_by('booked_on')
 
 class NewTicket(View):
 
