@@ -35,17 +35,12 @@ class CreateProfile(View):
         if request.user.is_authenticated:
             website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
             if website_users:
-                current_profile = get_object_or_404(WebsiteUser, username=request.user.username)
-                profile_form_user = WebsiteUserForm(data=request.POST, instance=current_profile)
-                profile_first_name = request.POST.get('first_name')
-                profile_last_name = request.POST.get('last_name')
-                profile_email = request.POST.get('email')
-                profile_fave_team = request.POST.get('fave_team')
-                profile_nationality = request.POST.get('nationality')
-                profile_form = WebsiteUser(first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
+                current_profile = WebsiteUser.objects.get(username=request.user.username)
+                profile_form = WebsiteUserForm(data=request.POST, instance=current_profile)
+                profile_form.username = request.user.username
                 profile_form.save()
                 return render(request,
-                            'profile.html',
+                            'index.html',
                             {
                                 'profile_form': profile_form
                             })
