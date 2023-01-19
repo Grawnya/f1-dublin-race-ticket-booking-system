@@ -72,35 +72,6 @@ class CreateProfile(View):
                                 })
 
 
-class EditProfile(View):
-    def get(self, request):
-        if request.user.is_authenticated:
-            website_user = WebsiteUser.objects.filter(username=request.user.username).first()
-            profile_form = WebsiteUserForm(instance=website_user)
-            return render(request,
-                        'edit_profile.html',
-                        {
-                            'website_user': website_user,
-                            'profile_form': profile_form
-                        })
-
-
-    def post(self, request):
-        profile = get_object_or_404(WebsiteUser, username=request.user.username)
-        profile_form = WebsiteUser(data=request.POST, instance=profile)
-        profile_form_first_name = request.POST.get('first_name')
-        profile_form_last_name = request.POST.get('last_name')
-        profile_form_email = request.POST.get('email')
-        profile_form_fave_team = request.POST.get('fave_team')
-        profile_form_nationality = request.POST.get('nationality')
-        profile_form.save()
-        return render(request,
-                      'index.html',
-                      {
-                        'profile_form': profile_form
-                      })
-
-
 class SeeMyTickets(generic.ListView):
     model = Ticket
     template_name = 'my_tickets.html'
