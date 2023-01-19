@@ -36,18 +36,18 @@ class CreateProfile(View):
             website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
             if website_users:
                 current_profile = get_object_or_404(WebsiteUser, username=request.user.username)
-                profile_form = WebsiteUser(data=request.POST, instance=current_profile)
                 if profile_form.is_valid():
-                    current_profile.username = request.user.username
-                    current_profile.first_name = request.POST.get('first_name')
-                    current_profile.last_name = request.POST.get('last_name')
-                    current_profile.email = request.POST.get('email')
-                    current_profile.fave_team = request.POST.get('fave_team')
-                    current_profile.nationality = request.POST.get('nationality')
-                    profile_form.save(commit=False)
-                    profile_form.save()
+                    profile_form = WebsiteUser(data=request.POST, instance=current_profile)
+                    profile_username = request.user.username
+                    profile_first_name = request.POST.get('first_name')
+                    profile_last_name = request.POST.get('last_name')
+                    profile_email = request.POST.get('email')
+                    profile_fave_team = request.POST.get('fave_team')
+                    profile_nationality = request.POST.get('nationality')
+                    profile = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
+                    profile.save()
                     return render(request,
-                                'index.html',
+                                'profile.html',
                                 {
                                     'profile_form': profile_form
                                 })
@@ -55,21 +55,20 @@ class CreateProfile(View):
                     return render(request,
                                 'profile.html',)
             else:
-                profile_form = WebsiteUser(data=request.POST)
-                profile = profile_form.save(commit=False)
-                if profile_form.is_valid():
-                    profile.username = request.user.username
-                    profile.first_name = request.POST.get('first_name')
-                    profile.last_name = request.POST.get('last_name')
-                    profile.email = request.POST.get('email')
-                    profile.fave_team = request.POST.get('fave_team')
-                    profile.nationality = request.POST.get('nationality')
-                    profile_form.save()
-                    return render(request,
-                                'index.html',
-                                {
-                                    'profile_form': profile_form
-                                })
+                profile_form = WebsiteUser(request.POST)
+                profile_username = request.user.username
+                profile_first_name = request.POST.get('first_name')
+                profile_last_name = request.POST.get('last_name')
+                profile_email = request.POST.get('email')
+                profile_fave_team = request.POST.get('fave_team')
+                profile_nationality = request.POST.get('nationality')
+                profile = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
+                profile.save()
+                return render(request,
+                            'index.html',
+                            {
+                                'profile': profile
+                            })
 
 
 class SeeMyTickets(generic.ListView):

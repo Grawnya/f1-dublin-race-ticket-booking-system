@@ -280,7 +280,7 @@ class WebsiteUser(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=250, default="")
-    fave_team = models.IntegerField(choices=team_choices, default=1)
+    fave_team = models.CharField(max_length=250, choices=team_choices, default='Red Bull')
     nationality = models.CharField(max_length=250, choices=country_choices, default='Ireland')
 
     def __str__(self):
@@ -309,7 +309,7 @@ class Ticket(models.Model):
     last_name = models.CharField(max_length=50)
     booked_on = models.DateTimeField(auto_now_add=True)
     nickname = models.CharField(max_length=50)
-    fave_team = models.IntegerField(choices=team_choices, default=1)
+    fave_team = models.CharField(max_length=250, choices=team_choices, default='Red Bull')
     nationality = models.CharField(max_length=250, choices=country_choices, default='Ireland')
     seat_number = models.IntegerField()
     row = models.IntegerField()
