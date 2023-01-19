@@ -36,38 +36,34 @@ class CreateProfile(View):
             website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
             if website_users:
                 current_profile = get_object_or_404(WebsiteUser, username=request.user.username)
-                if profile_form.is_valid():
-                    profile_form = WebsiteUser(data=request.POST, instance=current_profile)
-                    profile_username = request.user.username
-                    profile_first_name = request.POST.get('first_name')
-                    profile_last_name = request.POST.get('last_name')
-                    profile_email = request.POST.get('email')
-                    profile_fave_team = request.POST.get('fave_team')
-                    profile_nationality = request.POST.get('nationality')
-                    profile = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
-                    profile.save()
-                    return render(request,
-                                'profile.html',
-                                {
-                                    'profile_form': profile_form
-                                })
-                else:
-                    return render(request,
-                                'profile.html',)
+                profile_form_user = WebsiteUserForm(data=request.POST, instance=current_profile)
+                profile_first_name = request.POST.get('first_name')
+                profile_last_name = request.POST.get('last_name')
+                profile_email = request.POST.get('email')
+                profile_fave_team = request.POST.get('fave_team')
+                profile_nationality = request.POST.get('nationality')
+                profile_form = WebsiteUser(first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
+                profile_form.save()
+                return render(request,
+                            'profile.html',
+                            {
+                                'profile_form': profile_form
+                            })
+
             else:
-                profile_form = WebsiteUser(request.POST)
+                profile_form_user = WebsiteUserForm(request.POST)
                 profile_username = request.user.username
                 profile_first_name = request.POST.get('first_name')
                 profile_last_name = request.POST.get('last_name')
                 profile_email = request.POST.get('email')
                 profile_fave_team = request.POST.get('fave_team')
                 profile_nationality = request.POST.get('nationality')
-                profile = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
-                profile.save()
+                profile_form = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
+                profile_form.save()
                 return render(request,
                             'index.html',
                             {
-                                'profile': profile
+                                'profile_form': profile_form
                             })
 
 
