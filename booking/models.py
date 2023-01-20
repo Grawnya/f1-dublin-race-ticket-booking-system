@@ -273,6 +273,11 @@ country_choices = (
     ('zwe', 'Zimbabwe')
 )
 
+for_self_choices = (
+    (True, 'Yes'),
+    (False, 'No')
+)
+
 # Create your models here.
 class WebsiteUser(models.Model):
     '''WebsiteUser Information Model'''
@@ -297,22 +302,22 @@ class Seat(models.Model):
         unique_together = ['stand', 'seat_number']
 
     def __str__(self):
-        return f'Ticket: {self.stand} {self.row} {self.seat_number}'
+        return f'Ticket: {self.stand} {self.seat_number}'
 
 
 class Ticket(models.Model):
     '''Tickets Booked Model'''
-    for_self = models.BooleanField(default=False, null=True)
+    for_self = models.BooleanField(default=False, choices=for_self_choices)
     booked_by = models.ForeignKey(WebsiteUser, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=250)
+    last_name = models.CharField(max_length=250)
     booked_on = models.DateTimeField(auto_now_add=True)
-    nickname = models.CharField(max_length=50)
+    nickname = models.CharField(max_length=250)
     fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
     nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
     seat_number = models.IntegerField(null=True)
     stand = models.CharField(max_length=1, null=True)
-    show = models.BooleanField(default=True)
+    show = models.BooleanField(default=True, choices=for_self_choices)
 
     def __str__(self):
         return f'Ticket for {self.nickname} booked by {self.booked_by}'

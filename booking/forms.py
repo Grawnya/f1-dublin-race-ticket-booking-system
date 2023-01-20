@@ -25,3 +25,7 @@ class TicketForm(forms.ModelForm):
         }
         fields = ('for_self','first_name', 'last_name', 'nickname', 'fave_team',
                   'nationality', 'show')
+        widgets = {
+         'for_self': forms.RadioSelect(),
+         'show': forms.RadioSelect()
+        }
