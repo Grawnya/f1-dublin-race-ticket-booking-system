@@ -11,11 +11,11 @@ class WebsiteUserAdmin(admin.ModelAdmin):
 
 @admin.register(models.Seat)
 class SeatAdmin(admin.ModelAdmin):
-    list_display = ('stand', 'row', 'seat_number')
+    list_display = ('stand', 'seat_number')
 
 @admin.register(models.Ticket)
 class TicketAdmin(admin.ModelAdmin):
     list_display = ('booked_by', 'first_name', 'last_name',
                     'booked_on', 'nickname', 'fave_team', 'nationality',
-                    'seat_number', 'row', 'stand', 'show')
+                    'seat_number', 'stand', 'show')
     list_filter = ('booked_by', 'booked_on', 'fave_team', 'nationality')

@@ -290,12 +290,11 @@ class WebsiteUser(models.Model):
 class Seat(models.Model):
     '''Seats Booked Model'''
     seat_number = models.IntegerField()
-    row = models.IntegerField()
     stand = models.CharField(max_length=1)
 
     class Meta:
-        ordering = ['stand', 'row', 'seat_number']
-        unique_together = ['stand', 'row', 'seat_number']
+        ordering = ['stand', 'seat_number']
+        unique_together = ['stand', 'seat_number']
 
     def __str__(self):
         return f'Ticket: {self.stand} {self.row} {self.seat_number}'
@@ -312,7 +311,6 @@ class Ticket(models.Model):
     fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
     nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
     seat_number = models.IntegerField(null=True)
-    row = models.IntegerField(null=True)
     stand = models.CharField(max_length=1, null=True)
     show = models.BooleanField(default=True)
 
