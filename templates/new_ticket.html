@@ -27,15 +27,16 @@
             {{ ticket_form.nickname | as_crispy_field }}
             {{ ticket_form.fave_team | as_crispy_field }}
             {{ ticket_form.nationality | as_crispy_field }}
-            
-            <!-- SVG to select seat -->
-            <div class="col-12 col-md-6">
 
-            
-                <svg version="1.0" viewBox="0 0 788.000000 620.000000">
-                <g transform="translate(0.000000,620.000000) scale(0.100000,-0.100000)"
-                fill="#000000" stroke="none">
-                <path d="M4920 5900 c-125 -11 -163 -19 -261 -61 -43 -18 -103 -35 -142 -39
+            <!-- SVG to select seat -->
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+
+
+                    <svg version="1.0" viewBox="0 0 788.000000 620.000000">
+                        <g transform="translate(0.000000,620.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M4920 5900 c-125 -11 -163 -19 -261 -61 -43 -18 -103 -35 -142 -39
                 -51 -5 -89 -18 -145 -47 -64 -33 -86 -51 -128 -107 -39 -51 -53 -79 -58 -115
                 -7 -51 6 -171 23 -214 17 -44 59 -94 99 -118 l37 -22 -40 -14 c-22 -8 -67 -21
                 -99 -29 -32 -8 -91 -35 -131 -59 -66 -42 -72 -49 -88 -98 -35 -112 -8 -249 65
@@ -98,20 +99,25 @@
                 12 7 42 21 68 30 25 10 78 44 119 76 60 48 77 68 97 116 25 57 25 57 7 123
                 -16 61 -22 70 -77 115 -58 48 -137 86 -177 86 -11 0 -20 4 -20 8 0 11 130 40
                 205 46 33 3 96 17 140 31 74 23 95 25 290 26 116 0 219 4 230 9 28 12 73 11
-                210 -5z"/>
-                </g>
-                <rect id="A" x="10%" y="30%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem" transform="rotate(-15)"/>
-                <rect id="B" x="-50%" y="30%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem" transform="rotate(-80)"/>
-                <rect id="C" x="-60%" y="108%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem" transform="rotate(-78)"/>
-                <rect id="D" x="-14%" y="105%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem" transform="rotate(-80)"/>
-                </svg>
-            </div>
-            <div class="col-12 col-md-6">
-                {{ ticket_form.seat | as_crispy_field }}
-                {{ ticket_form.row | as_crispy_field }}
+                210 -5z" />
+                        </g>
+                        <rect id="A" x="10%" y="30%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem"
+                            transform="rotate(-15)" />
+                        <rect id="B" x="-50%" y="30%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem"
+                            transform="rotate(-80)" />
+                        <rect id="C" x="-60%" y="108%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem"
+                            transform="rotate(-78)" />
+                        <rect id="D" x="-14%" y="105%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem"
+                            transform="rotate(-80)" />
+                    </svg>
+                </div>
+                <div class="col-12 col-md-6">
+                    {{ ticket_form.stand | as_crispy_field }}
+                    {{ ticket_form.seat_number | as_crispy_field }}
+                </div>
             </div>
             <!-- ticket shape with details to post -->
-            
+
             {{ ticket_form.show | as_crispy_field }}
 
             <button type="submit" class="button mt-4 text-center submit-button">Submit</button>
@@ -120,4 +126,4 @@
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}

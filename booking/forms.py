@@ -24,7 +24,7 @@ class TicketForm(forms.ModelForm):
          'show': 'Do you want to share your ticket on the Tickets Sold page to let people know you are going?'
         }
         fields = ('for_self','first_name', 'last_name', 'nickname', 'fave_team',
-                  'nationality', 'stand', 'seat_number', 'show')
+                  'nationality', 'seat_number', 'stand', 'show')
         widgets = {
          'for_self': forms.RadioSelect(),
          'show': forms.RadioSelect()
