@@ -15,7 +15,7 @@ class SeatAdmin(admin.ModelAdmin):
 
 @admin.register(models.Ticket)
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('booked_by', 'first_name', 'last_name',
+    list_display = ('for_self', 'booked_by', 'first_name', 'last_name',
                     'booked_on', 'nickname', 'fave_team', 'nationality',
                     'seat_number', 'stand', 'show')
     list_filter = ('booked_by', 'booked_on', 'fave_team', 'nationality')
