@@ -84,24 +84,29 @@ class NewTicket(View):
                         'profile.html',)
 
     def post(self, request):
-        ticket_form_user = TicketForm(data=request.POST)
+        tickets_bought = len(Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)))
+        tickets_bought_for_self = len(Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True))
+        if tickets_bought <= 5 and tickets_bought_for_self <= 1:
+            ticket_form_user = TicketForm(data=request.POST)
 
-        if ticket_form_user.is_valid():
-            # ticket_form_for_self = request.POST.get('for_self')
-            ticket_form_booked_by = WebsiteUser.objects.get(username=request.user.username)
-            ticket_form_first_name = request.POST.get('first_name')
-            ticket_form_last_name = request.POST.get('last_name')
-            ticket_form_nickname = request.POST.get('nickname')
-            ticket_form_fave_team = request.POST.get('fave_team')
-            ticket_form_nationality = request.POST.get('nationality')
-            # ticket_form_show = request.POST.get('show')
-            ticket_form = Ticket(booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality)
-            ticket_form.save()
-        return render(request,
-                      'my_tickets.html',
-                      {
-                        'ticket_form': ticket_form
-                      })
+            if ticket_form_user.is_valid():
+                ticket_form_for_self = request.POST.get('for_self')
+                if ticket_form_for_self == 'on':
+                    ticket_form_for_self = True
+                ticket_form_booked_by = WebsiteUser.objects.get(username=request.user.username)
+                ticket_form_first_name = request.POST.get('first_name')
+                ticket_form_last_name = request.POST.get('last_name')
+                ticket_form_nickname = request.POST.get('nickname')
+                ticket_form_fave_team = request.POST.get('fave_team')
+                ticket_form_nationality = request.POST.get('nationality')
+                # ticket_form_show = request.POST.get('show')
+                ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality)
+                ticket_form.save()
+            return render(request,
+                        'my_tickets.html',
+                        {
+                            'ticket_form': ticket_form
+                        })
 
 
 class EditTicket(View):
