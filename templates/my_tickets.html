@@ -23,14 +23,17 @@
 </div>
 <br>
 <div class="row justify-content-center">
-    {% for ticket in my_tickets %}
-        <div class="col-md-4">
-            <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663478/cld-sample.jpg" alt="ticket image">
-        </div>
-        <div class="col-md-8 justify-content-right">
-            <a href="/edit_ticket/{{ ticket.ticket_id }}">
-                <button>Edit</button>
-            </a>
+    {% for ticket in ticket_list %}
+        <div class="col-12 col-md-4 pb-2">
+            <div class="card mx-auto">
+                <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663478/cld-sample.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="/booking/edit_ticket/{{ ticket.id }}">
+                        <button>Edit</button>
+                    </a>
+                </div>
+            </div>
         </div>
     {% endfor %}
 </div>
