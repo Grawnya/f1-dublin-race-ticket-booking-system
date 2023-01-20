@@ -102,11 +102,11 @@ class NewTicket(View):
                 # ticket_form_show = request.POST.get('show')
                 ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality)
                 ticket_form.save()
-            return render(request,
-                        'my_tickets.html',
-                        {
-                            'ticket_form': ticket_form
-                        })
+                return render(request,
+                            'my_tickets.html',
+                            {
+                                'ticket_form': ticket_form
+                            })
 
 
 class EditTicket(View):
@@ -124,26 +124,11 @@ class EditTicket(View):
                         })
         else:
             return render(request,
-                        'profile.html',)
+                        'index.html',)
 
-    def post(self, request, item_id):
-        item = get_object_or_404(WebsiteUser, id=item_id)
-        ticket_form = Ticket(data=request.POST)
+    def post(self, request, ticket_id):
+        ticket = get_object_or_404(Ticket, id=ticket_id)
+        ticket_form = TicketForm(data=request.POST, instance=ticket)
 
-        if ticket_form.is_valid():
-            ticket_form_for_self = request.POST.get('for_self')
-            ticket_form.instance.booked_by = request.user.username
-            ticket_form_first_name = request.POST.get('first_name')
-            ticket_form_last_name = request.POST.get('last_name')
-            ticket_form_nickname = request.POST.get('nickname')
-            ticket_form_fave_team = request.POST.get('fave_team')
-            ticket_form_nationality = request.POST.get('nationality')
-            ticket_form_show = request.POST.get('show')
-        else:
-            ticket_form = TicketForm()
         ticket_form.save()
-        return render(request,
-                        'my_tickets.html',
-                        {
-                        'ticket_form': ticket_form
-                        })
+        return redirect('my_tickets')
