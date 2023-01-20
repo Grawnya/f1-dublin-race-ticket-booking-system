@@ -402,19 +402,6 @@ class WebsiteUser(models.Model):
         return f'{self.first_name} {self.last_name}'
 
 
-class Seat(models.Model):
-    '''Seats Booked Model'''
-    seat_number = models.IntegerField()
-    stand = models.CharField(max_length=1)
-
-    class Meta:
-        ordering = ['stand', 'seat_number']
-        unique_together = ['stand', 'seat_number']
-
-    def __str__(self):
-        return f'Ticket: {self.stand} {self.seat_number}'
-
-
 class Ticket(models.Model):
     '''Tickets Booked Model'''
     for_self = models.BooleanField(default=False, choices=for_self_choices)

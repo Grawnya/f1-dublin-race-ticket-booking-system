@@ -9,10 +9,6 @@ class WebsiteUserAdmin(admin.ModelAdmin):
     search_fields = ['username', 'email']
 
 
-@admin.register(models.Seat)
-class SeatAdmin(admin.ModelAdmin):
-    list_display = ('stand', 'seat_number')
-
 @admin.register(models.Ticket)
 class TicketAdmin(admin.ModelAdmin):
     list_display = ('for_self', 'booked_by', 'first_name', 'last_name',
