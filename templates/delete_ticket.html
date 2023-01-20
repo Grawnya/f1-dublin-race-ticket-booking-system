@@ -9,6 +9,9 @@
     <p class="lead">
         Are you sure you want to delete the following ticket?
     </p>
+    <a href="/booking/my_tickets">
+        <button>Go Back</button>
+    </a>
 </div>
 <div class="row justify-content-center">
     <div>
@@ -128,7 +131,6 @@
             {{ ticket_form.show | as_crispy_field }}
 
             <button type="submit" class="button mt-4 text-center submit-button">Delete</button>
-
         </form>
     </div>
 </div>
