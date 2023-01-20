@@ -27,15 +27,17 @@
             {{ ticket_form.nickname | as_crispy_field }}
             {{ ticket_form.fave_team | as_crispy_field }}
             {{ ticket_form.nationality | as_crispy_field }}
-
-            <!-- SVG to select seat -->
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
+            <div class="row">
+                <div class="col-12 p-2">
                     <p>
                     See the diagram for the track layout on the left and select a stand to sit in and then select a seat
                     you want to sit in from the drop down menus on the right.
                     To see the seating numbers click on the button next to the track image.
                     </p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="track_image" class="col-12 col-md-6 col-lg-4">
                     <svg id="svg-track" version="1.0" viewBox="0 0 788.000000 620.000000">
                         <g transform="translate(0.000000,620.000000) scale(0.100000,-0.100000)" fill="#000000"
                             stroke="none">
@@ -104,8 +106,6 @@
                             205 46 33 3 96 17 140 31 74 23 95 25 290 26 116 0 219 4 230 9 28 12 73 11
                             210 -5z" />
                         </g>
-                        <rect id="see_seating" x="2%" y="2%" rx="0.2rem" ry="0.2rem" width="10rem" height="3rem"/>
-                        <text id="seating-font" x="2.5%" y="7%">See Seating Plan</text>
                         <rect id="A" x="10%" y="30%" rx="0.2rem" ry="0.2rem" width="7rem" height="3rem"
                             transform="rotate(-15)" />
                         <text class="stand-font" x="22%" y="28%">A</text>
@@ -120,7 +120,10 @@
                         <text class="stand-font" x="82%" y="29%">D</text>
                     </svg>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img id="individual_seats" src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png" alt="...">
+                </div>
+                <div class="col-12 col-lg-4">
                     {{ ticket_form.stand | as_crispy_field }}
                     {{ ticket_form.seat_number | as_crispy_field }}
                 </div>

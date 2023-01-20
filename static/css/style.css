@@ -122,23 +122,17 @@ body {
     stroke-width: 4;
 }
 
-#see_seating {
-    fill: var(--green);
-    stroke: var(--black);
-    stroke-width: 7;
-}
-
 #A:hover, #B:hover, #C:hover, #D:hover {
     fill: var(--green);
-}
-
-#see_seating:hover {
-    fill: var(--yellow);
 }
 
 .stand-font {
     font-weight: bold;
     font-size: 1.75rem;
+}
+
+#individual_seats {
+    width:100%
 }
 
 /* cards how to book */
