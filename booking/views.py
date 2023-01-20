@@ -72,16 +72,23 @@ class SeeMyTickets(generic.ListView):
 class NewTicket(View):
 
     def get(self, request):
-        if request.user.is_authenticated:
-            ticket_form = TicketForm()
-            return render(request,
-                        'new_ticket.html',
-                        {
-                            'ticket_form': ticket_form
-                        })
+        tickets_bought = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).count()
+        tickets_bought_for_self = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True).count()
+        if tickets_bought <= 5 and tickets_bought_for_self <= 1:
+
+            if request.user.is_authenticated:
+                ticket_form = TicketForm()
+                return render(request,
+                            'new_ticket.html',
+                            {
+                                'ticket_form': ticket_form
+                            })
+            else:
+                return render(request,
+                            'profile.html',)
         else:
-            return render(request,
-                        'profile.html',)
+            pass
+            # message that max limit has been hit
 
     def post(self, request):
             ticket_form_user = TicketForm(data=request.POST)
