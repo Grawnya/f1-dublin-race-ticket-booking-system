@@ -3,6 +3,7 @@
     --white: #fff;
     --black: #000;
     --green: #2cd341;
+    --yellow: #ebff00;
 }
 
 @font-face {
@@ -121,8 +122,18 @@ body {
     stroke-width: 4;
 }
 
+#see_seating {
+    fill: var(--green);
+    stroke: var(--black);
+    stroke-width: 7;
+}
+
 #A:hover, #B:hover, #C:hover, #D:hover {
     fill: var(--green);
+}
+
+#see_seating:hover {
+    fill: var(--yellow);
 }
 
 .stand-font {

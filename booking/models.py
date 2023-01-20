@@ -426,7 +426,7 @@ class Ticket(models.Model):
     fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
     nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
     seat_number = models.IntegerField(choices=seat_choices)
-    stand = models.CharField(max_length=1, choices=stand_choices)
+    stand = models.CharField(max_length=1, choices=stand_choices, default='D')
     show = models.BooleanField(default=True, choices=for_self_choices)
 
     def __str__(self):
