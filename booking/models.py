@@ -311,9 +311,9 @@ class Ticket(models.Model):
     nickname = models.CharField(max_length=50)
     fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
     nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
-    seat_number = models.IntegerField()
-    row = models.IntegerField()
-    stand = models.CharField(max_length=1)
+    seat_number = models.IntegerField(null=True)
+    row = models.IntegerField(null=True)
+    stand = models.CharField(max_length=1, null=True)
     show = models.BooleanField(default=True)
 
     def __str__(self):
