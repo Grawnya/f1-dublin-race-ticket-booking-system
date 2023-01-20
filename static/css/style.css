@@ -2,6 +2,7 @@
     --f1-red: #E13726;
     --white: #fff;
     --black: #000;
+    --green: #2cd341;
 }
 
 @font-face {
@@ -114,6 +115,20 @@ body {
 }
 
 /* race details */
+#A, #B, #C, #D {
+    fill: var(--f1-red);
+    stroke: var(--black);
+    stroke-width: 4;
+}
+
+#A:hover, #B:hover, #C:hover, #D:hover {
+    fill: var(--green);
+}
+
+.stand-font {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
 
 /* cards how to book */
 .card-text {
