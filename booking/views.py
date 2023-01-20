@@ -65,9 +65,10 @@ class CreateProfile(View):
 class SeeMyTickets(generic.ListView):
     model = Ticket
     template_name = 'my_tickets.html'
-
+    queryset = Ticket.objects.filter(booked_by=self.request.user.username).order_by("-booked_on")
+    
     # def get_queryset(self):
-    #    return super(SeeMyTickets, self).get_queryset().filter(booked_by=self.request.user.username).order_by('booked_on')
+    #     return Ticket.objects.filter(booked_by=WebsiteUser.objects.filter(username=self.request.user.username)).order_by("-booked_on")
 
 class NewTicket(View):
 
@@ -111,15 +112,16 @@ class NewTicket(View):
 
 class EditTicket(View):
 
-    def get(self, request, item_id):
+    def get(self, request, ticket_id):
+        ticket = get_object_or_404(Ticket, id=ticket_id)
         if request.user.is_authenticated:
-            item = get_object_or_404(WebsiteUser, id=item_id)
-            
-            ticket_form = TicketForm(data=request.POST)
+            ticket_form = TicketForm(instance=ticket)
             return render(request,
-                        'edit_ticket.html',
+                        'my_tickets.html',
                         {
-                            'ticket_form': ticket_form
+                            'ticket_form': ticket_form,
+                            'ticket_id': ticket_id,
+                            'ticket': ticket
                         })
         else:
             return render(request,
