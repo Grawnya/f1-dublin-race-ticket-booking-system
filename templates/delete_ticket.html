@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="py-5 text-center">
+    <h2>Delete Ticket</h2>
+    <p class="lead">
+        Are you sure you want to delete the following ticket?
+    </p>
+</div>
+<div class="row justify-content-center">
+    <div>
+        <!-- Display both forms together -->
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- Profile form -->
+            <!-- {{ ticket_form | crispy }} -->
+            {{ ticket_form.for_self | as_crispy_field }}
+            {{ ticket_form.first_name | as_crispy_field }}
+            {{ ticket_form.last_name | as_crispy_field }}
+            {{ ticket_form.nickname | as_crispy_field }}
+            {{ ticket_form.fave_team | as_crispy_field }}
+            {{ ticket_form.nationality | as_crispy_field }}
+            
+            <!-- SVG to select seat -->
+            
+            <!-- ticket shape with details to post -->
+            
+            {{ ticket_form.show | as_crispy_field }}
+
+            <button type="submit" class="button mt-4 text-center submit-button">Delete</button>
+
+        </form>
+    </div>
+</div>
+
+    {% endblock %}

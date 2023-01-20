@@ -131,3 +131,29 @@ class EditTicket(View):
 
         ticket_form.save()
         return redirect('my_tickets')
+
+
+class DeleteTicket(View):
+
+    def get(self, request, ticket_id):
+        ticket = get_object_or_404(Ticket, id=ticket_id)
+        if request.user.is_authenticated:
+            ticket_form = TicketForm(instance=ticket)
+            return render(request,
+                        'delete_ticket.html',
+                        {
+                            'ticket_form': ticket_form,
+                            'ticket_id': ticket_id,
+                            'ticket': ticket
+                        })
+        else:
+            return render(request,
+                        'index.html',)
+
+    def post(self, request, ticket_id):
+        ticket = get_object_or_404(Ticket, id=ticket_id)
+        ticket_form = TicketForm(data=request.POST, instance=ticket)
+
+        ticket.delete()
+        # message to say successful
+        return redirect('my_tickets')
