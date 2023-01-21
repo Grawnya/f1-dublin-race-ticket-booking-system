@@ -189,8 +189,18 @@ footer a {
     height: 15rem;
 }
 
+.flag {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.ticket-text {
+    font-size: 5rem;
+    font-family: 'Formula1-Bold';
+}
 
 .mclaren {
     background-color: #fa8905;
-    font: #23b5dc;
+    color: #23b5dc;
 }

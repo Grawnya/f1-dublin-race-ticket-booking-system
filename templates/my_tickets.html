@@ -27,7 +27,16 @@
         <div class="col-12 col-md-4 pb-2">
             <div class="card mx-auto">
                 <div class="ticket {{ ticket.fave_team }}" version="1.0">
-
+                    <div class="{{ ticket.fave_team }}-icon"></div>
+                    <div class="nickname pt-3">
+                        {{ticket.nickname}}
+                    </div>
+                    <div class="flag">
+                        <span class="flag-icon flag-icon-{{ticket.nationality}}"></span>
+                    </div>
+                    <div class="seat pt-3">
+                        <span class="ticket-text">{{ticket.stand}}{{ticket.seat_number}}</span>
+                    </div>
                 </div>
                 <div class="card-body">
                     <a href="/booking/edit_ticket/{{ ticket.id }}">
