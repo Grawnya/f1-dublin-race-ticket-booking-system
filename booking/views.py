@@ -66,15 +66,21 @@ class SeeMyTickets(generic.ListView):
     model = Ticket
     template_name = 'my_tickets.html'
     
-    # def get_queryset(self):
-    #     return Ticket.objects.filter(booked_by=WebsiteUser.objects.filter(username=self.request.user.username)).order_by("-booked_on")
+    def get_queryset(self):
+        return Ticket.objects.filter(booked_by=WebsiteUser.objects.filter(username=self.request.user.username).first()).order_by("-booked_on")
 
 class NewTicket(View):
 
     def get(self, request):
-        tickets_bought = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).count()
-        tickets_bought_for_self = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True).count()
-        if tickets_bought <= 5 and tickets_bought_for_self <= 1:
+        has_created_profile = WebsiteUser.objects.filter(username=request.user.username).exists()
+        if has_created_profile == False:
+            return redirect('profile')
+
+        has_bought_a_ticket = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).exists()
+        if has_bought_a_ticket:
+            tickets_bought = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).count()
+            tickets_bought_for_self = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True).count()
+        if ((has_bought_a_ticket == False) or (tickets_bought <= 5 and tickets_bought_for_self <= 1)):
 
             if request.user.is_authenticated:
                 ticket_form = TicketForm()
@@ -84,8 +90,7 @@ class NewTicket(View):
                                 'ticket_form': ticket_form
                             })
             else:
-                return render(request,
-                            'profile.html',)
+                return redirect('profile')
         else:
             pass
             # message that max limit has been hit
