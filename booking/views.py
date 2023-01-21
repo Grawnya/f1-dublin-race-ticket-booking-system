@@ -103,14 +103,24 @@ class NewTicket(View):
                 ticket_form_nationality = request.POST.get('nationality')
                 ticket_form_stand = request.POST.get('stand')
                 ticket_form_seat = request.POST.get('seat_number')
+                ticket_form_show = request.POST.get('show')
 
                 # check if instance exists of seat and if it does go to edit ticket and ask them to put in a new ticket location
+                seat_filled_check = Ticket.objects.filter(stand=ticket_form_stand, seat_number=ticket_form_seat).exists()
+                if seat_filled_check == True:
+                    ticket_form = TicketForm()
+                    # send message to let them know they have to apply again as this seat taken
+                    return render(request,
+                                'new_ticket.html',
+                                {
+                                    'ticket_form': ticket_form
+                                })
+                else:
+                    ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
+                    ticket_form.save()
 
-                ticket_form_show = request.POST.get('show')
-                print(ticket_form_show)
-                ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
-                ticket_form.save()
-                return redirect('my_tickets')
+
+                    return redirect('my_tickets')
 
 
 class EditTicket(View):

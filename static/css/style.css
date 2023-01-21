@@ -182,3 +182,15 @@ footer a {
     padding: 0.5rem 0;
     font-family: 'Formula1-Regular';
 }
+
+/* teams styling */
+.ticket {
+    width: 100%;
+    height: 15rem;
+}
+
+
+.mclaren {
+    background-color: #fa8905;
+    font: #23b5dc;
+}

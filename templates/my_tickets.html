@@ -26,8 +26,9 @@
     {% for ticket in ticket_list %}
         <div class="col-12 col-md-4 pb-2">
             <div class="card mx-auto">
-                <img src="https://res.cloudinary.com/grawnya/image/upload/v1671663478/cld-sample.jpg"
-                    class="card-img-top" alt="...">
+                <div class="ticket {{ ticket.fave_team }}" version="1.0">
+
+                </div>
                 <div class="card-body">
                     <a href="/booking/edit_ticket/{{ ticket.id }}">
                         <button>Edit</button>
