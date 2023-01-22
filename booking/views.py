@@ -65,7 +65,10 @@ class CreateProfile(View):
                                 'profile_form': profile_form
                             })
         else:
-            # message to say error with form - try again
+            messages.add_message(
+                    request, messages.ERROR,
+                    "There has been an error with the form "
+                    "Please try again later.")
             return redirect('my_tickets')
 
 
@@ -137,7 +140,10 @@ class NewTicket(View):
                     ticket_form.save()
                     return redirect('my_tickets')
             else:
-            # message to say error with form - try again
+                messages.add_message(
+                    request, messages.ERROR,
+                    "There has been an error with the form "
+                    "Please try again later.")
                 return redirect('my_tickets')
 
 
@@ -168,7 +174,10 @@ class EditTicket(View):
             ticket_form.save()
             return redirect('my_tickets')
         else:
-            # message to say error with form - try again
+            messages.add_message(
+                    request, messages.ERROR,
+                    "There has been an error with the form "
+                    "Please try again later.")
             return redirect('my_tickets')
 
 
@@ -200,5 +209,8 @@ class DeleteTicket(View):
             # message to say successful
             return redirect('my_tickets')
         else:
-            # message to say error with form - try again
+            messages.add_message(
+                    request, messages.ERROR,
+                    "There has been an error with the form "
+                    "Please try again later.")
             return redirect('my_tickets')
