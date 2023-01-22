@@ -24,6 +24,12 @@
 <br>
 <div class="row justify-content-center">
     {% for ticket in ticket_list %}
+        {% if len(ticket_list) == 0 %}
+        <div class="col-12 col-md-4">
+            <h2>No one has booked or ticket or everyone is keeping it private</h2>
+            <p>Come back later to see any updates</p>
+        </div>
+        {% else %}
         <div class="col-12 col-md-4 pb-2">
             <div class="card mx-auto">
                 <div class="ticket {{ ticket.fave_team }}" version="1.0">
@@ -40,16 +46,9 @@
                         <span class="ticket-text">{{ticket.stand}}{{ticket.seat_number}}</span>
                     </div>
                 </div>
-                <div class="card-body">
-                    <a href="/booking/edit_ticket/{{ ticket.id }}">
-                        <button>Edit</button>
-                    </a>
-                    <a href="/booking/delete_ticket/{{ ticket.id }}">
-                        <button>Delete</button>
-                    </a>
-                </div>
             </div>
         </div>
+        {% endif %}
         {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">
