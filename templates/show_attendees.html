@@ -24,7 +24,7 @@
 <br>
 <div class="row justify-content-center">
     {% for ticket in ticket_list %}
-        {% if len(ticket_list) == 0 %}
+        {% if ticket_list|length == 0 %}
         <div class="col-12 col-md-4">
             <h2>No one has booked or ticket or everyone is keeping it private</h2>
             <p>Come back later to see any updates</p>
