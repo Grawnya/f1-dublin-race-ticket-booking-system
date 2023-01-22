@@ -79,7 +79,10 @@ class NewTicket(View):
         has_bought_a_ticket = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).exists()
         if has_bought_a_ticket:
             tickets_bought = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).count()
+            tickets_bought += 1
+            print(tickets_bought)
             tickets_bought_for_self = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True).count()
+            print(tickets_bought_for_self)
         if ((has_bought_a_ticket == False) or (tickets_bought <= 5 and tickets_bought_for_self <= 1)):
 
             if request.user.is_authenticated:
@@ -91,9 +94,14 @@ class NewTicket(View):
                             })
             else:
                 return redirect('profile')
-        else:
-            pass
-            # message that max limit has been hit
+
+        if tickets_bought_for_self > 1:
+            # message saying you need to remove one for self
+            return redirect('my_tickets')
+
+        elif tickets_bought > 5:
+            # message saying you need to remove tickets to buy more
+            return redirect('my_tickets')
 
     def post(self, request):
             ticket_form_user = TicketForm(data=request.POST)
