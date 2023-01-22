@@ -210,3 +210,55 @@ footer a {
     background-color: #fa8905;
     color: #23b5dc;
 }
+
+.alfa_romeo {
+    background-color: #e9063a;
+    color: var(--white);
+}
+
+.alphatauri {
+    background-color: var(--white);
+    color: #01219a;
+}
+
+.alpine {
+    background-color: #1445eb;
+    color: var(--white);
+}
+
+.aston_martin {
+    background-color: var(--white);
+    color: #014b2c;
+}
+
+.ferrari {
+    background-color: var(--f1-red);
+    color: #feff00;
+}
+
+.haas {
+    background-color: var(--white);
+    color: var(--f1-red);
+}
+
+.mercedes {
+    background-color: #10d3ca;
+    color: #464749;
+}
+
+.red_bull {
+    background-color: #083bc0;
+    color: #db0a17;
+}
+
+.williams {
+    background-color: var(--white);
+    color: #00d2ff;
+}
+
+/* card body */
+
+.card-body {
+    margin-top: 0.2rem;
+    background-color: var(--black);
+}
