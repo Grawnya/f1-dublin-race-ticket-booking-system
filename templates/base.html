@@ -139,24 +139,18 @@
                 <a href="{% url 'home' %}#how-to-book-section">How to Book Tickets</a>
             </li>
             <li>
-                <a href="">Tickets Sold</a>
+                <a href="{% url 'show_attendees' %}">Tickets Sold</a>
             </li>
             {% if user.isauthenticated  %}
             <li>
-                <a href="">My Tickets</a>
+                <a href="{% url 'my_tickets' %}">My Tickets</a>
             </li>
             <li>
-                <a href="">Logout</a>
+                <a href="{% url 'profile' %}">Profile</a>
             </li>
             {% else %}
             <li>
-                <a href="">Buy Tickets</a>
-            </li>
-            <li>
-                <a href="">Register</a>
-            </li>
-            <li>
-                <a href="">Login</a>
+                <a href="{% url 'account_login' %}">Buy Tickets</a>
             </li>
         </ul>
         {% endif %}
