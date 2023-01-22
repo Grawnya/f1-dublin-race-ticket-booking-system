@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<div id="notfound">
+        <h1>500</h1>
+        <h2>Something Went Wrong</h2>
+        <p>An Internal Error has Occurred. Please Try Again Later.</p>
+        <a href="{% url 'home' %}" class="button submit-button">Go Home</a>
+	</div>
+</div>
+
+{% endblock %}

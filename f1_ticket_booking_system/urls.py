@@ -23,3 +23,6 @@ urlpatterns = [
     path('attend/', include('show_attendees.urls'), name='show-attendees-urls'),
     path('accounts/', include('allauth.urls')),
 ]
+
+handler404 = 'race_details.views.error_404'
+handler500 = 'race_details.views.error_500'
