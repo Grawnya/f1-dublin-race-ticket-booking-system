@@ -27,8 +27,8 @@ class CreateProfile(View):
                                 'profile_form': profile_form
                             })
         else:
-            return render(request,
-                            'signup.html',)
+            # message re user not being authenticated
+            return redirect('home')
 
     def post(self, request):
         profile_form = WebsiteUserForm(request.POST)
@@ -60,6 +60,9 @@ class CreateProfile(View):
                             {
                                 'profile_form': profile_form
                             })
+        else:
+            # message to say error with form - try again
+            return redirect('my_tickets')
 
 
 class SeeMyTickets(generic.ListView):
@@ -91,7 +94,8 @@ class NewTicket(View):
                                 'ticket_form': ticket_form
                             })
             else:
-                return redirect('profile')
+            # message re user not being authenticated
+                return redirect('home')
 
         if tickets_bought_for_self > 1:
             # message saying you need to remove one for self
@@ -125,6 +129,9 @@ class NewTicket(View):
                     ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
                     ticket_form.save()
                     return redirect('my_tickets')
+            else:
+            # message to say error with form - try again
+                return redirect('my_tickets')
 
 
 class EditTicket(View):
@@ -141,14 +148,17 @@ class EditTicket(View):
                             'ticket': ticket
                         })
         else:
-            return render(request,
-                        'index.html',)
+            # message re user not being authenticated
+            return redirect('home')
 
     def post(self, request, ticket_id):
         ticket = get_object_or_404(Ticket, id=ticket_id)
         ticket_form = TicketForm(data=request.POST, instance=ticket)
         if ticket_form.is_valid():
             ticket_form.save()
+            return redirect('my_tickets')
+        else:
+            # message to say error with form - try again
             return redirect('my_tickets')
 
 
@@ -166,8 +176,8 @@ class DeleteTicket(View):
                             'ticket': ticket
                         })
         else:
-            return render(request,
-                        'index.html',)
+            # message re user not being authenticated
+            return redirect('home')
 
     def post(self, request, ticket_id):
         ticket = get_object_or_404(Ticket, id=ticket_id)
@@ -175,4 +185,7 @@ class DeleteTicket(View):
         if ticket_form.is_valid():
             ticket.delete()
             # message to say successful
+            return redirect('my_tickets')
+        else:
+            # message to say error with form - try again
             return redirect('my_tickets')
