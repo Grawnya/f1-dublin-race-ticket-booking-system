@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from show_attendees.views import ShowViableTickets
+from booking.views import *
 
 # Create your tests here.
 class TestRaceDetailsUrls(SimpleTestCase):
