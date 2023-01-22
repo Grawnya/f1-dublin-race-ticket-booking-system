@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'race_details',
     'booking',
+    'show_attendees',
 ]
 
 SITE_ID = 1
