@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="py-5 text-center">
+    <h2>Tickets Sold</h2>
+    <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
+        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
+        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
+        ac sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
+        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+    </p>
+    <p>Please complete your profile before buying a ticket</p>
+    <button type="button" class="button mt-4 text-center submit-button">
+        <a href="{% url 'profile' %}">Profile</a>
+    </button><br>
+    <button type="button" class="button mt-4 text-center submit-button">
+        <a href="{% url 'new_ticket' %}">Buy a Ticket</a>
+    </button>
+</div>
+<br>
+<div class="row justify-content-center">
+    {% for ticket in ticket_list %}
+        <div class="col-12 col-md-4 pb-2">
+            <div class="card mx-auto">
+                <div class="ticket {{ ticket.fave_team }}" version="1.0">
+                    <div class="logo">
+                        <span class="logo-icon logo-icon-{{ticket.fave_team}}"></span>
+                    </div>
+                    <div class="nickname pt-3">
+                        {{ticket.nickname}}
+                    </div>
+                    <div class="flag">
+                        <span class="flag-icon flag-icon-{{ticket.nationality}}"></span>
+                    </div>
+                    <div class="seat pt-3">
+                        <span class="ticket-text">{{ticket.stand}}{{ticket.seat_number}}</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <a href="/booking/edit_ticket/{{ ticket.id }}">
+                        <button>Edit</button>
+                    </a>
+                    <a href="/booking/delete_ticket/{{ ticket.id }}">
+                        <button>Delete</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+        {% endif %}
+    {% endfor %}
+</div>
+{% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+{% endblock %}
