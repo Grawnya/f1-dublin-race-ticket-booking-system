@@ -110,6 +110,12 @@ body {
     padding-bottom: 1.75rem;
 }
 
+.green-section {
+    color: var(--black);
+    background-color: var(--green);
+    padding-bottom: 1.75rem;
+}
+
 /* carousel */
 .carousel-inner {
     max-height: 35rem;
