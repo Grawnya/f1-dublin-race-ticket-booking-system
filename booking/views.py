@@ -147,9 +147,9 @@ class EditTicket(View):
     def post(self, request, ticket_id):
         ticket = get_object_or_404(Ticket, id=ticket_id)
         ticket_form = TicketForm(data=request.POST, instance=ticket)
-
-        ticket_form.save()
-        return redirect('my_tickets')
+        if ticket_form.is_valid():
+            ticket_form.save()
+            return redirect('my_tickets')
 
 
 class DeleteTicket(View):
@@ -172,7 +172,7 @@ class DeleteTicket(View):
     def post(self, request, ticket_id):
         ticket = get_object_or_404(Ticket, id=ticket_id)
         ticket_form = TicketForm(data=request.POST, instance=ticket)
-
-        ticket.delete()
-        # message to say successful
-        return redirect('my_tickets')
+        if ticket_form.is_valid():
+            ticket.delete()
+            # message to say successful
+            return redirect('my_tickets')
