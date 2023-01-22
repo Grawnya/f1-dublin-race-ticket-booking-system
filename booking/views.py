@@ -32,7 +32,7 @@ class CreateProfile(View):
 
     def post(self, request):
         profile_form = WebsiteUserForm(request.POST)
-        if request.user.is_authenticated:
+        if profile_form.is_valid():
             website_users = WebsiteUser.objects.filter(username=request.user.username).exists()
             if website_users:
                 current_profile = WebsiteUser.objects.get(username=request.user.username)
@@ -80,9 +80,7 @@ class NewTicket(View):
         if has_bought_a_ticket:
             tickets_bought = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username)).count()
             tickets_bought += 1
-            print(tickets_bought)
             tickets_bought_for_self = Ticket.objects.filter(booked_by=WebsiteUser.objects.get(username=request.user.username), for_self=True).count()
-            print(tickets_bought_for_self)
         if ((has_bought_a_ticket == False) or (tickets_bought <= 5 and tickets_bought_for_self <= 1)):
 
             if request.user.is_authenticated:
@@ -121,18 +119,11 @@ class NewTicket(View):
                 # check if instance exists of seat and if it does go to edit ticket and ask them to put in a new ticket location
                 seat_filled_check = Ticket.objects.filter(stand=ticket_form_stand, seat_number=ticket_form_seat).exists()
                 if seat_filled_check == True:
-                    ticket_form = TicketForm()
                     # send message to let them know they have to apply again as this seat taken
-                    return render(request,
-                                'new_ticket.html',
-                                {
-                                    'ticket_form': ticket_form
-                                })
+                    return redirect('new_ticket')
                 else:
                     ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
                     ticket_form.save()
-
-
                     return redirect('my_tickets')
 
 
