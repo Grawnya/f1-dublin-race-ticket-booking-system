@@ -40,7 +40,7 @@ class CreateProfile(View):
                 profile_form.username = request.user.username
                 profile_form.save()
                 return render(request,
-                            'index.html',
+                            'my_tickets.html',
                             {
                                 'profile_form': profile_form
                             })
@@ -56,7 +56,7 @@ class CreateProfile(View):
                 profile_form = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
                 profile_form.save()
                 return render(request,
-                            'index.html',
+                            'my_tickets.html',
                             {
                                 'profile_form': profile_form
                             })
