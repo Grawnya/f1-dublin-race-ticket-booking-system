@@ -268,3 +268,14 @@ footer a {
     margin-top: 0.2rem;
     background-color: var(--black);
 }
+
+/* ticket pages */
+
+.lead-heading {
+    font-family: 'Formula1-Bold';
+}
+
+.lead {
+    align-content: center;
+    padding: 0 5%;
+}
