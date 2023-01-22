@@ -195,6 +195,12 @@ footer a {
     right: 5%;
 }
 
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
 .ticket-text {
     font-size: 5rem;
     font-family: 'Formula1-Bold';

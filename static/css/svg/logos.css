@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.logo-icon-background, .logo-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat; 
+  z-index: 1;    
+}
+
+.logo-icon {
+  position: relative;
+  display: inline-block;
+  min-width: 3rem;
+  min-height: 2rem;
+ }
+  .flag-icon:before {
+    content: " "; }
+
+.logo-icon-mclaren {
+  background-image: url(mclaren-svg.svg); }

@@ -27,7 +27,8 @@
         <div class="col-12 col-md-4 pb-2">
             <div class="card mx-auto">
                 <div class="ticket {{ ticket.fave_team }}" version="1.0">
-                    <div class="{{ ticket.fave_team }}-icon">
+                    <div class="logo">
+                        <span class="logo-icon logo-icon-{{ticket.fave_team}}"></span>
                     </div>
                     <div class="nickname pt-3">
                         {{ticket.nickname}}
