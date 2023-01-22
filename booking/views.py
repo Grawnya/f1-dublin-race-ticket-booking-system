@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import WebsiteUser, Ticket
 from .forms import WebsiteUserForm, TicketForm
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 # Create your views here.
 
@@ -27,7 +28,10 @@ class CreateProfile(View):
                                 'profile_form': profile_form
                             })
         else:
-            # message re user not being authenticated
+            messages.add_message(
+                    request, messages.ERROR,
+                    "You are trying to create a profile "
+                    "Please Register and/or Login first.")
             return redirect('home')
 
     def post(self, request):
@@ -94,7 +98,10 @@ class NewTicket(View):
                                 'ticket_form': ticket_form
                             })
             else:
-            # message re user not being authenticated
+                messages.add_message(
+                    request, messages.ERROR,
+                    "You are trying to create a profile "
+                    "Please Register and/or Login first.")
                 return redirect('home')
 
         if tickets_bought_for_self > 1:
@@ -148,7 +155,10 @@ class EditTicket(View):
                             'ticket': ticket
                         })
         else:
-            # message re user not being authenticated
+            messages.add_message(
+                    request, messages.ERROR,
+                    "You are trying to create a profile "
+                    "Please Register and/or Login first.")
             return redirect('home')
 
     def post(self, request, ticket_id):
@@ -176,7 +186,10 @@ class DeleteTicket(View):
                             'ticket': ticket
                         })
         else:
-            # message re user not being authenticated
+            messages.add_message(
+                    request, messages.ERROR,
+                    "You are trying to create a profile "
+                    "Please Register and/or Login first.")
             return redirect('home')
 
     def post(self, request, ticket_id):
