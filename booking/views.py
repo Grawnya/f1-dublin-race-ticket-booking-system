@@ -108,11 +108,19 @@ class NewTicket(View):
                 return redirect('home')
 
         if tickets_bought_for_self > 1:
-            # message saying you need to remove one for self
+            messages.add_message(
+                    request, messages.INFO,
+                    "You have bought more than 1 ticket for "
+                    "yourself. Make sure you change one of them "
+                    "if you intend on buying more tickets")
             return redirect('my_tickets')
 
         elif tickets_bought > 5:
-            # message saying you need to remove tickets to buy more
+            messages.add_message(
+                    request, messages.INFO,
+                    "You have bought more than 5 tickets."
+                    "This is the limit. Delete a booking to buy "
+                    "another ticket")
             return redirect('my_tickets')
 
     def post(self, request):
@@ -133,7 +141,10 @@ class NewTicket(View):
                 # check if instance exists of seat and if it does go to edit ticket and ask them to put in a new ticket location
                 seat_filled_check = Ticket.objects.filter(stand=ticket_form_stand, seat_number=ticket_form_seat).exists()
                 if seat_filled_check == True:
-                    # send message to let them know they have to apply again as this seat taken
+                    messages.add_message(
+                                request, messages.ERROR,
+                                "Someone has already purchased this seat. "
+                                "Please book another seat.")
                     return redirect('new_ticket')
                 else:
                     ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
@@ -206,7 +217,9 @@ class DeleteTicket(View):
         ticket_form = TicketForm(data=request.POST, instance=ticket)
         if ticket_form.is_valid():
             ticket.delete()
-            # message to say successful
+            messages.add_message(
+                    request, messages.SUCCESS,
+                    "This ticket has been successfully deleted.")
             return redirect('my_tickets')
         else:
             messages.add_message(
