@@ -43,6 +43,9 @@ class CreateProfile(View):
                 profile_form = WebsiteUserForm(data=request.POST, instance=current_profile)
                 profile_form.username = request.user.username
                 profile_form.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    "Profile Updated!")
                 return render(request,
                             'my_tickets.html',
                             {
@@ -59,6 +62,9 @@ class CreateProfile(View):
                 profile_nationality = request.POST.get('nationality')
                 profile_form = WebsiteUser(username=profile_username, first_name=profile_first_name, last_name=profile_last_name, email=profile_email, fave_team=profile_fave_team, nationality=profile_nationality)
                 profile_form.save()
+                messages.add_message(
+                    request, messages.SUCCESS,
+                    "Profile Created!")
                 return render(request,
                             'my_tickets.html',
                             {
@@ -149,6 +155,9 @@ class NewTicket(View):
                 else:
                     ticket_form = Ticket(for_self=ticket_form_for_self, booked_by=ticket_form_booked_by, first_name=ticket_form_first_name, last_name=ticket_form_last_name, nickname=ticket_form_nickname, fave_team=ticket_form_fave_team, nationality=ticket_form_nationality, seat_number=ticket_form_seat, stand=ticket_form_stand)
                     ticket_form.save()
+                    messages.add_message(
+                                request, messages.SUCCESS,
+                                "Ticket Booked!")
                     return redirect('my_tickets')
             else:
                 messages.add_message(
@@ -183,6 +192,9 @@ class EditTicket(View):
         ticket_form = TicketForm(data=request.POST, instance=ticket)
         if ticket_form.is_valid():
             ticket_form.save()
+            messages.add_message(
+                    request, messages.SUCCESS,
+                    "Ticket Updated!")
             return redirect('my_tickets')
         else:
             messages.add_message(
