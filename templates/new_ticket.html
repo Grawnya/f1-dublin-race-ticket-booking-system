@@ -5,19 +5,22 @@
 {% load crispy_forms_tags %}
 
 <div class="py-5 text-center">
-    <h2>Book a Ticket</h2>
+    <h2 class="lead-heading">Book a Ticket</h2>
     <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
-        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
-        ac sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
-        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+        So you've filled out your profile and are ready to purchase a ticket! Below you can buy a max. 
+        of 1 ticket for yourself and up to 5 tickets in total. Individually, you can fill in the details 
+        below. 
+    </p>
+    <p class="lead">
+        If you are buying yourself a ticket, you will still have to fill in the details, as this enables you 
+        to alter your details if you opt to share your ticket details in the "Show Tickets" page. We look 
+        forward to seeing you in 2026!
     </p>
 </div>
 <div class="row justify-content-center">
     <div>
         <!-- Display both forms together -->
-        <form method="POST">
+        <form method="POST" class="f1-form">
             {% csrf_token %}
 
             <!-- Profile form -->
@@ -28,11 +31,12 @@
             {{ ticket_form.fave_team | as_crispy_field }}
             {{ ticket_form.nationality | as_crispy_field }}
             <div class="row">
-                <div class="col-12 p-2">
-                    <p>
-                    See the diagram for the track layout on the left and select a stand to sit in and then select a seat
-                    you want to sit in from the drop down menus on the right.
-                    To see the seating numbers click on the button next to the track image.
+                <div class="col-12">
+                    <p class="py-5">
+                    See the diagram for the track layout on the left and each stand layout. Select the seat 
+                    you want to sit in from the drop down menus on the right. If you select the same seat as 
+                    someone else you will recieve a message to let you know. Please check the "Show Tickets" 
+                    page.
                     </p>
                 </div>
             </div>
@@ -132,7 +136,9 @@
 
             {{ ticket_form.show | as_crispy_field }}
 
-            <button type="submit" class="button mt-4 text-center submit-button">Submit</button>
+            <div class="text-center">
+                <button type="submit" class="btn btn-lg btn-f1">Submit</button>
+            </div>
 
         </form>
     </div>
