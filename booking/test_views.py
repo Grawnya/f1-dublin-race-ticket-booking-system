@@ -12,11 +12,11 @@ class TestBookingViews(TestCase):
         self.client.login(username='test_username', password='test123')
         self.home_url = reverse('home')
         self.my_tickets_url = reverse('my_tickets')
-        self.my_new_ticket_url = reverse('new_ticket')
+        self.new_ticket_url = reverse('new_ticket')
         self.profile_url = reverse('profile')
         self.new_url = reverse('profile')
 
-        self.website_user = self.WebsiteUser.objects.create(
+        self.website_user = WebsiteUser.objects.create(
                                             id=4,
                                             username='test123',
                                             first_name='John',
@@ -25,7 +25,7 @@ class TestBookingViews(TestCase):
                                             fave_team='red_bull',
                                             nationality='irl')
 
-        self.ticket1 = self.Ticket.objects.create(
+        self.ticket1 = Ticket.objects.create(
                                             id=30,
                                             for_self=False,
                                             booked_by=self.website_user,
@@ -40,7 +40,7 @@ class TestBookingViews(TestCase):
                                             show=True
         )
         
-        self.ticket2 = self.Ticket.objects.create(
+        self.ticket2 = Ticket.objects.create(
                                             id=31,
                                             for_self=True,
                                             booked_by=self.website_user,
@@ -55,11 +55,10 @@ class TestBookingViews(TestCase):
                                             show=True
         )
 
-        self.edit_booking1_url = reverse('edit_booking', args=[30])
-        self.delete_booking1_url = reverse('delete_booking', args=[30])
-        self.edit_booking2_url = reverse('edit_booking', args=[31])
-        self.delete_booking2_url = reverse('delete_booking', args=[31])
-        self.edit_profile_url = reverse('create_profile')
+        self.edit_booking1_url = reverse('edit_ticket', args=[30])
+        self.delete_booking1_url = reverse('delete_ticket', args=[30])
+        self.edit_booking2_url = reverse('edit_ticket', args=[31])
+        self.delete_booking2_url = reverse('delete_ticket', args=[31])
 
     def test_create_profile_GET(self):
         response = self.client.get(self.profile_url)

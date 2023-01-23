@@ -65,7 +65,7 @@ class TestWebsiteUserForm(TestCase):
         self.assertEqual(form.errors['nationality'][0], 'This field is required.')
 
     def test_fields_are_explicit_in_form_metaclass(self):
-        form = ItemForm()
+        form = WebsiteUserForm()
         self.assertEqual(form.Meta().fields, ('first_name', 'last_name', 'email', 'fave_team',
                   'nationality'))
     
