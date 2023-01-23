@@ -1,13 +1,6 @@
-// Function to automatically dismiss the alert after 3 seconds
-setTimeout(function() {
-    var messages = document.getElementById("msg");
-    var alert = new bootstrap.Alert(messages);
-    alert.close();
-}, 3000);
-
 // function to change track image on main page
 function changeTrackImage(element) {
-    var track_id = element.target.id
+    let track_id = element.target.id
     if (track_id === 'track_graphic') {
         document.getElementById('track_graphic').setAttribute("src", "https://res.cloudinary.com/grawnya/image/upload/v1674393438/formula1_dublin_street_race_map_vpf8oo.png")
         document.getElementById('track_graphic').setAttribute("alt", "Track mapped onto Google Maps")
