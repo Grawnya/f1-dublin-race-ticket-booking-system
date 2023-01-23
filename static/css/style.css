@@ -310,3 +310,9 @@ footer a {
     background-color: var(--black);
     border-color: var(--yellow);
 }
+
+/* pagination */
+
+.page-link {
+    background-color: var(--f1-red);
+}
