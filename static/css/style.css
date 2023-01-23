@@ -316,3 +316,18 @@ footer a {
 .page-link {
     background-color: var(--f1-red);
 }
+
+/* forms */
+/* add to make 4.5rem  for medium screens*/
+.f1-form {
+    padding: 0 3rem;
+}
+
+.f1-form label {
+    padding: 1rem 0;
+}
+
+.f1-form button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
