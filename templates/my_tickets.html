@@ -13,11 +13,11 @@
         booking and delete the booking. Note that you can only book up to 1 ticket for yourself, therefore, if you book 2,
         you will have to edit one fo the tickets for yourself to someone else or delete it.
     </p>
-    <button type="button" class="button mt-4 text-center submit-button">
-        <a href="{% url 'profile' %}">Profile</a>
+    <button class="btn btn-lg btn-f1 mt-4 text-center">
+        <a class="remove-underline-f1" href="{% url 'profile' %}">Profile</a>
     </button><br>
-    <button type="button" class="button mt-4 text-center submit-button">
-        <a href="{% url 'new_ticket' %}">Buy a Ticket</a>
+    <button class="btn btn-lg ticket-button mt-4 text-center">
+        <a class="remove-underline-ticket" href="{% url 'new_ticket' %}">Buy a Ticket</a>
     </button>
 </div>
 <br>

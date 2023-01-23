@@ -279,3 +279,32 @@ footer a {
     align-content: center;
     padding: 0 5%;
 }
+
+/* buttons */
+.remove-underline-f1 {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.remove-underline-f1:hover {
+    color: var(--f1-red);
+}
+
+.remove-underline-ticket {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.remove-underline-ticket:hover {
+    color: var(--yellow);
+}
+
+.ticket-button {
+    font-family: 'Formula1-Bold';
+    background-color: var(--green);
+    font-weight: bold;
+}
+
+.ticket-button:hover {
+    background-color: var(--black);
+}
