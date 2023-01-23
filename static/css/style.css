@@ -102,6 +102,7 @@ body {
 .btn-f1:hover {
     background-color: var(--black);
     color: var(--f1-red);
+    border-color: var(--f1-red);
 }
 
 .red-section {
@@ -307,4 +308,5 @@ footer a {
 
 .ticket-button:hover {
     background-color: var(--black);
+    border-color: var(--yellow);
 }
