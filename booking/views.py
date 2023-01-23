@@ -47,7 +47,7 @@ class CreateProfile(View):
                     request, messages.SUCCESS,
                     "Profile Updated!")
                 return render(request,
-                            'my_tickets.html',
+                            'index.html',
                             {
                                 'profile_form': profile_form
                             })
