@@ -13,17 +13,16 @@
     </p>
     <p class="lead">
         If you are buying yourself a ticket, you will still have to fill in the details, as this enables you 
-        to alter your details if you opt to share your ticket details in the "Show Tickets" page. We look 
+        to alter your details if you opt to share your ticket details in the "Tickets Sold" page. We look 
         forward to seeing you in 2026!
     </p>
 </div>
 <div class="row justify-content-center">
     <div>
-        <!-- Display both forms together -->
         <form method="POST" class="f1-form">
             {% csrf_token %}
 
-            <!-- Profile form -->
+            <!-- Ticket form -->
             {{ ticket_form.for_self | as_crispy_field }}
             {{ ticket_form.first_name | as_crispy_field }}
             {{ ticket_form.last_name | as_crispy_field }}
@@ -35,7 +34,7 @@
                     <p class="py-5">
                     See the diagram for the track layout on the left and each stand layout. Select the seat 
                     you want to sit in from the drop down menus on the right. If you select the same seat as 
-                    someone else you will recieve a message to let you know. Please check the "Show Tickets" 
+                    someone else you will recieve a message to let you know. Please check the "Tickets Sold" 
                     page.
                     </p>
                 </div>
@@ -125,14 +124,13 @@
                     </svg>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <img id="individual_seats" src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png" alt="...">
+                    <img id="individual_seats" src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png" alt="Track image with stands">
                 </div>
                 <div class="col-12 col-lg-4">
                     {{ ticket_form.stand | as_crispy_field }}
                     {{ ticket_form.seat_number | as_crispy_field }}
                 </div>
             </div>
-            <!-- ticket shape with details to post -->
 
             {{ ticket_form.show | as_crispy_field }}
 
