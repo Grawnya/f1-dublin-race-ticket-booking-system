@@ -153,6 +153,12 @@ body {
     text-align: center;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 15rem;
+    /* object-fit: cover; */
+}
+
 /* footer */
 footer ul {
     padding: 0;
