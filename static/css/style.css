@@ -121,6 +121,11 @@ body {
     max-height: 35rem;
 }
 
+.promote-race-text {
+    width: 60%;
+}
+
+
 /* race details */
 
 #A, #B, #C, #D {

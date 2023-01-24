@@ -14,23 +14,29 @@
     <div class="carousel-inner min-section-height">
         <div class="carousel-item active">
             <div class="promote-race black-section">
-                <div class="promote-race-text col-md-4 mx-auto">
-                    <h3 class="section-heading">Slide 1 with Content</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
-                        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
-                        ac
-                        sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
-                        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+                <div class="promote-race-text col-md-6 mx-auto py-5">
+                    <h3 class="section-heading text-center pb-3">Show Tickets Bought</h3>
+                    <p>
+                        Want to Know who you are sitting next to if you have already booked a ticket or maybe you're 
+                        noisy and just want to know who is attending the race on Sunday? Well you're in luck! We've 
+                        especially created a page for you to see who is going if they opt to share that they are attending. 
+                        Reach out to your seat neighbours on social media or let it influence your seat selection based on 
+                        the team people are supporting.
                     </p>
+                    <div class="text-center">
+                        <a class="remove-underline-f1" href="{% url 'show_attendees' %}">
+                            <button class="btn btn-f1 my-3 text-center">Tickets Sold</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="promote-race red-section">
-                <div class="promote-race-text col-md-4 mx-auto">
+                <div class="promote-race-text mx-auto py-5">
                     <h3 class="section-heading">Slide 2 with Content</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
                         penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
                         pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
                         ac
@@ -42,7 +48,7 @@
         </div>
         <div class="carousel-item">
             <div class="promote-race green-section">
-                <div class="promote-race-text col-md-4 mx-auto">
+                <div class="promote-race-text col-md-6 mx-auto py-5">
                     <h3 class="section-heading">Slide 3 with Content</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
                         penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
@@ -68,12 +74,12 @@
 </div>
 <div id="race-section" class="container-fluid text-center section white-section">
     <div class="row min-section-height">
+        <h3 class="section-heading py-5">Race Details</h3>
         <div class="col-12 col-md-4 my-auto">
             <img class="img-fluid" id="track_graphic" src="https://res.cloudinary.com/grawnya/image/upload/v1674393431/track_with_stands_fok6ra.png"
             alt="Track image with stands">
         </div>
         <div class="col-12 col-md-8">
-            <h3 class="section-heading py-5">Race Details</h3>
             <div>
                 <div class="row pb-2">
                     <div class="col-12 col-md-4 my-auto">
@@ -89,6 +95,7 @@
                         <p class="race-fact-title pb-4">Turns</p>
                     </div>
                 </div>
+                <div class="text-start px-5">	
                 <p>
                     Spanning 5.33km in length, the highly-anticipated Dublin City Grand Prix will finally take place in the Summer of 2026! 
                     With 3 DRS zones and 20 turns, undoubtedly plenty of action will happen out on track, as 20 of the world's best drivers 
@@ -109,13 +116,14 @@
                     travel companies associated with us. To buy some tickets, please follow the steps in the section below.
                 </p>
             </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="container-fluid text-center section min-section-height black-section" id="how-to-book-section">
     <h3 class="section-heading py-5">How to Book</h3>
     <div class="row">
-        <div class="col-12 col-md-4 pb-2">
+        <div class="col-12 col-md-4 pb-2 mb-4">
             <div class="card mx-auto">
                 <img src="https://res.cloudinary.com/grawnya/image/upload/v1674583655/register_or_login_na4mx8.png"
                     class="card-img-top" alt="Register and Login Buttons in Navbar">
@@ -128,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 pb-2">
+        <div class="col-12 col-md-4 pb-2 mb-4">
             <div class="card mx-auto">
                 <img src="https://res.cloudinary.com/grawnya/image/upload/v1674583799/my_tickets_fxgaqw.png"
                     class="card-img-top" alt="Preview of the 'My Tickets' Page">
@@ -141,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 pb-2">
+        <div class="col-12 col-md-4 pb-2 mb-4">
             <div class="card mx-auto">
                 <img src="https://res.cloudinary.com/grawnya/image/upload/v1674584249/show_tickets_pxj42j.png"
                     class="card-img-top" alt="Sample Ticket on the 'Tickets Sold' page">
