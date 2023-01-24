@@ -100,9 +100,8 @@ body {
 }
 
 .btn-f1:hover {
-    background-color: var(--black);
-    color: var(--f1-red);
-    border-color: var(--f1-red);
+    background-color: var(--yellow);
+    color: var(--black);
 }
 
 .red-section {
@@ -291,7 +290,7 @@ footer a {
 /* buttons */
 .remove-underline-f1 {
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
 }
 
 .remove-underline-f1:hover {
@@ -314,8 +313,7 @@ footer a {
 }
 
 .ticket-button:hover {
-    background-color: var(--black);
-    border-color: var(--yellow);
+    background-color: var(--f1-red);
 }
 
 /* pagination */
