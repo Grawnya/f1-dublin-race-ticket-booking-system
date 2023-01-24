@@ -123,6 +123,7 @@ body {
 }
 
 /* race details */
+
 #A, #B, #C, #D {
     fill: var(--f1-red);
     stroke: var(--black);
