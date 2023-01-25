@@ -5,7 +5,7 @@ from booking.models import Ticket
 # Create your views here.
 class ShowViableTickets(generic.ListView):
     '''
-    A class which represents all tickets where users have opted to share their ticket on the website
+    A class which represents all tickets where users have opted to share their ticket on the website.
 
     Methods:
     get_queryset():
