@@ -15,7 +15,7 @@
         <div class="carousel-item active">
             <div class="promote-race black-section">
                 <div class="promote-race-text col-md-6 mx-auto py-5">
-                    <h3 class="section-heading text-center pb-3">Show Tickets Bought</h3>
+                    <h3 class="section-heading text-center pb-3">Show Tickets Bought  <i class="fa-solid fa-ticket"></i></h3>
                     <p>
                         Want to Know who you are sitting next to if you have already booked a ticket or maybe you're 
                         noisy and just want to know who is attending the race on Sunday? Well you're in luck! We've 
@@ -25,7 +25,7 @@
                     </p>
                     <div class="text-center">
                         <a class="remove-underline-f1" href="{% url 'show_attendees' %}">
-                            <button class="btn btn-f1 my-3 text-center">Tickets Sold</button>
+                            <button class="btn btn-f1 my-3 text-center">Tickets Sold  <i class="fa-solid fa-ticket"></i></button>
                         </a>
                     </div>
                 </div>
@@ -33,30 +33,39 @@
         </div>
         <div class="carousel-item">
             <div class="promote-race red-section">
-                <div class="promote-race-text mx-auto py-5">
-                    <h3 class="section-heading">Slide 2 with Content</h3>
+                <div class="promote-race-text col-md-6 mx-auto py-5">
+                    <h3 class="section-heading text-center pb-3">Create a Profile  <i class="fa-solid fa-user"></i></h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
-                        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
-                        ac
-                        sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
-                        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+                        In order to book a ticket, you must create a profile before progressing on any further. This is 
+                        to ensure that we know you a bit better and can tailor the track race experience to you, as well as
+                        using the details in the future to verify that you have purchased the ticket. In order to create a 
+                        profile, you must have an account. Therefore, please login if you have an account. Otherwise, please 
+                        register before filling in your profile.
                     </p>
+                    <div class="text-center">
+                        <a class="remove-underline-ticket" href="{% url 'profile' %}">
+                            <button class="btn ticket-button my-3 text-center">Create a Profile  <i class="fa-solid fa-user"></i></button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="promote-race green-section">
                 <div class="promote-race-text col-md-6 mx-auto py-5">
-                    <h3 class="section-heading">Slide 3 with Content</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et arcu urna. Orci varius natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. In semper elit a nulla
-                        pellentesque, nec pharetra lorem pellentesque. Sed sapien arcu, molestie eu iaculis ut, aliquet
-                        ac
-                        sapien. Donec risus orci, malesuada a urna a, pretium finibus tellus. Curabitur dignissim massa
-                        vitae ipsum imperdiet fringilla. Etiam suscipit fermentum nisl. Phasellus ac aliquet ipsum, ac.
+                    <h3 class="section-heading text-center pb-3">Race Details  <i class="fa-solid fa-circle-info"></i></h3>
+                    <p>
+                        Maybe you're toying with the idea of attending the race in 2026 or are stead fast in the fact that 
+                        there's a seat in Stand C with your name on it? Either way, you'll want to know a bit more about the 
+                        race and track itself. Spanning 5.33km, the anticlockwise circuit will provide challenges for the 
+                        drivers, but the 20 turns and 3 DRS Zones should provide plenty of action. There is no better backdrop 
+                        for an f1 street race as plenty of the Dublin's attractions can be found around every corner.
                     </p>
+                    <div class="text-center">
+                        <a class="remove-underline-f1" href="{% url 'home' %}#race-section">
+                            <button class="btn btn-f1 my-3 text-center">Race Details  <i class="fa-solid fa-circle-info"></i></button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
