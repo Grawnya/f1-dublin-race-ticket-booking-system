@@ -31,6 +31,7 @@ Therefore, the UX aspect of the project can be broken down into 5 Planes:
 * The Skeleton Plane
 * The Surface Plane
 
+## Strategy
 In order to ensure the project aligns with these planes, it is vital to keep the target audience at the forefront at all times.
 
 The target audience consists of:
@@ -43,8 +44,7 @@ As a result, users will expect:
 * Plenty of information with regards to the F1 race and track details.
 * The ability to book, edit and cancel tickets for the event.
 
-## Strategy
-What the typical user will be and what they will want to do overall
+
 
 ## Purpose
 2 sentence synopsis of the whole website
