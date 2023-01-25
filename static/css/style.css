@@ -177,6 +177,10 @@ body {
     height: 15rem;
 }
 
+.my-ticket-body {
+    background-color: var(--black);
+}
+
 /* footer */
 footer ul {
     padding: 0;
