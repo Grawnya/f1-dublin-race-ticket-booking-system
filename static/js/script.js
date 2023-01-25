@@ -1,6 +1,7 @@
 // function to change track image on main page
-document.addEventListener('click', function() {
-    let track_id = element.target.id
+document.addEventListener('click', function(element) {
+    let track_id = element.target.id;
+    console.log(track_id);
     if (track_id === 'track_graphic') {
         document.getElementById('track_graphic').setAttribute("src", "https://res.cloudinary.com/grawnya/image/upload/v1674393438/formula1_dublin_street_race_map_vpf8oo.png")
         document.getElementById('track_graphic').setAttribute("alt", "Track mapped onto Google Maps")
