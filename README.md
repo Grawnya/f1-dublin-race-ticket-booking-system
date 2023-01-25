@@ -42,6 +42,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Landing Page](#landing-page "Landing Page")       
 			* [Navigation Bar](#navigation-bar "Navigation Bar")       
 			* [Information Carousel](#information-carousel "Information Carousel")       
+			* [Race Details Section](#race-details-section "Race Details Section")       
 
 \
 &nbsp;
@@ -300,7 +301,6 @@ The hamburger button matches the red colour used for the project along with the 
 &nbsp;
 
 ### Information Carousel
-
 The information carousel is used at the top of the home page to attract users to its contents. The slides vary in colour to draw the user’s attention compared to the predominantly white sections above and below it. The design is responsive and each slides contents can be seen clearly on various devices.
 
 ![Information Carousel on Small Screens](documentation/carousel_mobile_tickets_sold_slide.png)
@@ -311,5 +311,18 @@ The slides are broken down as follows:
 * Slide 3: Acquire race details – The slide teases some of the race details, drumming up excitement about the event.
 
 ![Information Carousel on Large Screens](documentation/carousel_desktop_profile_slide.png)
+\
+&nbsp;
+
+### Race Details Section
+In order to promote the race, details regarding the track and the event need to be provided. 3 eye catching details regarding when the event will take place and track characteristics – length and turns, provide a quick snapshot.
+
+![Race Details Section on Large Screens](documentation/race_details_desktop.png)
+
+A schematic of the track along with 4 stands is shown. Within the paragraphs, the user is prompted to click on this schematic in order to turn it into an image of the track mapped out onto its real life route on Google Images. Some of the tourist attractions nearby are also briefly mentioned in this section.
+
+On smaller screens, all the element stack up on top of each other so the content is still easy to follow.
+
+![Race Details Section on Small Screens](documentation/race_details_mobile.png)
 \
 &nbsp;
