@@ -35,6 +35,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     * [Surface](#surface "Surface")
     	* [Font](#font "Font")
     	* [Icons](#icons "Icons")
+    	* [Colours](#colours "Colours")
 \
 &nbsp;
 
@@ -222,5 +223,26 @@ The font was loaded into the project used `.tff` files and following the steps f
 
 ### Icons
 In order to obtain some icons for the website, [Font Awesome](https://fontawesome.com/ "Font Awesome") will be utilised. Icons were only utilised in the carousel to add a bit of character to the main page.
+
+For the user’s nationality, their country’s flag will be displayed on the ticket. The [`flag-icons`](https://alexsobolenko.github.io/flag-icons/) CSS library was used to create these.
+\
+&nbsp;
+
+### Colours
+To select the colour palette for the project, I was inspired by the official Formula 1 colour scheme, which heaving relies on a distinct shade of an orange based red, black and white. When checking the contrast of the colours on [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM"), the dark green with the white passed. For the light mode, the dark blue with the white also passed. Therefore the following colours were selected for the project:
+
+![Colour Palette](documentation/final-color-palette.png)
+
+Where:
+*  #E13726 (also known as --f1-red) is used for the background of one of the carousel slides as well as the majority of the backgrounds of the buttons on the website.
+*  #fff (also known as white) is used for the majority of the websites background and the font colour of many buttons.
+*  #000 (also known as --black) is used for the background of one of the carousel slides and for the majority of the font.
+*  #2cd341 (also known as --green) is used for the background of one of the carousel slides and occasionally is a background colour for a button if it is next to a button in --f1-red.
+*  #ebff00 (also known as --yellow) is used for the background of one of the carousel slides and often for buttons in their hover state.
+
+Each Formula 1 team also required a set of colours based on their 2022 colour scheme and can be seen in the diagram below. These colours were used to created the ticket styling,
+
+
+![F1 Colours](documentation/f1_colours.png)
 \
 &nbsp;
