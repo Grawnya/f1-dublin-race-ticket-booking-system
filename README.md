@@ -34,6 +34,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Ticket](#ticket "Ticket")
     * [Surface](#surface "Surface")
     	* [Font](#font "Font")
+    	* [Icons](#icons "Icons")
 \
 &nbsp;
 
@@ -216,5 +217,10 @@ The Formula 1 fonts that were used are and they can be seen below:
 ![Fonts](documentation/fonts.png)
 
 The font was loaded into the project used `.tff` files and following the steps found at [this link](https://www.geeksforgeeks.org/how-to-include-a-font-ttf-using-css/).
+\
+&nbsp;
+
+### Icons
+In order to obtain some icons for the website, [Font Awesome](https://fontawesome.com/ "Font Awesome") will be utilised. Icons were only utilised in the carousel to add a bit of character to the main page.
 \
 &nbsp;
