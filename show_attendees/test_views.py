@@ -8,15 +8,20 @@ class TestShowAttendeesViews(TestCase):
 
     Methods:
     setUp():
-        Creates a Client instance and sets up the test to send the user to the show_attendees page if successful.
+        Creates a Client instance and sets up the test to send the user to the 
+        show_attendees page if successful.
 
     test_show_attendees_GET():
-        Gets the website link and if it is successful it redirects to the correct website, using the right template.
+        Gets the website link and if it is successful it redirects to the 
+        correct website, using the right template.
     '''
+
+
     def setUp(self):
         ''' Sets up test for views.py functions'''
         self.client = Client()
         self.show_tickets_url = reverse('show_attendees')
+
 
     def test_show_attendees_GET(self):
         ''' Checks if the page successfully opens up the correct HTML file'''
