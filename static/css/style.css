@@ -342,7 +342,6 @@ footer a {
 }
 
 /* forms */
-/* add to make 4.5rem  for medium screens*/
 .f1-form {
     padding: 0 3rem;
 }
@@ -373,6 +372,7 @@ footer a {
 
 /* media query for large screens*/
 @media screen and (min-width:992px) {
+    
     /* carousel */
     .carousel-inner div {
         height: 25rem;
