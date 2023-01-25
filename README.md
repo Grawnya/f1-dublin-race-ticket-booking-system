@@ -40,6 +40,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 	* [Features](#features "Features")
 		* [Existing Features](#existing-features "Existing Features")
 			* [Landing Page](#landing-page "Landing Page")       
+			* [Navigation Bar](#navigation-bar "Navigation Bar")       
 
 \
 &nbsp;
@@ -280,5 +281,19 @@ A carousel with bright slides attracts the user to its content, which prompts th
 
 
 ![Landing Page](documentation/index1.jpg)
+\
+&nbsp;
+
+### Navigation Bar
+
+The navigation bar is designed to be responsive for the different screen sizes and collapses into a hamburger button if there is not enough room on the screen to fit. Each item within the navigation bar links to a section on the website. In order to increase each items readability, aria-labels are used:
+
+![Navigation Bar for Large Screens](documentation/navbar_desktop.png)
+
+The navigation bar is white in colour with black font to contrast each other easily and to increase readability. If the user is hovering over the various navigation bar items, if it is over a particular one, it will cause the font to turn red.
+
+The hamburger button matches the red colour used for the project along with the red border at the bottom of the navigation bar which acts as a clear divider between the navigation bar and the content of the webpage.
+
+![Navigation Bar for Small Screens](documentation/navbar_mobile.png)
 \
 &nbsp;
