@@ -37,6 +37,10 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Icons](#icons "Icons")
     	* [Colours](#colours "Colours")
     	* [Responsive Screens](#responsive-screens "Responsive Screens")
+	* [Features](#features "Features")
+		* [Existing Features](#existing-features "Existing Features")
+			* [Landing Page](#landing-page "Landing Page")       
+
 \
 &nbsp;
 
@@ -261,5 +265,20 @@ The website will be built for a small mobile screen of width 320px and then will
 \
 &nbsp;
 [Back to Top](#table-of-contents)
+\
+&nbsp;
+
+# Features
+
+## Existing Features
+### Landing Page
+The landing page is the first introduction to the website that the user generally has and therefore, it needs to be visibly attractive and easy to navigate. The large Formula 1 Dublin City Grand Prix logo at the top of the page tells the user clearly what the website is about. 
+
+A labelled navigation bar with various headings provides the user with details regarding how to use the website effectively.
+
+A carousel with bright slides attracts the user to its content, which prompts the user to create a profile, show the tickets that have already been bought or to obtain more race details.
+
+
+![Landing Page](documentation/index1.jpg)
 \
 &nbsp;
