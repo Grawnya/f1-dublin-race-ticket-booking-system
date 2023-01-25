@@ -45,6 +45,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Race Details Section](#race-details-section "Race Details Section")       
 			* [How to Book Tickets Section](#how-to-book-tickets-section "How to Book Tickets Section")       
 			* [Footer](#footer "Footer")       
+			* [Tickets Sold Page](#tickets-sold-page "Tickets Sold Page")       
 
 \
 &nbsp;
@@ -349,5 +350,20 @@ The footer works in tandem with the navigation bar menu as it enables the user t
 It's simple, yet clean design, means that it is easy to navigate, with icons being used for social media channels being self-explanatory. The layout also remains the same for all screen sizes due to its simplicity.
 
 ![Footer on Mobile Screen](documentation/footer_mobile.png)
+\
+&nbsp;
+
+### Tickets Sold Page
+As previously mentioned, the “Tickets Sold” page consists of the users’ tickets that have opted to share some of their details to other website users. It contains a descriptive paragraph at the top to provide the user with some details, followed by a button to encourage the user to buy a ticket.
+
+![Tickets Sold Page on Large Screen](documentation/tickets_sold_large.png)
+
+![Tickets Sold Page on Mobile](documentation/tickets_sold_mobile.png)
+
+At the base of the page, 3 cards per row and up to 6 per page, show each suitable ticket and the owners stand and seat, favourite team and nationality. This can be used to check what seats might be free and to see who is sitting nearby.
+
+![Sample Ticket](documentation/show_tickets.png)
+
+**Note:** The “My Tickets” Page is almost identical, but under each ticket that belongs to the logged in user, there is an “Edit” button and a “Delete” button, which allow the user to navigate to the specific form.
 \
 &nbsp;
