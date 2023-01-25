@@ -22,7 +22,26 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 
 
 # UX
-(Para on the different planes of UX Design) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt neque a consectetur finibus. Sed sed mattis est, finibus efficitur diam. Vivamus tortor neque, viverra eget gravida ac, vestibulum eu magna. Praesent id turpis odio. Etiam aliquam euismod aliquet. Curabitur sodales sodales efficitur. Vivamus sodales luctus enim sit amet egestas. Pellentesque eget sapien in ex porta fermentum. Pellentesque sit amet purus ornare, efficitur purus eu, bibendum nulla. Pellentesque sed dictum felis.
+User Experience of UX focuses on how accessible the website is to the user and it’s ease of use, which is pivotal the website’s success.
+
+Therefore, the UX aspect of the project can be broken down into 5 Planes:
+* The Strategy Plane
+* The Scope Plane
+* The Structure Plane
+* The Skeleton Plane
+* The Surface Plane
+
+In order to ensure the project aligns with these planes, it is vital to keep the target audience at the forefront at all times.
+
+The target audience consists of:
+* 25 – 45 year olds.
+* People that are avid sport and Formula 1 fans.
+* People who like to share their experiences with their friends.
+
+As a result, users will expect:
+* A website with easy navigation and a logical progression to its flow.
+* Plenty of information with regards to the F1 race and track details.
+* The ability to book, edit and cancel tickets for the event.
 
 ## Strategy
 What the typical user will be and what they will want to do overall
