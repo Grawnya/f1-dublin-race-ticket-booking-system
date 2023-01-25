@@ -32,6 +32,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Databases](#databases "Databases")
 			* [WebsiteUser](#websiteuser "WebsiteUser")
 			* [Ticket](#ticket "Ticket")
+    * [Surface](#surface "Surface")
+    	* [Font](#font "Font")
 \
 &nbsp;
 
@@ -191,8 +193,28 @@ The skeleton provides a broad initial idea that is further refined and built on.
 
 Basic wireframes can be found below (Note that these vary slightly from the final website design):
 
-#### [Home Page](documentation/home_page.png "Home Page")
-#### [Tickets Sold](documentation/tickets_sold.png "Tickets Sold") – The My Tickets Page is very similar, as it shows only the user’s tickets with edit and delete buttons beneath and has an extra button to redirect to the user’s profile.
-#### [Buy Tickets](documentation/buy_tickets.png "Buy Tickets") – The pages to edit and delete the tickets are very similar.
+* [Home Page](documentation/home_page.png "Home Page")
+* [Tickets Sold](documentation/tickets_sold.png "Tickets Sold") – The My Tickets Page is very similar, as it shows only the user’s tickets with edit and delete buttons beneath and has an extra button to redirect to the user’s profile.
+* [Buy Tickets](documentation/buy_tickets.png "Buy Tickets") – The pages to edit and delete the tickets are very similar.
+\
+&nbsp;
+
+## Surface
+The surface plane refers more to the aesthetics and the interface itself. It’s important to select the right colour, font and icons for your website to ensure it is as appealing as possible.
+\
+&nbsp;
+
+### Font
+The fonts used were the official Formula 1 fonts. They were sourced from [here](https://www.reddit.com/r/formula1/comments/8rpzq3/f1_font/) and were used in suitable sections.
+
+The Formula 1 fonts that were used are and they can be seen below:
+* Formula1-Black
+* Formula1-Bold
+* Formula1-Regular
+* Formula1-Wide
+
+![Fonts](documentation/fonts.png)
+
+The font was loaded into the project used `.tff` files and following the steps found at [this link](https://www.geeksforgeeks.org/how-to-include-a-font-ttf-using-css/).
 \
 &nbsp;
