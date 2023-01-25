@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         id = setInterval(downMotion, 3);
         function downMotion() {
             if (position < scrollHeight-60) {
-                position += 10;
+                position += 5;
                 flag.style.top = position + "px";
             }
         }
