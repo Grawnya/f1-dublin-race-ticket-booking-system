@@ -36,6 +36,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Font](#font "Font")
     	* [Icons](#icons "Icons")
     	* [Colours](#colours "Colours")
+    	* [Responsive Screens](#responsive-screens "Responsive Screens")
 \
 &nbsp;
 
@@ -244,5 +245,21 @@ Each Formula 1 team also required a set of colours based on their 2022 colour sc
 
 
 ![F1 Colours](documentation/f1_colours.png)
+\
+&nbsp;
+
+### Responsive Screens
+The website will be built for a small mobile screen of width 320px and then will also meet the requirements for a medium/tablet, large and extra-large screen, as shown in the table below.
+
+| Screen Size   | Breakpoint |
+| -----------   | ---------- |
+| small/mobile  |    320px   |
+| medium/tablet |    768px   |
+| large         |   992px    |
+| extra-large   |   1400+px  |
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
 \
 &nbsp;
