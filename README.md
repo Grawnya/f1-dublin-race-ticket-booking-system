@@ -43,6 +43,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Navigation Bar](#navigation-bar "Navigation Bar")       
 			* [Information Carousel](#information-carousel "Information Carousel")       
 			* [Race Details Section](#race-details-section "Race Details Section")       
+			* [How to Book Tickets Section](#how-to-book-tickets-section "How to Book Tickets Section")       
 
 \
 &nbsp;
@@ -324,5 +325,19 @@ A schematic of the track along with 4 stands is shown. Within the paragraphs, th
 On smaller screens, all the element stack up on top of each other so the content is still easy to follow.
 
 ![Race Details Section on Small Screens](documentation/race_details_mobile.png)
+\
+&nbsp;
+
+### How to Book Tickets Section
+The “How to Book” section provides information to the user regarding the steps they are required to follow in order to book a ticket. It consists of 3 informative cards that remain spread out on 1 row when the screen is large, but all stack on top of each other when the screen becomes small.
+
+![How to Book Section on Small Screens](documentation/how_to_book_mobile.png)
+
+The 3 cards consist of the following information and provide buttons which link to the suitable webpage:
+* Login and Create a Profile – Tells the user that they must login and create a profile before they can buy up to 5 tickets. If they are not logged in, the button will say “Login”, but if they are logged in, the button will say “Profile”.
+* My Tickets – Tells the user to go to the “My Tickets” page in order to book, edit or delete a ticket.
+*Show Tickets – Tells the user that if they have opted to share their ticket details that it will be shown on a page called “Tickets Sold” and they can view who else has booked a ticket.
+
+![How to Book Section on Large Screens](documentation/how_to_book_large.png)
 \
 &nbsp;
