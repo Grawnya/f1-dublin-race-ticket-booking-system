@@ -44,6 +44,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Information Carousel](#information-carousel "Information Carousel")       
 			* [Race Details Section](#race-details-section "Race Details Section")       
 			* [How to Book Tickets Section](#how-to-book-tickets-section "How to Book Tickets Section")       
+			* [Footer](#footer "Footer")       
 
 \
 &nbsp;
@@ -231,7 +232,7 @@ The font was loaded into the project used `.tff` files and following the steps f
 &nbsp;
 
 ### Icons
-In order to obtain some icons for the website, [Font Awesome](https://fontawesome.com/ "Font Awesome") will be utilised. Icons were only utilised in the carousel to add a bit of character to the main page.
+In order to obtain some icons for the website, [Font Awesome](https://fontawesome.com/ "Font Awesome") will be utilised. Icons were only utilised in the carousel to add a bit of character to the main page and for social media icons.
 
 For the user’s nationality, their country’s flag will be displayed on the ticket. The [`flag-icons`](https://alexsobolenko.github.io/flag-icons/) CSS library was used to create these.
 \
@@ -339,5 +340,14 @@ The 3 cards consist of the following information and provide buttons which link 
 *Show Tickets – Tells the user that if they have opted to share their ticket details that it will be shown on a page called “Tickets Sold” and they can view who else has booked a ticket.
 
 ![How to Book Section on Large Screens](documentation/how_to_book_large.png)
+\
+&nbsp;
+
+### Footer
+The footer works in tandem with the navigation bar menu as it enables the user to visit various pages on the website. It also consists of related social media links which act as method of connecting the user with the race organisers and allows users to contact the race organisers via a direct message.
+
+It's simple, yet clean design, means that it is easy to navigate, with icons being used for social media channels being self-explanatory. The layout also remains the same for all screen sizes due to its simplicity.
+
+![Footer on Mobile Screen](documentation/footer_mobile.png)
 \
 &nbsp;
