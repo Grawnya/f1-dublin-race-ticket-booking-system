@@ -24,11 +24,10 @@
                         the team people are supporting.
                     </p>
                     <div class="text-center">
-                        <button class="btn btn-f1 my-3 text-center">
                         <a class="remove-underline-f1" href="{% url 'show_attendees' %}">
-                            Tickets Sold  <i class="fa-solid fa-ticket"></i>
+                            <span class="btn btn-f1 my-3 text-center">Tickets Sold  <i class="fa-solid fa-ticket"></i>
+                            </span>
                         </a>
-                    </button>
                     </div>
                 </div>
             </div>
@@ -45,9 +44,10 @@
                         register before filling in your profile.
                     </p>
                     <div class="text-center">
-                            <button class="btn ticket-button my-3 text-center">
-                                <a class="remove-underline-ticket" href="{% url 'profile' %}">Create a Profile  <i class="fa-solid fa-user"></i>
-                        </a></button>
+                                <a class="remove-underline-ticket" href="{% url 'profile' %}">
+                                    <span class="btn ticket-button my-3 text-center">Create a Profile  <i class="fa-solid fa-user"></i>
+                                </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -64,11 +64,10 @@
                         for an f1 street race as plenty of the Dublin's attractions can be found around every corner.
                     </p>
                     <div class="text-center">
-                        <button class="btn ticket-button my-3 text-center">
                         <a class="remove-underline-ticket" href="{% url 'home' %}#race-section">
-                            Race Details  <i class="fa-solid fa-circle-info"></i>
+                            <span class="btn ticket-button my-3 text-center">Race Details  <i class="fa-solid fa-circle-info"></i>
+                            </span>
                         </a>
-                    </button>
                     </div>
                 </div>
             </div>
@@ -143,17 +142,15 @@
                 <div class="card-body">
                     <h5 class="card-title lead-heading">Login and Create a Profile</h5>
                     <p>You can book up to 5 Tickets for yourself and your friends & family but Register and create a Profile first!</p>
-                    <button class="btn btn-f1 my-3 text-center">
                     {% if user.is_authenticated %}
                         <a class="remove-underline-f1" href="{% url 'profile' %}">
-                            Profile
+                            <span class="btn btn-f1 my-3 text-center">`Profile</span>
                         </a>
                     {% else %}
                         <a class="remove-underline-f1" href="{% url 'account_login' %}">
-                            Login
+                            <span class="btn btn-f1 my-3 text-center">Login</span>
                         </a>
                     {% endif %}
-                </button>
                 </div>
             </div>
         </div>
@@ -164,11 +161,9 @@
                 <div class="card-body">
                     <h5 class="card-title lead-heading">My Tickets</h5>
                     <p>After logging in, click on the "My Tickets" menu bar option in order to not only buy, but edit and delete existing tickets!</p>
-                    <button class="btn btn-f1 my-3 text-center">
                     <a class="remove-underline-f1" href="{% url 'my_tickets' %}">
-                        My Tickets
+                        <span class="btn btn-f1 my-3 text-center">My Tickets</span>
                     </a>
-                </button>
                 </div>
             </div>
         </div>
@@ -179,11 +174,9 @@
                 <div class="card-body">
                     <h5 class="card-title lead-heading">Show Tickets</h5>
                     <p>Click on the "Tickets Sold" menu bar option to see who else is attending and wants to let you know their details!</p>
-                    <button class="btn btn-f1 my-3 text-center">
                     <a class="remove-underline-f1" href="{% url 'show_attendees' %}">
-                        Tickets Sold
+                        <span class="btn btn-f1 my-3 text-center">Tickets Sold</span>
                     </a>
-                </button>
                 </div>
             </div>
         </div>
