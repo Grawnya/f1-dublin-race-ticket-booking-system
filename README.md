@@ -17,10 +17,14 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 
 * [UX](#ux "UX")
     * [Strategy](#strategy "Strategy")
-    	* [Purpose](#user-stories "User Stories")
+    	* [Purpose](#purpose "Purpose")
    	    * [User Stories](#user-stories "User Stories")
    	        * [For This Sprint](#for-this-sprint "For This Sprint")
    	        * [For Future Sprints](#for-future-sprints "For Future Sprints")
+    * [Scope](#scope "Scope")
+    	* [Sprint 1](#sprint-1 "Sprint 1")
+    	* [Sprint 2](#sprint-2 "Sprint 2")
+    	* [Future Sprints](#future-sprints "Future Sprints")
 
 
 # UX
@@ -32,6 +36,8 @@ Therefore, the UX aspect of the project can be broken down into 5 Planes:
 * The Structure Plane
 * The Skeleton Plane
 * The Surface Plane
+\
+&nbsp;
 
 ## Strategy
 In order to ensure the project aligns with these planes, it is vital to keep the target audience at the forefront at all times.
@@ -45,9 +51,13 @@ As a result, users will expect:
 * A website with easy navigation and a logical progression to its flow.
 * Plenty of information with regards to the F1 race and track details.
 * The ability to book, edit and cancel tickets for the event.
+\
+&nbsp;
 
 ### Purpose
 The purpose of this website is to promote a potential Formula 1 race in Dublin in the future and allow users to register their interest in the first wave of ticket releases.
+\
+&nbsp;
 
 ### User Stories
 #### For This Sprint
@@ -72,8 +82,40 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 | [19](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/19) | As a user, I can easily reach the home page in case I get an error so that I am not stuck on an error page and have to select the back button. | Could Have |
 | [20](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/20) | As a site owner/admin, I can log in so that I can access the website's backend. | Must Have |
 | [21](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/21) | As a site owner/admin, I can delete tickets booked by users so that I can alter the race's attendance and stand capacity. | Must Have |
+\
+&nbsp;
 
 #### For Future Sprints
 | id  |  Content | Label |
 | ------ | ------ | ------ |
 | [10](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/10) | As a user, I can obtain email confirmation of my ticket bookings so that I know I have successfully booked the tickets. | Could Have |
+\
+&nbsp;
+
+## Scope
+In order to ensure that the current sprint (i.e. the elements required for the current project submission) are completed, the focus was as follows:
+\
+&nbsp;
+
+### Sprint 1
+This sprint focuses on the “Must Haves” and the marking criteria:
+* A homepage with basic details on how to book tickets and obtain race details.
+* Navbar enabling the user to reach the different pages within the site.
+* The ability of the user to login and create a profile.
+* An application that allows the user to book a ticket and then edit or delete the ticket based on their situation.
+\
+&nbsp;
+
+### Sprint 2
+This sprint builds on Sprint 1:
+* Fills the homepage up with more details on how to book tickets and obtain race details, adding extra styling and animation of a more enjoyable experience.
+* Creating a “Tickets Sold” page to allow the user to see who else is attending.
+* Adding styling to card elements to create mock tickets with user’s details for their “My Tickets” page.
+\
+&nbsp;
+
+### Future Sprints
+Elements to add to the site in the future:
+* Create an app that allows users to add tickets based on clicking on an animated SVG of a stand, similar to the cinema.
+* Incorporate email confirmation.
+* Allow user to put in banking details to confirm the booking.
