@@ -27,6 +27,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Sprint 1](#sprint-1 "Sprint 1")
     	* [Sprint 2](#sprint-2 "Sprint 2")
     	* [Future Sprints](#future-sprints "Future Sprints")
+    * [Structure](#structure "Structure")
+    	* [Project Applications](#project-applications "Project Applications")
 
 
 # UX
@@ -87,7 +89,6 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 
 \
 &nbsp;
-
 #### For Future Sprints
 | id  |  Content | Label |
 | ------ | ------ | ------ |
@@ -95,7 +96,6 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 
 \
 &nbsp;
-
 ## Scope
 In order to ensure that the current sprint (i.e. the elements required for the current project submission) are completed, the focus was as follows:
 \
@@ -123,3 +123,18 @@ Elements to add to the site in the future:
 * Create an app that allows users to add tickets based on clicking on an animated SVG of a stand, similar to the cinema.
 * Incorporate email confirmation.
 * Allow user to put in banking details to confirm the booking.
+\
+&nbsp;
+
+## Structure
+Having a well-worked out project structure ensures that creating the project would occur in a more logical manner and the sprint steps can be closely followed. Therefore, the content was broken into applications to account for the various tasks and into database tables to organise how the data obtained from the user will be stored.
+\
+&nbsp;
+
+### Project Applications
+For this project, 3 applications were created:
+* race_details – To provide details regarding booking the tickets and race information. A solely static project with no models.
+* see_attendees – To create the extra “Tickets Sold” page which shows all users who opted to share their ticket info.
+* booking – To book, edit and delete tickets, where the user needs to create a profile first, which is connected to the ticket booking details.
+\
+&nbsp;
