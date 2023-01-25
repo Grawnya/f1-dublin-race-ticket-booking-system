@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (screenWidth >= 992) {
         let scrollHeight = document.documentElement.scrollHeight;
         const flag = document.getElementById("flag")
-        let flagHeight = flag.clientHeight;
         let position = -100;
         id = setInterval(downMotion, 3);
         function downMotion() {

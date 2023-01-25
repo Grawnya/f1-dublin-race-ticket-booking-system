@@ -298,7 +298,8 @@ footer a {
 
 .card-body {
     margin-top: 0.2rem;
-    background-color: var(--black);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 /* ticket pages */
