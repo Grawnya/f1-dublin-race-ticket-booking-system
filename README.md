@@ -32,7 +32,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Databases](#databases "Databases")
 			* [WebsiteUser](#websiteuser "WebsiteUser")
 			* [Ticket](#ticket "Ticket")
-
+\
+&nbsp;
 
 # UX
 User Experience of UX focuses on how accessible the website is to the user and it’s ease of use, which is pivotal the website’s success.
@@ -177,5 +178,21 @@ It can be broken down as follows:
 * `seat_number` - The seat number in which the user will sit.
 * `stand` - The stand letter in which the user will be sitting in.
 * `show` - Boolean value if the user wants to share their attendance in the “Tickets” Sold page.
+\
+&nbsp;
+
+## Skeleton
+The skeleton provides a broad initial idea that is further refined and built on. It enables the creation of a plan that aligns with the requirements of the [user stories](#user-stories "User Stories") and the [sprints](#scope "Sprints"). Therefore, wireframes can be created to act as a design aid and provide the website skeleton.
+\
+&nbsp;
+
+### Wirefames
+[Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq") was used to create the conception for the website appearance and flow. I initially created a mobile version in-line with my mobile-first approach and then followed with a medium and large screen version. The key is to make sure that the website is responsive on various screens.
+
+Basic wireframes can be found below (Note that these vary slightly from the final website design):
+
+#### [Home Page](documentation/home_page.png "Home Page")
+#### [Tickets Sold](documentation/tickets_sold.png "Tickets Sold") – The My Tickets Page is very similar, as it shows only the user’s tickets with edit and delete buttons beneath and has an extra button to redirect to the user’s profile.
+#### [Buy Tickets](documentation/buy_tickets.png "Buy Tickets") – The pages to edit and delete the tickets are very similar.
 \
 &nbsp;
