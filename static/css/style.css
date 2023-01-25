@@ -105,6 +105,12 @@ body {
     color: var(--black);
 }
 
+.red-section {
+    color: var(--white);
+    background-color: var(--f1-red);
+    padding-bottom: 1.75rem;
+}
+
 .yellow-section {
     color: var(--black);
     background-color: var(--yellow);
