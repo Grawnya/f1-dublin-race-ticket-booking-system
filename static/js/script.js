@@ -11,3 +11,21 @@ document.addEventListener('click', function() {
         document.getElementById('track_map').setAttribute('id', 'track_graphic')
     }
 })
+
+// function to make checkered flag image travel to the bottom of the screen if a large screen
+document.addEventListener("DOMContentLoaded", function() {
+    let screenWidth = screen.width;
+    if (screenWidth >= 992) {
+        let scrollHeight = document.documentElement.scrollHeight;
+        const flag = document.getElementById("flag")
+        let flagHeight = flag.clientHeight;
+        let position = -100;
+        id = setInterval(downMotion, 3);
+        function downMotion() {
+            if (position < scrollHeight) {
+                position += 10;
+                flag.style.top = position + "px";
+            }
+        }
+    }
+}) 

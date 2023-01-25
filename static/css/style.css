@@ -215,6 +215,12 @@ footer a {
     font-family: 'Formula1-Regular';
 }
 
+/* animation */
+#flag {
+    position: absolute;
+    top: -500px;
+}
+
 /* teams styling */
 .ticket {
     width: 100%;
@@ -372,7 +378,7 @@ footer a {
 
 /* media query for large screens*/
 @media screen and (min-width:992px) {
-    
+
     /* carousel */
     .carousel-inner div {
         height: 25rem;
