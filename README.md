@@ -41,6 +41,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 		* [Existing Features](#existing-features "Existing Features")
 			* [Landing Page](#landing-page "Landing Page")       
 			* [Navigation Bar](#navigation-bar "Navigation Bar")       
+			* [Information Carousel](#information-carousel "Information Carousel")       
 
 \
 &nbsp;
@@ -295,5 +296,20 @@ The navigation bar is white in colour with black font to contrast each other eas
 The hamburger button matches the red colour used for the project along with the red border at the bottom of the navigation bar which acts as a clear divider between the navigation bar and the content of the webpage.
 
 ![Navigation Bar for Small Screens](documentation/navbar_mobile.png)
+\
+&nbsp;
+
+### Information Carousel
+
+The information carousel is used at the top of the home page to attract users to its contents. The slides vary in colour to draw the user’s attention compared to the predominantly white sections above and below it. The design is responsive and each slides contents can be seen clearly on various devices.
+
+![Information Carousel on Small Screens](documentation/carousel_mobile_tickets_sold_slide.png)
+
+The slides are broken down as follows:
+* Slide 1: Promote “Tickets Sold” page – Encourages user to see who is going, which either encourages them to buy a ticket or find out more about the race.
+* Slide 2: Urge the user to create a profile – It is vital for the user to create a profile in order to buy a ticket.
+* Slide 3: Acquire race details – The slide teases some of the race details, drumming up excitement about the event.
+
+![Information Carousel on Large Screens](documentation/carousel_desktop_profile_slide.png)
 \
 &nbsp;
