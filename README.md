@@ -10,6 +10,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 
 [Visit the Project's GitHub Repository Here](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system)
 
+![Responsive Image](documentation/responsive_image.png)
+
 ![Website Highlights](documentation/website_highlights.png)
 
 
@@ -82,6 +84,7 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 | [19](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/19) | As a user, I can easily reach the home page in case I get an error so that I am not stuck on an error page and have to select the back button. | Could Have |
 | [20](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/20) | As a site owner/admin, I can log in so that I can access the website's backend. | Must Have |
 | [21](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/21) | As a site owner/admin, I can delete tickets booked by users so that I can alter the race's attendance and stand capacity. | Must Have |
+
 \
 &nbsp;
 
@@ -89,6 +92,7 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 | id  |  Content | Label |
 | ------ | ------ | ------ |
 | [10](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/10) | As a user, I can obtain email confirmation of my ticket bookings so that I know I have successfully booked the tickets. | Could Have |
+
 \
 &nbsp;
 
