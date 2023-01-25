@@ -30,20 +30,39 @@ body {
     font-family: 'Formula1-Regular';
 }
 
+/* sections */
 .min-section-height {
     min-height: 15rem;
+}
+
+.section-padding {
+    padding-bottom: 1.75rem;
 }
 
 .white-section {
     color: var(--black);
     background-color: var(--white);
-    padding-bottom: 1.75rem;
 }
 
 .black-section {
     color: var(--white);
     background-color: var(--black);
-    padding-bottom: 1.75rem;
+}
+
+
+.red-section {
+    color: var(--white);
+    background-color: var(--f1-red);
+}
+
+.yellow-section {
+    color: var(--black);
+    background-color: var(--yellow);
+}
+
+.green-section {
+    color: var(--black);
+    background-color: var(--green);
 }
 
 .section-heading {
@@ -74,10 +93,6 @@ body {
     font-size: larger;
 }
 
-.nav-link:hover {
-    color: var(--f1-red);
-}
-
 .nav-item {
     display: flex;
     align-items: center;
@@ -93,37 +108,12 @@ body {
     font-size: 1.75rem;
 }
 
-.btn-f1 {
-    font-family: 'Formula1-Bold';
-    background-color: var(--f1-red);
-    color: var(--white);
-    font-weight: bold;
-}
-
-.btn-f1:hover {
-    background-color: var(--yellow);
-    color: var(--black);
-}
-
-.red-section {
-    color: var(--white);
-    background-color: var(--f1-red);
-    padding-bottom: 1.75rem;
-}
-
-.yellow-section {
-    color: var(--black);
-    background-color: var(--yellow);
-    padding-bottom: 1.75rem;
-}
-
-.green-section {
-    color: var(--black);
-    background-color: var(--green);
-    padding-bottom: 1.75rem;
+.nav-link:hover {
+    color: var(--f1-red);
 }
 
 /* carousel */
+
 .carousel-inner div {
     height: 52rem;
 }
@@ -131,7 +121,6 @@ body {
 .promote-race-text {
     width: 60%;
 }
-
 
 /* race details */
 
@@ -141,8 +130,8 @@ body {
     stroke-width: 4;
 }
 
-#A:hover, #B:hover, #C:hover, #D:hover {
-    fill: var(--green);
+#individual_seats {
+    width:100%
 }
 
 .race-fact {
@@ -150,26 +139,29 @@ body {
     font-size: 3rem;
 }
 
+.stand-font {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
 .race-fact-title {
     font-family: 'Formula1-Bold';
     font-size: 1.25rem;
+}
+
+#A:hover, #B:hover, #C:hover, #D:hover {
+    fill: var(--green);
 }
 
 .race-fact:hover {
     text-shadow: 2px 2px 3px var(--f1-red);
 }
 
-.stand-font {
-    font-weight: bold;
-    font-size: 1.75rem;
-}
+/* cards */
 
-#individual_seats {
-    width:100%
-}
-
-/* cards how to book */
-.card-text {
+#how-to-book-section .card-body {
+    margin-top: 0.2rem;
+    background-color: var(--white);
     color: var(--black);
 }
 
@@ -188,6 +180,7 @@ body {
 }
 
 /* footer */
+
 footer ul {
     padding: 0;
 }
@@ -209,10 +202,6 @@ footer a {
     transition-delay: 0.2s;
 }
 
-.socials i:hover, .section-links li a:hover {
-    color: var(--black);
-}
-
 .section-links li {
     text-align: center;
     list-style: none;
@@ -225,13 +214,19 @@ footer a {
     font-family: 'Formula1-Regular';
 }
 
+.socials i:hover, .section-links li a:hover {
+    color: var(--black);
+}
+
 /* animation */
+
 #flag {
     position: absolute;
     top: -500px;
 }
 
 /* teams styling */
+
 .ticket {
     width: 100%;
     height: 15rem;
@@ -304,14 +299,6 @@ footer a {
     color: #00d2ff;
 }
 
-/* card body */
-
-#how-to-book-section .card-body {
-    margin-top: 0.2rem;
-    background-color: var(--white);
-    color: var(--black);
-}
-
 /* ticket pages */
 
 .lead-heading {
@@ -324,13 +311,17 @@ footer a {
 }
 
 /* buttons */
+
+.btn-f1 {
+    font-family: 'Formula1-Bold';
+    background-color: var(--f1-red);
+    color: var(--white);
+    font-weight: bold;
+}
+
 .remove-underline-f1 {
     text-decoration: none;
     color: var(--black);
-}
-
-.remove-underline-f1:hover {
-    color: var(--f1-red);
 }
 
 .remove-underline-ticket {
@@ -338,14 +329,23 @@ footer a {
     color: var(--black);
 }
 
-.remove-underline-ticket:hover {
-    color: var(--yellow);
-}
-
 .ticket-button {
     font-family: 'Formula1-Bold';
     background-color: var(--green);
     font-weight: bold;
+}
+
+.btn-f1:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.remove-underline-f1:hover {
+    color: var(--f1-red);
+}
+
+.remove-underline-ticket:hover {
+    color: var(--yellow);
 }
 
 .ticket-button:hover {
@@ -356,9 +356,11 @@ footer a {
 
 .page-link {
     background-color: var(--f1-red);
+    color: var(--white);
 }
 
 /* forms */
+
 .f1-form {
     padding: 0 3rem;
 }
@@ -371,7 +373,6 @@ footer a {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
 
 /* media query for tablet screens and larger */
 @media screen and (min-width:768px) {
