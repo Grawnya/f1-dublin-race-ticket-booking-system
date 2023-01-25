@@ -7,13 +7,13 @@
 <div class="py-5 text-center">
     <h2 class="lead-heading">Book a Ticket</h2>
     <p class="lead">
-        So you've filled out your profile and are ready to purchase a ticket! Below you can buy a max. 
-        of 1 ticket for yourself and up to 5 tickets in total. Individually, you can fill in the details 
-        below. 
+        So you've filled out your profile and are ready to purchase a ticket! Below you can buy a max.
+        of 1 ticket for yourself and up to 5 tickets in total. Individually, you can fill in the details
+        below.
     </p>
     <p class="lead">
-        If you are buying yourself a ticket, you will still have to fill in the details, as this enables you 
-        to alter your details if you opt to share your ticket details in the "Tickets Sold" page. We look 
+        If you are buying yourself a ticket, you will still have to fill in the details, as this enables you
+        to alter your details if you opt to share your ticket details in the "Tickets Sold" page. We look
         forward to seeing you in 2026!
     </p>
 </div>
@@ -32,16 +32,16 @@
             <div class="row">
                 <div class="col-12">
                     <p class="py-5">
-                    See the diagram for the track layout on the left and each stand layout. Select the seat 
-                    you want to sit in from the drop down menus on the right. If you select the same seat as 
-                    someone else you will recieve a message to let you know. Please check the "Tickets Sold" 
-                    page.
+                        See the diagram for the track layout on the left and each stand layout. Select the seat
+                        you want to sit in from the drop down menus on the right. If you select the same seat as
+                        someone else you will recieve a message to let you know. Please check the "Tickets Sold"
+                        page.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div id="track_image" class="col-12 col-md-6 col-lg-4">
-                    <svg id="svg-track" version="1.0" viewBox="0 0 788.000000 620.000000">
+                    <svg id="svg-track" viewBox="0 0 788.000000 620.000000">
                         <g transform="translate(0.000000,620.000000) scale(0.100000,-0.100000)" fill="#000000"
                             stroke="none">
                             <path d="M4920 5900 c-125 -11 -163 -19 -261 -61 -43 -18 -103 -35 -142 -39
@@ -124,7 +124,9 @@
                     </svg>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <img id="individual_seats" src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png" alt="Track image with stands">
+                    <img id="individual_seats"
+                        src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png"
+                        alt="Track image with stands">
                 </div>
                 <div class="col-12 col-lg-4">
                     {{ ticket_form.stand | as_crispy_field }}

@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="container mx-auto text-center justify-content-center">
-	<div id="notfound">
-        <h1 class="lead-heading">500</h1>
-        <h2 class="lead-heading">Something Went Wrong</h2>
-        <p  class="lead">An Internal Error has Occurred. Please Try Again Later.</p>
-        <a href="{% url 'home' %}" class="button submit-button">Go Home</a>
-	</div>
+        <div id="notfound">
+                <h1 class="lead-heading">500</h1>
+                <h2 class="lead-heading">Something Went Wrong</h2>
+                <p class="lead">An Internal Error has Occurred. Please Try Again Later.</p>
+                <a href="{% url 'home' %}" class="button submit-button">Go Home</a>
+        </div>
 </div>
 
 {% endblock %}

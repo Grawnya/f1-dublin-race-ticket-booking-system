@@ -8,24 +8,34 @@
     <h2 class="lead-heading">My Tickets</h2>
     <p class="lead">
         Find a list of all the tickets you have purchased below for yourself and/or friends and family. Please note that
-        you can not purchase a ticket without a valid account and associated profile. Therefore, fill out your profile at 
-        the link below. Once you have a profile, buy up to 5 tickets, which are displayed below. Here you can edit a ticket 
-        booking and delete the booking. Note that you can only book up to 1 ticket for yourself, therefore, if you book 2,
+        you can not purchase a ticket without a valid account and associated profile. Therefore, fill out your profile
+        at
+        the link below. Once you have a profile, buy up to 5 tickets, which are displayed below. Here you can edit a
+        ticket
+        booking and delete the booking. Note that you can only book up to 1 ticket for yourself, therefore, if you book
+        2,
         you will have to edit one fo the tickets for yourself to someone else or delete it.
     </p>
-    <button class="btn btn-lg btn-f1 mt-4 text-center">
-        <a class="remove-underline-f1" href="{% url 'profile' %}">Profile</a>
-    </button><br>
-    <button class="btn btn-lg ticket-button mt-4 text-center">
-        <a class="remove-underline-ticket" href="{% url 'new_ticket' %}">Buy a Ticket</a>
-    </button>
+
+    <a class="remove-underline-f1" href="{% url 'profile' %}" aria-label="To Profile Page">
+        <span class="btn btn-lg btn-f1 mt-4 text-center">Profile
+
+        </span>
+    </a>
+    <br>
+
+    <a class="remove-underline-ticket" href="{% url 'new_ticket' %}" aria-label="To New Ticket Page">
+        <span class="btn btn-lg ticket-button mt-4 text-center">Buy a Ticket
+
+        </span>
+    </a>
 </div>
 <br>
 <div class="row justify-content-center">
     {% for ticket in ticket_list %}
     <div class="col-12 col-md-4 pb-2">
         <div class="card mx-auto">
-            <div class="ticket {{ ticket.fave_team }}" version="1.0">
+            <div class="ticket {{ ticket.fave_team }}">
                 <div class="logo">
                     <span class="logo-icon logo-icon-{{ticket.fave_team}}"></span>
                 </div>
@@ -40,11 +50,13 @@
                 </div>
             </div>
             <div class="card-body my-ticket-body">
-                <a class="remove-underline-ticket" href="/booking/edit_ticket/{{ ticket.id }}">
-                    <button class="btn ticket-button mt-4 text-center">Edit</button>
+                <a class="remove-underline-ticket" href="/booking/edit_ticket/{{ ticket.id }}"
+                    aria-label="To Edit Ticket Page">
+                    <span class="btn ticket-button mt-4 text-center">Edit</span>
                 </a>
-                <a class="remove-underline-f1" href="/booking/delete_ticket/{{ ticket.id }}">
-                    <button class="btn btn-f1 mt-4 text-center">Delete</button>
+                <a class="remove-underline-f1" href="/booking/delete_ticket/{{ ticket.id }}"
+                    aria-label="To Delete Ticket Page">
+                    <span class="btn btn-f1 mt-4 text-center">Delete</span>
                 </a>
             </div>
         </div>

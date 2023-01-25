@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="container mx-auto text-center justify-content-center">
-	<div id="notfound">
-        <h1 class="lead-heading">404</h1>
-        <h2 class="lead-heading">Page Not Found</h2>
-        <p  class="lead">The page you are looking for might have been removed or is currently unavailable.</p>
-        <a href="{% url 'home' %}" class="button submit-button">Go Home</a>
-	</div>
+        <div id="notfound">
+                <h1 class="lead-heading">404</h1>
+                <h2 class="lead-heading">Page Not Found</h2>
+                <p class="lead">The page you are looking for might have been removed or is currently unavailable.</p>
+                <a href="{% url 'home' %}" class="button submit-button">Go Home</a>
+        </div>
 </div>
 
 {% endblock %}

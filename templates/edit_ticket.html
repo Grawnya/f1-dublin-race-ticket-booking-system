@@ -7,9 +7,9 @@
 <div class="py-5 text-center">
     <h2 class="lead-heading">Edit Ticket</h2>
     <p class="lead">
-        Update the ticket details below. Whether its just one field or many, make sure to submit the form 
-        at the bottom of the page to ensure that the edit is successful. Note that if you have already booked 
-        a ticket for yourself and you update someone else's ticket as another one for yourself, you can purchase 
+        Update the ticket details below. Whether its just one field or many, make sure to submit the form
+        at the bottom of the page to ensure that the edit is successful. Note that if you have already booked
+        a ticket for yourself and you update someone else's ticket as another one for yourself, you can purchase
         no further tickets until you allocate the second ticket to another person or delete the ticket.
     </p>
 </div>
@@ -28,16 +28,16 @@
             <div class="row">
                 <div class="col-12">
                     <p class="py-5">
-                        See the diagram for the track layout on the left and each stand layout. Select the seat 
-                        you want to sit in from the drop down menus on the right. If you select the same seat as 
-                        someone else you will recieve a message to let you know. Please check the "Tickets Sold" 
+                        See the diagram for the track layout on the left and each stand layout. Select the seat
+                        you want to sit in from the drop down menus on the right. If you select the same seat as
+                        someone else you will recieve a message to let you know. Please check the "Tickets Sold"
                         page.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div id="track_image" class="col-12 col-md-6 col-lg-4">
-                    <svg id="svg-track" version="1.0" viewBox="0 0 788.000000 620.000000">
+                    <svg id="svg-track" viewBox="0 0 788.000000 620.000000">
                         <g transform="translate(0.000000,620.000000) scale(0.100000,-0.100000)" fill="#000000"
                             stroke="none">
                             <path d="M4920 5900 c-125 -11 -163 -19 -261 -61 -43 -18 -103 -35 -142 -39
@@ -120,7 +120,9 @@
                     </svg>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <img id="individual_seats" src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png" alt="Track image with stands">
+                    <img id="individual_seats"
+                        src="https://res.cloudinary.com/grawnya/image/upload/v1674225408/stand_nmqkke.png"
+                        alt="Track image with stands">
                 </div>
                 <div class="col-12 col-lg-4">
                     {{ ticket_form.stand | as_crispy_field }}
@@ -137,4 +139,4 @@
     </div>
 </div>
 
-    {% endblock %}
+{% endblock %}
