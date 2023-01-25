@@ -17,15 +17,17 @@ document.addEventListener('click', function(element) {
 document.addEventListener("DOMContentLoaded", function() {
     let screenWidth = screen.width;
     let scrollHeight = document.documentElement.scrollHeight;
-    const flag = document.getElementById("flag");
     let position = -100;
+    const flag = document.getElementById("flag");
     function downMotion() {
         if (position < scrollHeight-60) {
             position += 5;
             flag.style.top = position + "px";
         }
     }
-    if (screenWidth >= 1024) {
-        setInterval(downMotion, 3);
+    if (flag){
+        if (screenWidth >= 1024) {
+            setInterval(downMotion, 3);
+        }
     }
 });
