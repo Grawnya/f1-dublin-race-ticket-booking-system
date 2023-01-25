@@ -390,32 +390,64 @@ seat_choices = (
 
 # Create your models here.
 class WebsiteUser(models.Model):
-    '''WebsiteUser Information Model'''
+    '''
+    WebsiteUser Information Model with the following fields:
+    
+    username - Unique username that user has chosen as login.
+    first_name - First name of user.
+    last_name - Last name of user.
+    email - User's email that they didn't use to login.
+    fave_team - User's favourite current Formula 1 team.
+    nationality - User's mationality that they identify as.
+    '''
     username = models.CharField(max_length=50, unique=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(max_length=250, default="")
-    fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
-    nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
+    fave_team = models.CharField(max_length=250, choices=team_choices,
+                                 default='alfa_romeo')
+    nationality = models.CharField(max_length=250, choices=country_choices,
+                                   default='irl')
+
 
     def __str__(self):
+        # return users full name as easier to read
         return f'{self.first_name} {self.last_name}'
 
 
 class Ticket(models.Model):
-    '''Tickets Booked Model'''
+    '''
+    Tickets Booked Model with the following fields:
+    
+    for_self - Boolean value if ticket is for the user or a non-user.
+    booked_by - Connection to the current user's WebsiteUser object.
+    first_name - First name of user.
+    last_name - Last name of user.
+    booked_on - DateTime of when the form was booked for easier organisation.
+    nickname - A nickname that the user may have for the shared ticket.
+    fave_team - User's favourite current Formula 1 team.
+    nationality - User's mationality that they identify as.
+    seat_number - The seat number in which the user will sit.
+    stand - The stand letter in which the user will be sitting in.
+    show - Boolean value if the user wants to share their attendance in the
+           Tickets Sold page.
+    '''
     for_self = models.BooleanField(default=False, choices=for_self_choices)
     booked_by = models.ForeignKey(WebsiteUser, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
     booked_on = models.DateTimeField(auto_now_add=True)
     nickname = models.CharField(max_length=250)
-    fave_team = models.CharField(max_length=250, choices=team_choices, default='alfa_romeo')
-    nationality = models.CharField(max_length=250, choices=country_choices, default='irl')
+    fave_team = models.CharField(max_length=250, choices=team_choices,
+                                 default='alfa_romeo')
+    nationality = models.CharField(max_length=250, choices=country_choices,
+                                   default='irl')
     seat_number = models.IntegerField(choices=seat_choices)
     stand = models.CharField(max_length=1, choices=stand_choices, default='D')
     show = models.BooleanField(default=True, choices=for_self_choices)
 
+
     def __str__(self):
+        # return ticket details as easier to read
         return f'Ticket for {self.nickname} booked by {self.booked_by}'
 

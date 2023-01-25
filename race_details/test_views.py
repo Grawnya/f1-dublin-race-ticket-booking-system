@@ -18,13 +18,13 @@ class TestRaceDetailsViews(TestCase):
 
 
     def setUp(self):
-        ''' Sets up test for views.py functions'''
+        '''Sets up test for views.py functions'''
         self.client = Client()
         self.home_url = reverse('home')
 
 
     def test_homepage_GET(self):
-        ''' Checks if the page successfully opens up the correct HTML file'''
+        '''Checks if the page successfully opens up the correct HTML file'''
         response = self.client.get(self.home_url)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')

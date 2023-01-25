@@ -18,13 +18,13 @@ class TestShowAttendeesViews(TestCase):
 
 
     def setUp(self):
-        ''' Sets up test for views.py functions'''
+        '''Sets up test for views.py functions'''
         self.client = Client()
         self.show_tickets_url = reverse('show_attendees')
 
 
     def test_show_attendees_GET(self):
-        ''' Checks if the page successfully opens up the correct HTML file'''
+        '''Checks if the page successfully opens up the correct HTML file'''
         response = self.client.get(self.show_tickets_url)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'show_attendees.html')
