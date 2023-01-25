@@ -44,10 +44,8 @@ As a result, users will expect:
 * Plenty of information with regards to the F1 race and track details.
 * The ability to book, edit and cancel tickets for the event.
 
-
-
-## Purpose
-2 sentence synopsis of the whole website
+### Purpose
+The purpose of this website is to promote a potential Formula 1 race in Dublin in the future and allow users to register their interest in the first wave of ticket releases.
 
 ## User Stories
 | id  |  Content | Label |
