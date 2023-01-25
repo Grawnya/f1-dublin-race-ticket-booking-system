@@ -109,7 +109,6 @@ class NewTicket(View):
             else:
                 messages.add_message(
                     request, messages.ERROR,
-                    "You are trying to create a profile "
                     "Please Register and/or Login first.")
                 return redirect('home')
 
