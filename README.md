@@ -29,6 +29,9 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Future Sprints](#future-sprints "Future Sprints")
     * [Structure](#structure "Structure")
     	* [Project Applications](#project-applications "Project Applications")
+    	* [Databases](#databases "Databases")
+			* [WebsiteUser](#websiteuser "WebsiteUser")
+			* [Ticket](#ticket "Ticket")
 
 
 # UX
@@ -136,5 +139,43 @@ For this project, 3 applications were created:
 * race_details – To provide details regarding booking the tickets and race information. A solely static project with no models.
 * see_attendees – To create the extra “Tickets Sold” page which shows all users who opted to share their ticket info.
 * booking – To book, edit and delete tickets, where the user needs to create a profile first, which is connected to the ticket booking details.
+\
+&nbsp;
+
+### Databases
+2 databases can be found in the “booking” application, which enable the user to create the profile required to book tickets and then to stored booked ticket information. The schematic below provides the relationship between both [the WebsiteUser Model](#websiteuser "The WebsiteUser Model") and [the Ticket Model](#ticket "The Ticket Model").
+
+![Database Tables](documentation/models.png)
+\
+&nbsp;
+
+#### WebsiteUser
+The WebsiteUser model is used to obtain more information from the user than just their username, email and password. It provides relevant information with regards to the person who made the booking of a ticket and can be used to influence decisions that the race organisers will do to enhance the race experience.
+
+It can be broken down as follows:
+* `username` - Unique username that user has chosen when registering.
+* `first_name` - First name of user.
+* `last_name` - Last name of user.
+* `email` - User's email that they didn't use to login.
+* `fave_team` - User's favourite current Formula 1 team.
+* `nationality` - User's nationality that they identify as.
+\
+&nbsp;
+
+#### Ticket
+The Ticket model is used to store ticket information, regardless of if it being a new ticket, or if it is an existing ticket that is being edited or deleted. Information from the ticket booking can be shared if the person booking the ticket opts to share the details on the “Tickets Sold” page.
+
+It can be broken down as follows:
+* `for_self` - Boolean value if ticket is for the user or a non-user.
+* `booked_by` - Connection to the current user's WebsiteUser object.
+* `first_name`  - First name of user.
+* `last_name` - Last name of user.
+* `booked_on` - DateTime of when the form was booked for easier organisation.
+* `nickname` - A nickname that the user may have for the shared ticket.
+* `fave_team` - User's favourite current Formula 1 team.
+* `nationality` - User's nationality that they identify as.
+* `seat_number` - The seat number in which the user will sit.
+* `stand` - The stand letter in which the user will be sitting in.
+* `show` - Boolean value if the user wants to share their attendance in the “Tickets” Sold page.
 \
 &nbsp;
