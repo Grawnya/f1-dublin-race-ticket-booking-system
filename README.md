@@ -2,15 +2,24 @@
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt neque a consectetur finibus. Sed sed mattis est, finibus efficitur diam. Vivamus tortor neque, viverra eget gravida ac, vestibulum eu magna. Praesent id turpis odio. Etiam aliquam euismod aliquet. Curabitur sodales sodales efficitur. Vivamus sodales luctus enim sit amet egestas. Pellentesque eget sapien in ex porta fermentum. Pellentesque sit amet purus ornare, efficitur purus eu, bibendum nulla. Pellentesque sed dictum felis.
+Welcome to the coding repository dedicated to the F1 Dublin City Grand Prix website; A website which not only provides details about a made up street track located in Dublin City, Ireland, but also allows users to book tickets for the event.
+
+The project is very relevant as Formula 1 is an increasingly popular sport, frequently looking to add new race locations and the flexibility of the website ensures that its design can be utilised for any event that requires booking a ticket in advance.
 
 [Visit the Website Here](https://f1-dublin-race.herokuapp.com)
 
 [Visit the Project's GitHub Repository Here](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system)
 
-![Responsive Display](documentation/responsive_screens.png)
+![Website Highlights](documentation/website_highlights.png)
+
 
 # Table of Contents
+
+* [UX](#ux "UX")
+    * [Strategy](#strategy "Strategy")
+    	* [Purpose](#user-stories "User Stories")
+   	    * [User Stories](#user-stories "User Stories")
+
 
 # UX
 (Para on the different planes of UX Design) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt neque a consectetur finibus. Sed sed mattis est, finibus efficitur diam. Vivamus tortor neque, viverra eget gravida ac, vestibulum eu magna. Praesent id turpis odio. Etiam aliquam euismod aliquet. Curabitur sodales sodales efficitur. Vivamus sodales luctus enim sit amet egestas. Pellentesque eget sapien in ex porta fermentum. Pellentesque sit amet purus ornare, efficitur purus eu, bibendum nulla. Pellentesque sed dictum felis.
