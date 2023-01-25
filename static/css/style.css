@@ -276,7 +276,7 @@ footer a {
 
 .ferrari {
     background-color: var(--f1-red);
-    color: #feff00;
+    color: var(--yellow);
 }
 
 .haas {
