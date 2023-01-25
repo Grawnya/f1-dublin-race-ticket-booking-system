@@ -296,7 +296,7 @@ footer a {
 
 /* card body */
 
-.card-body {
+#how-to-book-section .card-body {
     margin-top: 0.2rem;
     background-color: var(--white);
     color: var(--black);
@@ -384,4 +384,18 @@ footer a {
     .carousel-inner div {
         height: 25rem;
 }
+
+    /* cards */
+    #how-to-book-section .card-body {
+        height: 20rem;
+    }
+}
+
+/* media query for larger screens*/
+@media screen and (min-width:1400px) {
+
+    /* cards */
+    #how-to-book-section .card-body {
+        height: 15rem;
+    }
 }

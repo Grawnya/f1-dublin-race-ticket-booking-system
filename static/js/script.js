@@ -15,13 +15,13 @@ document.addEventListener('click', function() {
 // function to make checkered flag image travel to the bottom of the screen if a large screen
 document.addEventListener("DOMContentLoaded", function() {
     let screenWidth = screen.width;
-    if (screenWidth >= 992) {
+    if (screenWidth >= 1024) {
         let scrollHeight = document.documentElement.scrollHeight;
         const flag = document.getElementById("flag")
         let position = -100;
         id = setInterval(downMotion, 3);
         function downMotion() {
-            if (position < scrollHeight) {
+            if (position < scrollHeight-60) {
                 position += 10;
                 flag.style.top = position + "px";
             }
