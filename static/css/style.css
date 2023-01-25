@@ -343,7 +343,7 @@ footer a {
 }
 
 .ticket-button:hover {
-    background-color: var(--black);
+    background-color: var(--f1-red);
 }
 
 /* pagination */
