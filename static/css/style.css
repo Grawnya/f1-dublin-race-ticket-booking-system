@@ -374,6 +374,11 @@ footer a {
     margin-bottom: 2rem;
 }
 
+/* django templates */
+.min-view-height {
+    min-height: 80vh;
+}
+
 /* media query for tablet screens and larger */
 @media screen and (min-width:768px) {
 
