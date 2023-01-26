@@ -744,3 +744,32 @@ The following reports were obtained:
 [Back to Top](#table-of-contents)
 \
 &nbsp;
+
+# Bugs
+
+## Resolved
+| Bug  |  Fix | Useful Source | Associated Image |
+| ------ | ------ | ------ | ------ |
+| Navbar border does not fill 100% of the screen width | Copied a navbar from the bootstrap documentation, as the navbar was confused with all the margin and padding classes. | [Bootstrap Navbar]( https://getbootstrap.com/docs/5.0/components/navbar/#nav) | [Navbar with Short Border](documentation/navbar_border_short.png) |
+| `template_name` is a standard variable name in Django views using the `TemplateView` class, but it was not working | Ensured that the correct variable was changed from `home_page` to `template_name` in `race_details` app. | [Useful YouTube Video]( https://www.youtube.com/watch?v=6PX_eVxg5jM) | - |
+| CSS files wouldn't load as obtained a `static` not registered error | I put `{% load static %}` at top of base file | [Remember Static Tag]( https://stackoverflow.com/questions/27886477/invalid-block-tag-static | - |
+| An issue with links connecting to sections on the same page but with a different `id` | Use this for the link `{% url 'home' %}#section-id` | [Link to Specific Section on Page]( https://stackoverflow.com/questions/55055523/how-to-configure-django-url-to-point-to-a-specific-section-in-the-page | - |
+| Issue with saving profile if it already existed | Make sure to clearly define the create a data entry and edit an entry in a model views. Scott from Code Institute tutor support helped and also a techwithtim resource | [TechWithTim Django Forms]( https://www.techwithtim.net/tutorials/django/custom-forms/ | [Saving Profile Error](documentation/create_profile_error.png) |
+| `h-100` Bootstrap 5 style not working on cards within carousel | `max-height` style applied to carousel was removed and the `h-100` was changed to the `carousel-inner` sections | - | - |
+| The user could purchase more than 5 tickets | Within the logic, the number of tickets that the user had was increased by 1 to anticipate the user buying another when filling out the “New Ticket” form. | - | - |
+| When creating the error 500 page, the associated function prevented the website from running | Removed the extra `exception` parameter left in the function that was copied from the 404 function| - | - |
+| Deployment was not working as Django couldn't find `allauth` | I was saving everything to requirement.txt instead of requirements.txt – the name was updated | - | - |
+| Database error was obtained when testing | Swapped to the local SQLite database in `settings.py`, instead of using the ElephantSQL database for deployment | Both my mentor Harry and Jason from Code Insititute mentioned this as a potential fix | [Database Issue](documentation/database_issue_testing.png) |
+| Messages not Appearing | Changed the HTML block location to the top of the page, just underneath the navbar and added `x` symbol functionality to close by setting button to `data-bs-dismiss='alert'` | [Bootstrap 5 Alert Button Changes](https://stackoverflow.com/questions/66333249/cant-close-django-message-alerts) | - |
+| Issue with `<button>` tag wrapped by `<a>` tag when validating code | Changed the `<button>`  to a `<span>` | [Anchor Tags Cannot Wrap Buttons]( https://stackoverflow.com/questions/24837102/the-element-button-must-not-appear-as-a-descendant-of-the-a-element) | - |
+| JavaScript was trying to run animation even though it doesn’t exist on any other page apart from home page and is leading to a console error | Added an if statement to check if the flag exists and if it does, then run the associated function. | - | - |
+\
+&nbsp;
+
+## Unresolved
+No unresolved bugs were left in the project.
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
