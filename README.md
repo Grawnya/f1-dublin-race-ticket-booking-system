@@ -112,7 +112,7 @@ Therefore, the UX aspect of the project can be broken down into 5 Planes:
 &nbsp;
 
 ## Strategy
-In order to ensure the project aligns with these planes, it is vital to keep the target audience at the forefront at all times.
+In order to ensure the project aligns with these planes, it is vital to keep the target audience at the forefront at all times. It is vital to ensure that the project has real world use and that its design is transferrable to other sports events which also require the user to book a ticket.
 
 The target audience consists of:
 * 25 – 45 year olds.
@@ -224,6 +224,8 @@ It can be broken down as follows:
 * `email` - User's email that they didn't use to login.
 * `fave_team` - User's favourite current Formula 1 team.
 * `nationality` - User's nationality that they identify as.
+
+Note that the details of an entry in the `WebsiteUser` model, will not be used in the `Ticket` model, apart from as a foreign key in the `booked_by` field. This is due to enabling the user to alter their details which will be shared on the ticket if they opt to share it with all users in the "Tickets Sold" page. Therefore, the user will not have to input the same data twice into 2 different models to protect their privacy, becasue if they had to input the same data twice, it would be bad practice.
 \
 &nbsp;
 
@@ -427,6 +429,8 @@ Similarly, the form narrows on smaller screens, but is stacked in the same manne
 > ![Profile on a Mobile](documentation/profile_mobile.png)
 
 If the user has already created a profile, by opening the profile page, it will preload the information and enable the user to edit their previously entered details.
+
+Note that the details themselves, added to the `WebsiteUser` model, will not be used in the `Ticket` model. This is due to enabling the user to alter their details, which will be shared on the ticket. Therefore, the user will not have to input the same data twice into 2 different models to protect their privacy, as inputting the same data twice is poor practice.
 \
 &nbsp;
 
