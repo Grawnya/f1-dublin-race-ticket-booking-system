@@ -86,7 +86,12 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 * [Bugs](#bugs "Bugs")
 	* [Resolved](#resolved "Resolved")
 	* [Unresolved](#unresolved "Unresolved")
-
+* [Deployment](#deployment "Deployment")
+	* [Create Application](#create-application "Create Application")
+	* [ElephantSQL](#elephantsql "ElephantSQL")
+	* [Cloudinary](#cloudinary "Cloudinary")
+	* [Final Repo Preparations](#final-repo-preparations "Final Repo Preparations")
+	* [Heroku Deploy](#heroku-deploy "Heroku Deploy")
 
 \
 &nbsp;
@@ -773,6 +778,46 @@ The following reports were obtained:
 
 ## Unresolved
 No unresolved bugs were left in the project.
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+# Deployment
+During the process of coding up the website, the code was deployed on GitHub to allow for continuous manual testing and code validation. The following steps were conducted to deploy the website on GitHub:
+
+## Create Application
+1. Create a Heroku account if you don’t have one and login.
+2. Create a new application, by selecting the “new” button on the top right of the dashboard and click “Create new app”.
+3. Choose a unique name for the application and select the region you live in, followed by "Create App".
+
+## ElephantSQL
+4. Go to [elephantsql.com](https://www.elephantsql.com/), login with GitHub and create a new instance.
+5. Copy the URL once the project instance has been created. This value can also be saved with as environment variable used to equal the `DATABASES` variable in `settings.py`.
+6. Install the `dj-database-url` package version 0.5.0 by using `pip3 install dj_database_url==0.5.0` to format the URL into one that Django can use, subsequently updating the `requirements.txt`.
+
+## Cloudinary 
+7. Create a cloudinary account.
+8. Add any images for your project in the “Media Library”.
+9. Copy the Cloudinary API URL from your dashboard.
+
+## Final Repo Preparations
+10. Make sure to make any migrations in the project, by typing `python3 manage.py makemigrations` followed by `python3 manage.py migrate` into the terminal.
+11. Ensure a `Procfile`, which contains `web: gunicorn [project_name].wsgi:application` is added to the project.
+
+## Heroku Deploy
+12. Go back to Heroku and when the Project’s page opens up, go to the "settings" tab and scroll down to the “Config Vars” section. 
+13. Enter the following key-valuen pairs in the “Config Vars” section: 
+	* Key = `PORT` : Value = 8000
+	* Key = `SECRET_KEY` : Value = Django Secret Key value obtained from `settings.py`
+	* Key = `DATABASE_URL` : Value = ElephantSQL URL from point 5.
+	* Key = `CLOUDINARY_URL` : Value = Cloudinary API URL from your Cloudinary account in point 9.
+14. Go to the “Deploy” tab next and scroll down to the GitHub deployment method.
+15. Search for the suitable repository and then connect to it by selecting the “Connect” button.
+16. Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to conduct. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository. Otherwise, you will have to manually deploy, by selecting the button at the bottom of the page.
+17. The application is now deployed!
 
 \
 &nbsp;
