@@ -92,6 +92,10 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 	* [Cloudinary](#cloudinary "Cloudinary")
 	* [Final Repo Preparations](#final-repo-preparations "Final Repo Preparations")
 	* [Heroku Deploy](#heroku-deploy "Heroku Deploy")
+* [Credits](#credits "Credits")
+	* [For Code Help and Advice](#for-code-help-and-advice "For Code Help and Advice")
+	* [Helpful Resources](#helpful-resources "Helpful Resources")
+	* [For Content and Code](#for-content-and-code "For Content and Code")
 
 \
 &nbsp;
@@ -818,6 +822,36 @@ During the process of coding up the website, the code was deployed on GitHub to 
 15. Search for the suitable repository and then connect to it by selecting the “Connect” button.
 16. Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to conduct. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository. Otherwise, you will have to manually deploy, by selecting the button at the bottom of the page.
 17. The application is now deployed!
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+# Credits
+
+## For Code Help and Advice
+* [Harry Dhillon](https://github.com/Harry-Leepz)
+* [Rich Wells]( https://github.com/D0nni387)
+\
+&nbsp;
+
+## Helpful Resources
+* [On using .tff fonts](https://www.geeksforgeeks.org/how-to-include-a-font-ttf-using-css/)
+* [Model field details](https://docs.djangoproject.com/en/4.1/ref/models/fields/#django.db.models.Field.null)
+* [SVG tips when creating the track schematic](https://www.freecodecamp.org/news/use-svg-images-in-css-html/)
+* [For turning .png to .svg](https://convertio.co/)
+* [Error page handling](https://www.geeksforgeeks.org/built-in-error-views-in-django/)
+\
+&nbsp;
+
+## For Content and Code
+* [Footer from the “South Kerry Greenway” project](https://github.com/Grawnya/south-kerry-greenway)
+* [404 page template](https://colorlib.com/wp/template/colorlib-error-404-15/)
+* [CSS Flags for tickets](https://alexsobolenko.github.io/flag-icons/)
+* [Pagination from “I Think, Therefore I Blog” project]( https://github.com/Grawnya/I-think-therefore-I-blog)
+* [Checkered flag image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.clipartmax.com%2Fmiddle%2Fm2i8G6H7d3N4G6i8_racing-clipart-flag-png-checkered-flag-png%2F&psig=AOvVaw1GS9tCRkNNhZA15sFxMxm3&ust=1674779151651000&source=images&cd=vfe&ved=0CBEQjhxqFwoTCPDhotX84_wCFQAAAAAdAAAAABAE)
 
 \
 &nbsp;
