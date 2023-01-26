@@ -48,6 +48,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Tickets Sold Page](#tickets-sold-page "Tickets Sold Page")       
 			* [Profile](#profile "Profile")       
 			* [My Tickets Page](#my-tickets-page "My Tickets Page")       
+			* [New Ticket Page](#new-ticket-page "New Ticket Page")       
 
 \
 &nbsp;
@@ -389,5 +390,20 @@ Below each ticket, there is a section with an edit and delete button. The “Edi
 On smaller screens, instead of lining up 3 in a row, tickets stack up on top of one another.
 
 ![My Tickets Page on Large Screen](documentation/my_tickets_large.png)
+\
+&nbsp;
+
+### New Ticket Page
+In order to book a ticket, the user must click “Book a Ticket” on the “My Tickets” page. This will redirect the user to a blank form, where they can declare if they are booking for themselves or for someone else, as they can only buy 1 ticket for themselves and a maximum of 5 total tickets. They can then fill out the following fields: First Name, Last Name, Nickname, Favourite Team and Nationality.
+
+![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
+
+An image of the track layout with stands and an individual stand with seat numbers can be seen. The user should select a seat and stand in the dropdown menus. If the specific seat has already been taken, the user will be notified and they will have to fill out the form and select a new seat.
+
+At the end of the form, the user is prompted if they want to share their ticket details on the “Tickets Sold” page and the form is recorded as an entry in the into the [Ticket](#ticket "Ticket") table.
+
+The page is responsive and therefore the track stand and seating images stack on top of each other on small screens.
+
+![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
 \
 &nbsp;
