@@ -1,5 +1,7 @@
 # Manual Tests
 
+[Go Back to README.md](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system)
+
 ## Epic 1: Core Website Functionality
 ### Related User Stories
  [1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1) - As a user, I can navigate through the website easily so that I can get more information about the race, the track itself and ticket booking.
@@ -209,3 +211,5 @@ The criteria of [14](https://github.com/Grawnya/f1-dublin-race-ticket-booking-sy
 In order to see what seats are free and where the user can potentially sit, the user is encouraged to visit the “Tickets Sold” page to see where users are sitting and select a seat which does not appear here.
 \
 &nbsp;
+
+[Go Back to README.md](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system)
