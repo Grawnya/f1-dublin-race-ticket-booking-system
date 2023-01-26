@@ -691,3 +691,5 @@ The responsiveness and the appearance remained relatively the same across the va
 ## Manual Testing
 As detailed above, the website was used on a variety of browsers and devices. It was tested by friends and family to catch any mistakes.
 The [User Stories](#user-stories "User Stories") and page elements are manual tested in this separate Markdown page:
+
+[MANUAL_TESTS](MANUAL_TESTS.md)
