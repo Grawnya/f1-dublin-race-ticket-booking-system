@@ -52,6 +52,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Edit Ticket Page](#edit-ticket-page "Edit Ticket Page")       
 			* [Delete Ticket Page](#delete-ticket-page "Delete Ticket Page")       
 			* [Flag Animation](#flag-animation "Flag Animation")       
+			* [Django Template Pages](#django-template-pages "Django Template Pages")       
 
 \
 &nbsp;
@@ -428,5 +429,15 @@ A checkered flag animation is run when the user opens the home page. This is a n
 The animation uses JavaScript to push the flag down the screen slowly and it eventually stops at the base of the page on large screens.
 
 If the user clicks on the flag on the website, they will be redirected to the “Tickets Sold” page.
+\
+&nbsp;
+
+### Django Template Pages
+This project utilises `allauth` to allow users to register, login, logout etc. on the website and provides excellent out-of-the-box functionality. This creates basic templates to conduct these tasks, but in order to align them with the style of the rest of the website, they had to adopt the project’s base file and were spaced to ensure the user experience was good.
+
+![Password Reset Page on Mobile](documentation/password_reset.png)
+
+
+![Sign In Page on Large Screen](documentation/sign_in.png)
 \
 &nbsp;
