@@ -76,6 +76,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Python Syntax Checker PEP8 Validation](#python-syntax-checker-pep8-validation "Python Syntax Checker PEP8 Validation")
 				* [First Attempt of Python Files](#first-attempt-of-python-files "First Attempt of Python Files")
 				* [Final Attempt of Python Files](#final-attempt-of-python-files "Final Attempt of Python Files")
+		* [Lighthouse](#lighthouse "Lighthouse")
+			* [Final Attempt for Lighthouse](#final-attempt-forlighthouse "Final Attempt for Lighthouse")
      
 
 \
@@ -608,13 +610,31 @@ No issues arose.
 
 ### Python Syntax Checker PEP8 Validation
 The [Python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") was used to check all the Django Python files – scanning for any syntax or declaration errors. Below contains the returned results of the scripts.
+\
+&nbsp;
 
 #### First Attempt of Python Files
 Many warning and errors were obtained in the first run through the PEP8 linter. They mainly consisted of lines that were too long, over-indentation or under-indentation of items and then too many or too few blank lines. These were all easy to rectify quite quickly. 
+\
+&nbsp;
 
 #### Final Attempt of Python Files
 No issues arose in any of the files and their accompanying `test_` files, as seen in the sample one below for the “Show Attendees” application’s `test_views.py` page.
 
 > ![Python Syntax Checker PEP8](documentation/show_attendees_test_views_pep8.png)
+\
+&nbsp;
+
+## Lighthouse 
+In order to verify the suitability of the webpage, [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse"), a tool found in Chrome Developer Tools was used to check a broad variety. This includes:
+
+* Performance – Based on how fast the website loads and contributes to the overall UX.
+* Accessibility – Based on how easy it is to use the website regardless if people might use a screen reader, etc.
+* Best Practices – Based on the best practices used in industry.
+
+### Final Attempt for Lighthouse
+After completing the project, Lighthouse was used to check the suitability on the website. The following result was obtained:
+
+![Lighthouse Final Attempt](documentation/lighthouse.png)
 \
 &nbsp;
