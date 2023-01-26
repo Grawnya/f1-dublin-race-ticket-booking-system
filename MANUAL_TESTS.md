@@ -14,8 +14,8 @@
 
 These 3 User Stories’ criteria are met on the [Home Page](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system#landing-page). The home page consists of various sections to ensure that the user is informed at all times:
 
-* [Race Details Section](#race-details-section "Race Details Section") which meets the criteria of [2](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/2), as it can be easily reached on the home page directly by scrolling down or by clicking on the link on the information carousel.
-* [How to Book Tickets Section](#how-to-book-tickets-section "How to Book Tickets Section") which meets the criteria of [3](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/3), as it can be easily reached on the home page directly by scrolling down the page.
+* [Race Details Section](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system#race-details-section "Race Details Section") which meets the criteria of [2](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/2), as it can be easily reached on the home page directly by scrolling down or by clicking on the link on the information carousel.
+* [How to Book Tickets Section](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system#how-to-book-tickets-section "How to Book Tickets Section") which meets the criteria of [3](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/3), as it can be easily reached on the home page directly by scrolling down the page.
 
 The website is generally well laid out and uses a striking colour scheme to easily read all its content. It also utilises links to the various pages on the site via a navbar, footer and buttons to provide a logical flow that is easy to understand, meeting the criteria of [1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1).
 
@@ -130,7 +130,7 @@ If the admin confirms that they want to delete it, they are redirected to the �
 
 > ![Ticket Deleted](documentation/ticket_removed.png)
 
-If the user wants to select more tickets, they can manually go through and ticket the box next to each row, or alternatively they can filter by who booked the ticket, when it was booked, favourite team and nationality on the right hand side.
+If the user wants to select more tickets, they can manually go through and tick the box next to each row, or alternatively they can filter by who booked the ticket, when it was booked, favourite team and nationality on the right hand side.
 
 > ![Filter Tickets](documentation/can_filter.png)
 \
@@ -143,7 +143,6 @@ If the user wants to select more tickets, they can manually go through and ticke
 [6](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/6) - As a user, I can book a ticket so that I can attend the race.
 \
 &nbsp;
-
 [16](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/16) - As a user, I can edit and/or delete tickets I have booked when logged in so that I can make any necessary changes.
 
 The primary function of the webpage is to allow users to book tickets and to edit their bookings based on requirements i.e. to edit or delete their tickets.
@@ -166,13 +165,13 @@ The criterion for successful booking is:
 Respective Manually Tested Errors that occur if the criterion is not met:
 1. Message pops up to say that the user has booked more than one ticket for themselves and if they want to buy more they have to either edit or delete the extra ticket.
 2. Message pops up to say that the user has booked more than 5 tickets and if they want to buy more they have to delete some of their tickets.
-3. An little message will pop up next to the input field that the user has left blank and they’ll be prompted to put in a valid value.
+3. A small message will pop up next to the input field that the user has left blank and they’ll be prompted to put in a valid value.
 4. If the user selects a seat that someone else has already booked, a message pops up to say that it is occupied and to select a new seat.
 5. Message pops up to say that the user is either not logged in and/or doesn’t have a profile and therefore, needs to do these before they can book a ticket.
 
 > ![My Tickets](documentation/my_tickets_large.png)
 
-This creates a ticket at the bottom of the “My Tickets” screen with the users info and both “Edit” and “Delete” buttons beneath each ticket to alter the ticket. This meets the criteria for [16](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/16) as the user can edit the existing ticket by selecting the “Edit” button and it directs the user to a form that looks similar to the “New Ticket” page but is prepopulated with the ticket information. The ticket information can be updated by changing the value sin the form fields and submitting it by selecting the “Submit” button at the bottom of the page. Any revisions can be seen in the ticket.
+This creates a ticket at the bottom of the “My Tickets” screen with the users info and both “Edit” and “Delete” buttons beneath each ticket to alter the ticket. This meets the criteria for [16](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/16) as the user can edit the existing ticket by selecting the “Edit” button and it directs the user to a form that looks similar to the “New Ticket” page but is prepopulated with the ticket information. The ticket information can be updated by changing the values in the form fields and submitting it by selecting the “Submit” button at the bottom of the page. Any revisions can be seen in the ticket.
 
 The user can also delete a ticket by selecting the “Delete” button, which redirects the user to a similar form to the “Edit Ticket” page, but it includes a button at the top prompting the user to “Go Back” to “My Tickets” in case they clicked the button by mistake. If they want to confirm that they want to delete the button, they have to scroll down to the bottom of the page to click “Delete”.
 \
@@ -187,7 +186,11 @@ As explained in the criterion above, if the limits are exceeded, suitable messag
 &nbsp;
 
 [11](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/11) - As a user, I can select my favourite team when booking tickets so that I can let users know who I support and see who other fans in attendance support.
+\
+&nbsp;
 [12](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/12) - As a user, I can select my nationality when booking tickets so that I can let users know what country I am from and see where other fans in attendance are from.
+\
+&nbsp;
 [13](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/13) - As a user, I can input a nickname so that I don't have to reveal my real name and can use it to identify people whom I am buying tickets for.
 
 The criteria for [11](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/11), [12](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/12) and [13](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/13) are met in the ticket booking forms as well, as the inputted values are connected to suitable CSS settings and SVGs that help format the tickets.
@@ -204,6 +207,7 @@ Note that these features remain even when the screen size changes, as verified w
 &nbsp;
 
 [14](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/14) - As a user, I can select my seat when booking tickets from a graphic so that I can easily see what seats are free and where I can potentially sit.
+
 The criteria of [14](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/14) is met by providing an SVG of the track schematic layout with the 4 current stands. Next to it is a layout of the seats within a stand. In future sprints, this will be altered to be more interactive with live seat selection from the schematic, but currently based on the 2 images, the user has to select a seat and stand from a dropdown menu.
 
 > ![Book a Seat](documentation/book_ticket_mobile.png)

@@ -139,7 +139,7 @@ The purpose of this website is to promote a potential Formula 1 race in Dublin i
 | [1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1) | As a user, I can navigate through the website easily so that I can get more information about the race, the track itself and ticket booking. | Must Have |
 | [2](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/2) | As a user, I can get information regarding the race details so that I can spend less time having to search for the suitable information. | Must Have |
 | [3](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/3) | As a user, I can obtain ticket booking information so that I can easily book tickets. | Must Have |
-| [4](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/4) | As a user, I can find the race's social media accounts so that I can keep up-to-date with race details. | Should Have |
+| [4](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/4) | As a user, I can find the race's social media accounts so that I can keep up-to-date with race details. | Could Have |
 | [5](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/5) | As a user, I can see who else is attending the race so that I know what fans are in attendance. | Could Have |
 | [6](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/6) | As a user, I can book a ticket so that I can attend the race. | Must Have |
 | [7](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/7) | As a user, I can register or log in so that I can manage my tickets. | Must Have |
@@ -290,7 +290,7 @@ For the user’s nationality, their country’s flag will be displayed on the ti
 &nbsp;
 
 ### Colours
-To select the colour palette for the project, I was inspired by the official Formula 1 colour scheme, which heaving relies on a distinct shade of an orange based red, black and white. When checking the contrast of the colours on [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM"), the dark green with the white passed. For the light mode, the dark blue with the white also passed. Therefore the following colours were selected for the project:
+To select the colour palette for the project, I was inspired by the official Formula 1 colour scheme, which heaving relies on a distinct shade of an orange based red, black and white. When checking the contrast of the colours on [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM"), the red with the white passed as well as the black with the red.:
 
 ![Colour Palette](documentation/final-color-palette.png)
 
@@ -335,7 +335,7 @@ A labelled navigation bar with various headings provides the user with details r
 A carousel with bright slides attracts the user to its content, which prompts the user to create a profile, show the tickets that have already been bought or to obtain more race details.
 
 
-> ![Landing Page](documentation/index1.jpg)
+> ![Landing Page](documentation/index1.png)
 \
 &nbsp;
 
@@ -354,7 +354,7 @@ The hamburger button matches the red colour used for the project along with the 
 &nbsp;
 
 ### Information Carousel
-The information carousel is used at the top of the home page to attract users to its contents. The slides vary in colour to draw the user’s attention compared to the predominantly white sections above and below it. The design is responsive and each slides contents can be seen clearly on various devices.
+The information carousel is used at the top of the home page to attract users to its contents. The slides vary in colour to draw the user’s attention compared to the predominantly white sections above and below it. The design is responsive and each slide's contents can be seen clearly on various devices.
 
 ![Information Carousel on Small Screens](documentation/carousel_mobile_tickets_sold_slide.png)
 
@@ -388,7 +388,7 @@ The “How to Book” section provides information to the user regarding the ste
 The 3 cards consist of the following information and provide buttons which link to the suitable webpage:
 * Login and Create a Profile – Tells the user that they must login and create a profile before they can buy up to 5 tickets. If they are not logged in, the button will say “Login”, but if they are logged in, the button will say “Profile”.
 * My Tickets – Tells the user to go to the “My Tickets” page in order to book, edit or delete a ticket.
-*Show Tickets – Tells the user that if they have opted to share their ticket details that it will be shown on a page called “Tickets Sold” and they can view who else has booked a ticket.
+* Show Tickets – Tells the user that if they have opted to share their ticket details that it will be shown on a page called “Tickets Sold” and they can view who else has booked a ticket.
 
 ![How to Book Section on Large Screens](documentation/how_to_book_large.png)
 \
@@ -407,6 +407,8 @@ It's simple, yet clean design, means that it is easy to navigate, with icons bei
 As previously mentioned, the “Tickets Sold” page consists of the users’ tickets that have opted to share some of their details to other website users. It contains a descriptive paragraph at the top to provide the user with some details, followed by a button to encourage the user to buy a ticket.
 
 > ![Tickets Sold Page on Large Screen](documentation/tickets_sold_large.png)
+
+On smaller screens, the tickets stack on top of each other.
 
 > ![Tickets Sold Page on Mobile](documentation/tickets_sold_mobile.png)
 
@@ -451,7 +453,7 @@ At the end of the form, the user is prompted if they want to share their ticket 
 
 The page is responsive and therefore the track stand and seating images stack on top of each other on small screens.
 
-> ![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
+> ![New Ticket Page on Large Screen](documentation/book_ticket_mobile.png)
 \
 &nbsp;
 
@@ -486,7 +488,7 @@ This project utilises `allauth` to allow users to register, login, logout etc. o
 &nbsp;
 
 ### Messages
-Django handles messages by default using `'django.contrib.messages'` and you can create them within the suitable views.py, displaying them in the associated html file.
+Django handles messages by default using `'django.contrib.messages'` and you can create them within the suitable `views.py`, displaying them in the associated HTML file.
 
 They are seen when the user has successfully created, edited or deleted either their profile or ticket at the top of the page and they follow the Bootstrap 5 naming convention. Therefore, they are pre-styled based on their message type.
 
@@ -618,7 +620,7 @@ No issues arose on any of the personalised CSS files.
 &nbsp;
 
 ### JSHint
-The primary JavaScript document `script.js` was often run through [JSHint](https://jshint.com/ “JSHint”) to check for any syntax or declaration errors. Below contains the returned results of the script.
+The primary JavaScript document `script.js` was often run through [JSHint](https://jshint.com/ "JSHint") to check for any syntax or declaration errors. Below contains the returned results of the script.
 
 #### Final Attempt of JavaScript Files
 No issues arose. 
@@ -659,7 +661,7 @@ After completing the project, Lighthouse was used to check the suitability on th
 &nbsp;
 
 ## Responsiveness 
-The responsiveness of the design was manually checked using the Chrome Developer Tools for various screens. The manual testing itself will be discussed [here](#manual-testing “Manual Testing”).
+The responsiveness of the design was manually checked using the Chrome Developer Tools for various screens. The manual testing itself will be discussed [here](#manual-testing "Manual Testing").
 
 This included:
 * iPhone SE
@@ -705,7 +707,7 @@ The responsiveness and the appearance remained relatively the same across the va
 
 ## Manual Testing
 As detailed above, the website was used on a variety of browsers and devices. It was tested by friends and family to catch any mistakes.
-The [User Stories](#user-stories "User Stories") and page elements are manual tested in this separate Markdown page:
+The [User Stories](#user-stories "User Stories") and page elements are manually tested in this separate Markdown page:
 
 [MANUAL_TESTS](MANUAL_TESTS.md)
 
@@ -765,9 +767,9 @@ The following reports were obtained:
 | ------ | ------ | ------ | ------ |
 | Navbar border does not fill 100% of the screen width | Copied a navbar from the bootstrap documentation, as the navbar was confused with all the margin and padding classes. | [Bootstrap Navbar]( https://getbootstrap.com/docs/5.0/components/navbar/#nav) | [Navbar with Short Border](documentation/navbar_border_short.png) |
 | `template_name` is a standard variable name in Django views using the `TemplateView` class, but it was not working | Ensured that the correct variable was changed from `home_page` to `template_name` in `race_details` app. | [Useful YouTube Video]( https://www.youtube.com/watch?v=6PX_eVxg5jM) | - |
-| CSS files wouldn't load as obtained a `static` not registered error | I put `{% load static %}` at top of base file | [Remember Static Tag]( https://stackoverflow.com/questions/27886477/invalid-block-tag-static | - |
-| An issue with links connecting to sections on the same page but with a different `id` | Use this for the link `{% url 'home' %}#section-id` | [Link to Specific Section on Page]( https://stackoverflow.com/questions/55055523/how-to-configure-django-url-to-point-to-a-specific-section-in-the-page | - |
-| Issue with saving profile if it already existed | Make sure to clearly define the create a data entry and edit an entry in a model views. Scott from Code Institute tutor support helped and also a techwithtim resource | [TechWithTim Django Forms]( https://www.techwithtim.net/tutorials/django/custom-forms/ | [Saving Profile Error](documentation/create_profile_error.png) |
+| CSS files wouldn't load as obtained a `static` not registered error | I put `{% load static %}` at top of base file | [Remember Static Tag](https://stackoverflow.com/questions/27886477/invalid-block-tag-static) | - |
+| An issue with links connecting to sections on the same page but with a different `id` | Use this for the link `{% url 'home' %}#section-id` | [Link to Specific Section on Page](https://stackoverflow.com/questions/55055523/how-to-configure-django-url-to-point-to-a-specific-section-in-the-page) | - |
+| Issue with saving profile if it already existed | Make sure to clearly define the create a data entry and edit an entry in a model views. Scott from Code Institute tutor support helped and also a techwithtim resource | [TechWithTim Django Forms](https://www.techwithtim.net/tutorials/django/custom-forms/) | [Saving Profile Error](documentation/create_profile_error.png) |
 | `h-100` Bootstrap 5 style not working on cards within carousel | `max-height` style applied to carousel was removed and the `h-100` was changed to the `carousel-inner` sections | - | - |
 | The user could purchase more than 5 tickets | Within the logic, the number of tickets that the user had was increased by 1 to anticipate the user buying another when filling out the “New Ticket” form. | - | - |
 | When creating the error 500 page, the associated function prevented the website from running | Removed the extra `exception` parameter left in the function that was copied from the 404 function| - | - |
@@ -775,7 +777,7 @@ The following reports were obtained:
 | Database error was obtained when testing | Swapped to the local SQLite database in `settings.py`, instead of using the ElephantSQL database for deployment | Both my mentor Harry and Jason from Code Insititute mentioned this as a potential fix | [Database Issue](documentation/database_issue_testing.png) |
 | Messages not Appearing | Changed the HTML block location to the top of the page, just underneath the navbar and added `x` symbol functionality to close by setting button to `data-bs-dismiss='alert'` | [Bootstrap 5 Alert Button Changes](https://stackoverflow.com/questions/66333249/cant-close-django-message-alerts) | - |
 | Issue with `<button>` tag wrapped by `<a>` tag when validating code | Changed the `<button>`  to a `<span>` | [Anchor Tags Cannot Wrap Buttons]( https://stackoverflow.com/questions/24837102/the-element-button-must-not-appear-as-a-descendant-of-the-a-element) | - |
-| JavaScript was trying to run animation even though it doesn’t exist on any other page apart from home page and is leading to a console error | Added an if statement to check if the flag exists and if it does, then run the associated function. | - | - |
+| JavaScript was trying to run animation even though it doesn’t exist on any other page apart from home page and is leading to a console error | Added an `if` statement to check if the flag exists and if it does, then run the associated function. | - | - |
 
 \
 &nbsp;
@@ -796,20 +798,28 @@ During the process of coding up the website, the code was deployed on GitHub to 
 1. Create a Heroku account if you don’t have one and login.
 2. Create a new application, by selecting the “new” button on the top right of the dashboard and click “Create new app”.
 3. Choose a unique name for the application and select the region you live in, followed by "Create App".
+\
+&nbsp;
 
 ## ElephantSQL
 4. Go to [elephantsql.com](https://www.elephantsql.com/), login with GitHub and create a new instance.
 5. Copy the URL once the project instance has been created. This value can also be saved with as environment variable used to equal the `DATABASES` variable in `settings.py`.
 6. Install the `dj-database-url` package version 0.5.0 by using `pip3 install dj_database_url==0.5.0` to format the URL into one that Django can use, subsequently updating the `requirements.txt`.
+\
+&nbsp;
 
 ## Cloudinary 
 7. Create a cloudinary account.
 8. Add any images for your project in the “Media Library”.
 9. Copy the Cloudinary API URL from your dashboard.
+\
+&nbsp;
 
 ## Final Repo Preparations
 10. Make sure to make any migrations in the project, by typing `python3 manage.py makemigrations` followed by `python3 manage.py migrate` into the terminal.
 11. Ensure a `Procfile`, which contains `web: gunicorn [project_name].wsgi:application` is added to the project.
+\
+&nbsp;
 
 ## Heroku Deploy
 12. Go back to Heroku and when the Project’s page opens up, go to the "settings" tab and scroll down to the “Config Vars” section. 
