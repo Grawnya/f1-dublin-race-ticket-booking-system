@@ -29,7 +29,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
     	* [Future Sprints](#future-sprints "Future Sprints")
     * [Structure](#structure "Structure")
     	* [Project Applications](#project-applications "Project Applications")
-    	* [Databases](#databases "Databases")
+    	* [Project Databases](#project-databases "Project Databases")
 			* [WebsiteUser](#websiteuser "WebsiteUser")
 			* [Ticket](#ticket "Ticket")
     * [Surface](#surface "Surface")
@@ -65,10 +65,10 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 	* [Code Validation](#code-validation "Code Validation")
 		* [W3C HTML Validator](#w3c-html-validator "W3C HTML Validator")
 			* [First Attempt of Home Page](#first-attempt-of-home-page "First Attempt of Home Page")
-			* [Final Attempt of Home Page](#final-attempt-html-of-home-page "Final Attempt of Home Page")
+			* [Final Attempt of Home Page](#final-attempt-of-home-page "Final Attempt of Home Page")
 			* [Only Attempt of the Django Templates](#only-attempt-of-the-django-templates "Only Attempt of the Django Templates")
 			* [First Attempt of Ticket Sold Page](#first-attempt-of-tickets-sold-page "First Attempt of Ticket Sold Page")
-			* [Final Attempt of Ticket Sold Page](#final-attempt-html-of-tickets-sold-page "Final Attempt of Ticket Sold Page")
+			* [Final Attempt of Ticket Sold Page](#final-attempt-of-tickets-sold-page "Final Attempt of Ticket Sold Page")
 		* [W3C CSS Validator](#w3c-css-validator "W3C CSS Validator")
 			* [First Attempt of CSS Files](#first-attempt-of-css-files "First Attempt of CSS Files")
 		* [JSHint](#jshint "JSHint")
@@ -77,7 +77,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [First Attempt of Python Files](#first-attempt-of-python-files "First Attempt of Python Files")
 			* [Final Attempt of Python Files](#final-attempt-of-python-files "Final Attempt of Python Files")
 	* [Lighthouse](#lighthouse "Lighthouse")
-		* [Final Attempt for Lighthouse](#final-attempt-forlighthouse "Final Attempt for Lighthouse")
+		* [Final Attempt for Lighthouse](#final-attempt-for-lighthouse "Final Attempt for Lighthouse")
 	* [Responsiveness](#responsiveness "Responsiveness")
 	* [Web Aim Contrast Checker](#web-aim-contrast-checker "Web Aim Contrast Checker")
 	* [Browser Compatibility](#browser-compatibility "Browser Compatibility")
@@ -96,7 +96,6 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 	* [For Code Help and Advice](#for-code-help-and-advice "For Code Help and Advice")
 	* [Helpful Resources](#helpful-resources "Helpful Resources")
 	* [For Content and Code](#for-content-and-code "For Content and Code")
-
 \
 &nbsp;
 
@@ -208,7 +207,7 @@ For this project, 3 applications were created:
 \
 &nbsp;
 
-### Databases
+### Project Databases
 2 databases can be found in the “booking” application, which enable the user to create the profile required to book tickets and then to stored booked ticket information. The schematic below provides the relationship between both [the WebsiteUser Model](#websiteuser "The WebsiteUser Model") and [the Ticket Model](#ticket "The Ticket Model").
 
 > ![Database Tables](documentation/models.png)
