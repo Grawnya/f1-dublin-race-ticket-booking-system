@@ -170,7 +170,7 @@ For this project, 3 applications were created:
 ### Databases
 2 databases can be found in the “booking” application, which enable the user to create the profile required to book tickets and then to stored booked ticket information. The schematic below provides the relationship between both [the WebsiteUser Model](#websiteuser "The WebsiteUser Model") and [the Ticket Model](#ticket "The Ticket Model").
 
-![Database Tables](documentation/models.png)
+> ![Database Tables](documentation/models.png)
 \
 &nbsp;
 
@@ -294,7 +294,7 @@ A labelled navigation bar with various headings provides the user with details r
 A carousel with bright slides attracts the user to its content, which prompts the user to create a profile, show the tickets that have already been bought or to obtain more race details.
 
 
-![Landing Page](documentation/index1.jpg)
+> ![Landing Page](documentation/index1.jpg)
 \
 &nbsp;
 
@@ -302,13 +302,13 @@ A carousel with bright slides attracts the user to its content, which prompts th
 
 The navigation bar is designed to be responsive for the different screen sizes and collapses into a hamburger button if there is not enough room on the screen to fit. Each item within the navigation bar links to a section on the website. In order to increase each items readability, aria-labels are used:
 
-![Navigation Bar for Large Screens](documentation/navbar_desktop.png)
+> ![Navigation Bar for Large Screens](documentation/navbar_desktop.png)
 
 The navigation bar is white in colour with black font to contrast each other easily and to increase readability. If the user is hovering over the various navigation bar items, if it is over a particular one, it will cause the font to turn red.
 
 The hamburger button matches the red colour used for the project along with the red border at the bottom of the navigation bar which acts as a clear divider between the navigation bar and the content of the webpage.
 
-![Navigation Bar for Small Screens](documentation/navbar_mobile.png)
+> ![Navigation Bar for Small Screens](documentation/navbar_mobile.png)
 \
 &nbsp;
 
@@ -329,13 +329,13 @@ The slides are broken down as follows:
 ### Race Details Section
 In order to promote the race, details regarding the track and the event need to be provided. 3 eye catching details regarding when the event will take place and track characteristics – length and turns, provide a quick snapshot.
 
-![Race Details Section on Large Screens](documentation/race_details_desktop.png)
+> ![Race Details Section on Large Screens](documentation/race_details_desktop.png)
 
 A schematic of the track along with 4 stands is shown. Within the paragraphs, the user is prompted to click on this schematic in order to turn it into an image of the track mapped out onto its real life route on Google Images. Some of the tourist attractions nearby are also briefly mentioned in this section.
 
 On smaller screens, all the element stack up on top of each other so the content is still easy to follow.
 
-![Race Details Section on Small Screens](documentation/race_details_mobile.png)
+> ![Race Details Section on Small Screens](documentation/race_details_mobile.png)
 \
 &nbsp;
 
@@ -365,9 +365,9 @@ It's simple, yet clean design, means that it is easy to navigate, with icons bei
 ### Tickets Sold Page
 As previously mentioned, the “Tickets Sold” page consists of the users’ tickets that have opted to share some of their details to other website users. It contains a descriptive paragraph at the top to provide the user with some details, followed by a button to encourage the user to buy a ticket.
 
-![Tickets Sold Page on Large Screen](documentation/tickets_sold_large.png)
+> ![Tickets Sold Page on Large Screen](documentation/tickets_sold_large.png)
 
-![Tickets Sold Page on Mobile](documentation/tickets_sold_mobile.png)
+> ![Tickets Sold Page on Mobile](documentation/tickets_sold_mobile.png)
 
 At the base of the page, 3 cards per row and up to 6 per page, show each suitable ticket and the owners stand and seat, favourite team and nationality. This can be used to check what seats might be free and to see who is sitting nearby.
 
@@ -378,11 +378,11 @@ At the base of the page, 3 cards per row and up to 6 per page, show each suitabl
 ### Profile
 The Profile page allows users to provide specific details about themselves which help influence data-driven decisions made by the race organisers. The user can fill in fields: First Name, Last Name, Email, Favourite Team and Nationality. This helps to create a data entry regarding the user into the [WebsiteUser](#websiteuser "WebsiteUser") table. This acts as an identifier as to who bought the tickets.
 
-![Profile on a Large Screen](documentation/profile_large.png)
+> ![Profile on a Large Screen](documentation/profile_large.png)
 
 Similarly, the form narrows on smaller screens, but is stacked in the same manner, with a submit button at its base. 
 
-![Profile on a Mobile](documentation/profile_mobile.png)
+> ![Profile on a Mobile](documentation/profile_mobile.png)
 
 If the user has already created a profile, by opening the profile page, it will preload the information and enable the user to edit their previously entered details.
 \
@@ -395,14 +395,14 @@ Below each ticket, there is a section with an edit and delete button. The “Edi
 
 On smaller screens, instead of lining up 3 in a row, tickets stack up on top of one another.
 
-![My Tickets Page on Large Screen](documentation/my_tickets_large.png)
+> ![My Tickets Page on Large Screen](documentation/my_tickets_large.png)
 \
 &nbsp;
 
 ### New Ticket Page
 In order to book a ticket, the user must click “Book a Ticket” on the “My Tickets” page. This will redirect the user to a blank form, where they can declare if they are booking for themselves or for someone else, as they can only buy 1 ticket for themselves and a maximum of 5 total tickets. They can then fill out the following fields: First Name, Last Name, Nickname, Favourite Team and Nationality.
 
-![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
+> ![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
 
 An image of the track layout with stands and an individual stand with seat numbers can be seen. The user should select a seat and stand in the dropdown menus. If the specific seat has already been taken, the user will be notified and they will have to fill out the form and select a new seat.
 
@@ -410,7 +410,7 @@ At the end of the form, the user is prompted if they want to share their ticket 
 
 The page is responsive and therefore the track stand and seating images stack on top of each other on small screens.
 
-![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
+> ![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
 \
 &nbsp;
 
@@ -437,10 +437,10 @@ If the user clicks on the flag on the website, they will be redirected to the �
 ### Django Template Pages
 This project utilises `allauth` to allow users to register, login, logout etc. on the website and provides excellent out-of-the-box functionality. This creates basic templates to conduct these tasks, but in order to align them with the style of the rest of the website, they had to adopt the project’s base file and were spaced to ensure the user experience was good.
 
-![Password Reset Page on Mobile](documentation/password_reset.png)
+> ![Password Reset Page on Mobile](documentation/password_reset.png)
 
 
-![Sign In Page on Large Screen](documentation/sign_in.png)
+> ![Sign In Page on Large Screen](documentation/sign_in.png)
 \
 &nbsp;
 
@@ -460,7 +460,7 @@ They are seen when the user has successfully created, edited or deleted either t
 
 This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) was copied and altered to fit the rest of the website’s style.
 
-![404 Page](documentation/404_page.png)
+> ![404 Page](documentation/404_page.png)
 \
 &nbsp;
 
