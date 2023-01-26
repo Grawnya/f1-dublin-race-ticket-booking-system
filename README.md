@@ -508,6 +508,7 @@ This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) wa
 
 ## Tools
 * [Django](https://www.djangoproject.com/ "Django") – The framework used in this project to incorporate databases with a website.
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/ "Crispy Forms") – Formats the models into forms on webpages using the `|crispy` filter and `{% crispy %}` tag.
 * [Gitpod](https://www.gitpod.io/ "Gitpod") – Used as the development environment.
 * [GitHub](https://github.com/ "GitHub") – The project’s Version Control Management System.
 * [Heroku](https://www.heroku.com/ "Heroku") – To deploy the webpage.
