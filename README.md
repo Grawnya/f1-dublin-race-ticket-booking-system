@@ -53,6 +53,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Delete Ticket Page](#delete-ticket-page "Delete Ticket Page")       
 			* [Flag Animation](#flag-animation "Flag Animation")       
 			* [Django Template Pages](#django-template-pages "Django Template Pages")       
+			* [Messages](#messages "Messages")       
 
 \
 &nbsp;
@@ -441,3 +442,15 @@ This project utilises `allauth` to allow users to register, login, logout etc. o
 ![Sign In Page on Large Screen](documentation/sign_in.png)
 \
 &nbsp;
+
+### Messages
+Django handles messages by default using `'django.contrib.messages'` and you can create them within the suitable views.py, displaying them in the associated html file.
+
+They are seen when the user has successfully created, edited or deleted either their profile or ticket at the top of the page and they follow the Bootstrap 5 naming convention. Therefore, they are pre-styled based on their message type.
+
+![Success Message](documentation/success_message.png)
+
+![Error Message](documentation/error_message.png)
+\
+&nbsp;
+
