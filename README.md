@@ -55,6 +55,12 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Django Template Pages](#django-template-pages "Django Template Pages")       
 			* [Messages](#messages "Messages")       
 			* [Error Pages](#error-pages "Error Pages")       
+		* [Technologies Used](#technologies-used "Technologies Used")       
+			* [Languages](#languages "Languages")       
+			* [Tools](#tools "Tools")       
+			* [Styling](#styling "Styling")       
+			* [Validation](#validation "Validation")       
+			* [Databases](#databases "Databases")       
 
 \
 &nbsp;
@@ -468,3 +474,48 @@ This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) wa
 \
 &nbsp;
 
+# Technologies Used
+
+## Languages
+* [HTML](https://en.wikipedia.org/wiki/HTML "HTML") - To create the Django templates for the associated views and models in the project applications.
+* [CSS](https://en.wikipedia.org/wiki/CSS "CSS") - To style the website.
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") - To create the flag animation and change the track image provided when clicked.
+* [Python]( https://en.wikipedia.org/wiki/Python_(programming_language) "Python") – Is the primary language of Django and used to create all forms, models and views.
+\
+&nbsp;
+
+## Tools
+* [Django](https://www.djangoproject.com/ "Django") – The framework used in this project to incorporate databases with a website.
+* [Gitpod](https://www.gitpod.io/ "Gitpod") – Used as the development environment.
+* [GitHub](https://github.com/ "GitHub") – The project’s Version Control Management System.
+* [Heroku](https://www.heroku.com/ "Heroku") – To deploy the webpage.
+* [Balsamiq](https://balsamiq.com/wireframes/ "Balsamiq") – For the creation of associated wireframes.
+\
+&nbsp;
+
+## Styling
+* [Bootstrap](https://getbootstrap.com/ "Bootstrap") – To provide extra styling and out-of-the-box elements e.g. carousel.
+* [Font Awesome](https://fontawesome.com/ "Font Awesome") – For the social media icons and carousel icons.
+* [Flag Icons CSS](https://alexsobolenko.github.io/flag-icons/ "Flag Icons CSS") – For the flag icons on the ticket based on the user’s nationality.
+* [Formula 1 Fonts](https://www.reddit.com/r/formula1/comments/8rpzq3/f1_font/ "Formula 1 Fonts") – The fonts that Formula 1 uses on their website, which inspired the fonts for this website.
+\
+&nbsp;
+
+## Validation
+* [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML") – To validate all the HTML files, including the templates from Django itself, due to editing them.
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS") – To validate the “style.css” page as well as the specific css page made to create the Formula 1 teams’ logos.
+* [JSHint](https://jshint.com/ “JSHint”) – To validate the code within the “script.js” file.
+* [Python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") – To validate all the Python files, making sure they align with PEP8.
+* [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM") – To analyse the colour contrast properties between colours.
+* [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse") – To check the website’s performance and accessibility, making sure the best practices are used.
+\
+&nbsp;
+
+## Databases
+* [SQLite](https://sqlite.org/index.html "SQLite") - The default database on Django, utilised for unittesting.
+* [ElephantSQL](https://www.elephantsql.com/ "ElephantSQL") – The final database used for the deployed project.
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
