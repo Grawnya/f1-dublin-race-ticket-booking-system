@@ -51,6 +51,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [New Ticket Page](#new-ticket-page "New Ticket Page")       
 			* [Edit Ticket Page](#edit-ticket-page "Edit Ticket Page")       
 			* [Delete Ticket Page](#delete-ticket-page "Delete Ticket Page")       
+			* [Flag Animation](#flag-animation "Flag Animation")       
 
 \
 &nbsp;
@@ -418,5 +419,14 @@ The “Edit Ticket” Page is basically identical to the [New Ticket Page](#new-
 
 ### Delete Ticket Page
 The “Delete Ticket” Page is basically identical to the [Edit Ticket Page](#edit-ticket-page "Edit Ticket Page"), but it just includes a button at the top of the page to redirect the user back to the “My Tickets” page in case they clicked delete by mistake. The user has to scroll down to the bottom of the page to delete the ticket to ensure that the decision is intentional.
+\
+&nbsp;
+
+### Flag Animation
+A checkered flag animation is run when the user opens the home page. This is a novel, extra feature of the website to pique the user’s interest in the movement.
+
+The animation uses JavaScript to push the flag down the screen slowly and it eventually stops at the base of the page on large screens.
+
+If the user clicks on the flag on the website, they will be redirected to the “Tickets Sold” page.
 \
 &nbsp;
