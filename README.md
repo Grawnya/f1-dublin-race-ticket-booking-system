@@ -49,6 +49,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Profile](#profile "Profile")       
 			* [My Tickets Page](#my-tickets-page "My Tickets Page")       
 			* [New Ticket Page](#new-ticket-page "New Ticket Page")       
+			* [Edit Ticket Page](#edit-ticket-page "Edit Ticket Page")       
+			* [Delete Ticket Page](#delete-ticket-page "Delete Ticket Page")       
 
 \
 &nbsp;
@@ -405,5 +407,16 @@ At the end of the form, the user is prompted if they want to share their ticket 
 The page is responsive and therefore the track stand and seating images stack on top of each other on small screens.
 
 ![New Ticket Page on Large Screen](documentation/book_ticket_large.png)
+\
+&nbsp;
+
+### Edit Ticket Page
+The “Edit Ticket” Page is basically identical to the [New Ticket Page](#new-ticket-page "New Ticket Page"), but it just loads the form with previously entered values from the specific ticket.
+\
+&nbsp;
+
+
+### Delete Ticket Page
+The “Delete Ticket” Page is basically identical to the [Edit Ticket Page](#edit-ticket-page "Edit Ticket Page"), but it just includes a button at the top of the page to redirect the user back to the “My Tickets” page in case they clicked delete by mistake. The user has to scroll down to the bottom of the page to delete the ticket to ensure that the decision is intentional.
 \
 &nbsp;
