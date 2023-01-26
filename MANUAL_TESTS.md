@@ -2,7 +2,7 @@
 
 ## Epic 1: Core Website Functionality
 ### Related User Stories
-[1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1) - As a user, I can navigate through the website easily so that I can get more information about the race, the track itself and ticket booking.
+ [1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1) - As a user, I can navigate through the website easily so that I can get more information about the race, the track itself and ticket booking.
 \
 &nbsp;
 [2](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/2) - As a user, I can get information regarding the race details so that I can spend less time having to search for the suitable information.
@@ -59,7 +59,6 @@ The criteria for [19](https://github.com/Grawnya/f1-dublin-race-ticket-booking-s
 > ![404 Page](documentation/404_page.png)
 \
 &nbsp;
-[Back to Top](#table-of-contents)
 \
 &nbsp;
 
@@ -79,10 +78,10 @@ Similar to [7](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/i
 
 > ![Success Message](documentation/success_message.png)
 
-When Logged In:
+**When Logged In:**
 > ![Logout Button on Navbar](documentation/logout.png)
 
-When Logged Out:
+**When Logged Out:**
 > ![Register and Login Buttons on Navbar](documentation/register_or_login.png)
 \
 &nbsp;
@@ -94,6 +93,45 @@ To meet the criteria for [18](https://github.com/Grawnya/f1-dublin-race-ticket-b
 > ![Profile](documentation/profile_large.png)
 \
 &nbsp;
-[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+## Epic 3: Admin Functionality
+### Related User Stories
+[20](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/20) - As a site owner/admin, I can log in so that I can access the website's backend.
+
+It is imperative to also think about the website from the admin/site owner’s point of view. Django enables the user to easily add admins and allows them to view data from the models that has been imported from forms. 
+
+The criteria for [20](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/20) is met, by adding `/admin` to the homepage link, which redirects the user to the admin page. If the user has not logged in on the website, they are prompted to login here.
+
+> ![Admin Login](documentation/admin_login.png)
+
+Manually testing has verified that if a non-admin user tries to follow the `/admin` link, they will automatically be logged out and prompted to but in valid credentials.
+
+Alternatively, if the user has already logged in and have valid admin credentials, they are automatically redirected to the admin dashboard, which shows all models created, sites, social media accounts etc. along with any recent actions, allowing the user to access the website’s backend.
+
+> ![Admin Dashboard](documentation/admin_models.png)
+\
+&nbsp;
+
+[21](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/21) - As a site owner/admin, I can delete tickets booked by users so that I can alter the race's attendance and stand capacity.
+
+The criteria for [21](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/21) was met by clicking into the “Tickets” database on the dashboard, which redirects the user to the specific database with every entry. If the admin wants to delete a Ticket, they can select it and in the “action” dropdown menu above the table, they can select “Delete selected tickets”.
+
+> ![Try to Delete Ticket](documentation/can_delete.png)
+
+This redirects the admin to a prompt to ask them if they are sure they want to delete the ticket.
+
+> ![Make sure to Delete Ticket](documentation/delete_check.png)
+
+If the admin confirms that they want to delete it, they are redirected to the “Tickets” database, where they receive a message to confirm the deletion and the ticket can no longer be seen.
+
+> ![Ticket Deleted](documentation/ticket_removed.png)
+
+If the user wants to select more tickets, they can manually go through and ticket the box next to each row, or alternatively they can filter by who booked the ticket, when it was booked, favourite team and nationality on the right hand side.
+
+> ![Filter Tickets](documentation/can_filter.png)
+\
+&nbsp;
 \
 &nbsp;
