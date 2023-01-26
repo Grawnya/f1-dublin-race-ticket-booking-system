@@ -71,6 +71,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 				* [Final Attempt of Ticket Sold Page](#final-attempt-html-of-tickets-sold-page "Final Attempt of Ticket Sold Page")
 			* [W3C CSS Validator](#w3c-css-validator "W3C CSS Validator")
 				* [First Attempt of CSS Files](#first-attempt-of-css-files "First Attempt of CSS Files")
+			* [JSHint](#jshint "JSHint")
+				* [Final Attempt of JavaScript Files](#final-attempt-of-javascript-files "Final Attempt of JavaScript Files")
      
 
 \
@@ -588,5 +590,15 @@ I validated my CSS upon completion with [W3C CSS Validation Service]((https://ji
 No issues arose on any of the personalised CSS files. 
 
 ![W3C CSS Validator Test Result](documentation/final_attempt_css.png)
+\
+&nbsp;
+
+### JSHint
+The primary JavaScript document `script.js` was often run through [JSHint](https://jshint.com/ “JSHint”) to check for any syntax or declaration errors. Below contains the returned results of the script.
+
+#### Final Attempt of JavaScript Files
+No issues arose. 
+
+![JSHint Result](documentation/final_attempt_js_lint.png)
 \
 &nbsp;
