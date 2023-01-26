@@ -78,6 +78,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 				* [Final Attempt of Python Files](#final-attempt-of-python-files "Final Attempt of Python Files")
 		* [Lighthouse](#lighthouse "Lighthouse")
 			* [Final Attempt for Lighthouse](#final-attempt-forlighthouse "Final Attempt for Lighthouse")
+		* [Responsiveness](#responsiveness "Responsiveness")
      
 
 \
@@ -636,5 +637,26 @@ In order to verify the suitability of the webpage, [Lighthouse](https://chrome.g
 After completing the project, Lighthouse was used to check the suitability on the website. The following result was obtained:
 
 ![Lighthouse Final Attempt](documentation/lighthouse.png)
+\
+&nbsp;
+
+## Responsiveness 
+The responsiveness of the design was manually checked using the Chrome Developer Tools for various screens. The manual testing itself will be discussed [here](#manual-testing “Manual Testing”).
+
+This included:
+* iPhone SE
+* Pixel 5
+* Samsung Galaxy S8, S20 Ultra
+* iPad Air and Mini
+* Galaxy Fold
+* Nest Hub and Hub Max
+
+I also opted to use the responsiveness option and checked the screens at the following width sizes:
+* 320px
+* 768px
+* 992px
+* 1400px
+
+No issues arose, due to the responsive design of the website with rem and % values.
 \
 &nbsp;
