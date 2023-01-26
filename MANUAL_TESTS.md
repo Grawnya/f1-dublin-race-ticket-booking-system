@@ -3,7 +3,11 @@
 ## Epic 1: Core Website Functionality
 ### Related User Stories
 [1](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/1) - As a user, I can navigate through the website easily so that I can get more information about the race, the track itself and ticket booking.
+\
+&nbsp;
 [2](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/2) - As a user, I can get information regarding the race details so that I can spend less time having to search for the suitable information.
+\
+&nbsp;
 [3](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/3) - As a user, I can obtain ticket booking information so that I can easily book tickets.
 
 These 3 User Stories’ criteria are met on the [Home Page](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system#landing-page). The home page consists of various sections to ensure that the user is informed at all times:
@@ -53,6 +57,41 @@ The criteria for [15](https://github.com/Grawnya/f1-dublin-race-ticket-booking-s
 The criteria for [19](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/19) was met by creating 404 and 500 error pages that would provide the user with some information as to what went wrong. These were manually tested by checking all the button links were successful when causing the errors to occur. The navbar located at the top of the error pages also allows for easy navigation back to the homepage.
 
 > ![404 Page](documentation/404_page.png)
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
+## Epic 2: User Authentication
+### Related User Stories
+[7](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/7) - As a user, I can register or log in so that I can manage my tickets.
+
+The criteria for [7](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/7) is met by using the `allauth` templates from Django and editing them to match the layout of the rest of the webpage. The user can easily register or login by selecting the suitable option in the navbar. If the user has successfully logged in/is authenticated, then an option called “My Tickets” can be found on the navbar which allows the users to manage their tickets. All links and buttons have been tested to ensure that they successfully go to the correct webpages.
+
+> ![Sign in Page](documentation/sign_in.png)
+\
+&nbsp;
+
+[9](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/9) - As a user, I can see if I am logged in so that I can easily log out or log in.
+
+Similar to [7](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/7), the criteria for [9](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/9) is met when the user has logged in, which is confirmed by a message at the top of the screen to say they have logged in. The navbar is then altered to include a logout button. The login and logout button are on the top right hand side corner of the page in large screens and is bigger than the rest of the navbar items to attract the user. The buttons also change to a yellow background with black text when the user hovers over them to attract them to click on the button.
+
+> ![Success Message](documentation/success_message.png)
+
+When Logged In:
+> ![Logout Button on Navbar](documentation/logout.png)
+
+When Logged Out:
+> ![Register and Login Buttons on Navbar](documentation/register_or_login.png)
+\
+&nbsp;
+
+[18](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/18) - As a user, I can edit my user details when logged in so that I can ensure that my details are up-to-date.
+
+To meet the criteria for [18](https://github.com/Grawnya/f1-dublin-race-ticket-booking-system/issues/18), when the user has logged in, a “Profile” navbar item appears next to the “logout” button. If the user has never created a profile, a blank document appears, but if they have previously filled it in and only want to update the details. The form values will be populated with the last saved values from the user. This has been manually tested to ensure that the user has to create a profile before buying a ticket to prevent non-users from buying tickets.
+
+> ![Profile](documentation/profile_large.png)
 \
 &nbsp;
 [Back to Top](#table-of-contents)
