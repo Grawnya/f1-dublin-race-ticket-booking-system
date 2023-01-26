@@ -60,7 +60,16 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Tools](#tools "Tools")       
 			* [Styling](#styling "Styling")       
 			* [Validation](#validation "Validation")       
-			* [Databases](#databases "Databases")       
+			* [Databases](#databases "Databases")
+	* [Testing](#testing "Testing")
+		* [Code Validation](#code-validation "Code Validation")
+			* [W3C HTML Validator](#w3c-html-validator "W3C HTML Validator")
+				* [First Attempt of Home Page](#first-attempt-of-home-page "First Attempt of Home Page")
+				* [Final Attempt of Home Page](#final-attempt-html-of-home-page "Final Attempt of Home Page")
+				* [Only Attempt of the Django Templates](#only-attempt-of-the-django-templates "Only Attempt of the Django Templates")
+				* [First Attempt of Ticket Sold Page](#first-attempt-of-tickets-sold-page "First Attempt of Ticket Sold Page")
+				* [Final Attempt of Ticket Sold Page](#final-attempt-html-of-tickets-sold-page "Final Attempt of Ticket Sold Page")
+     
 
 \
 &nbsp;
@@ -504,7 +513,7 @@ This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) wa
 ## Validation
 * [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML") – To validate all the HTML files, including the templates from Django itself, due to editing them.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS") – To validate the “style.css” page as well as the specific css page made to create the Formula 1 teams’ logos.
-* [JSHint](https://jshint.com/ “JSHint”) – To validate the code within the “script.js” file.
+* [JSHint](https://jshint.com/ "JSHint") – To validate the code within the “script.js” file.
 * [Python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") – To validate all the Python files, making sure they align with PEP8.
 * [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM") – To analyse the colour contrast properties between colours.
 * [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse") – To check the website’s performance and accessibility, making sure the best practices are used.
@@ -514,8 +523,58 @@ This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) wa
 ## Databases
 * [SQLite](https://sqlite.org/index.html "SQLite") - The default database on Django, utilised for unittesting.
 * [ElephantSQL](https://www.elephantsql.com/ "ElephantSQL") – The final database used for the deployed project.
+
 \
 &nbsp;
 [Back to Top](#table-of-contents)
+\
+&nbsp;
+
+# Testing
+
+## Code Validation 
+### W3C HTML Validator
+I validated my HTML at various stages of the website creation using the [W3C HTML Validation Service](https://validator.w3.org/ "W3C HTML"). The various attempts for the [Website](#landing-page "Landing Page") can be seen below.
+\
+&nbsp;
+
+#### First Attempt of Home Page
+The primary issue that arose in the first attempt was the inclusion of a `<button>` tag inside an `<a>` tag. This was rectified by replacing the `<button>` tags with `<span>` tags.
+
+> ![First W3C HTML Validator Test Result of Home Page](documentation/first_attempt_index.png)
+\
+&nbsp;
+
+#### Final Attempt of Home Page
+No issues arose.
+
+Note that the same result was obtained when validating the Profile, New Ticket, Edit Ticket and Delete Ticket pages.
+
+> ![Final W3C HTML Validator Test Result of Home Page](documentation/final_attempt_index.png)
+\
+&nbsp;
+
+#### Only Attempt of the Django Templates
+No issues arose when validating each of the pages. The following screenshot was obtained for all.
+
+> ![Final W3C HTML Validator Test Result of Django Templates](documentation/attempt_django_templates.png)
+\
+&nbsp;
+
+#### First Attempt of Tickets Sold Page
+The primary issue that arose in the first attempt was similar to the Home Page i.e. the inclusion of a `<button>` tag inside an `<a>` tag. This was rectified by replacing the `<button>` tags with `<span>` tags.
+
+An additional issue occurred due to dealing with the `.svg` files of the F1 teams’ logos where the version was included as 1.0, but 1.1. was required. This was fixed by removing the version attribute.
+
+> ![First W3C HTML Validator Test Result of Show Tickets Page](documentation/show_tickets_html_attempt1.png)
+\
+&nbsp;
+
+#### Final Attempt of Tickets Sold Page
+No issues arose.
+
+Note that the same result was obtained when validating the My Tickets page as the errors were due to the ticket card information one each page.
+
+> ![Final W3C HTML Validator Test Result of Show Tickets Page](documentation/final_attempt_show_tickets.png)
 \
 &nbsp;
