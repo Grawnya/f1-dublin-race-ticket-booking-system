@@ -46,6 +46,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [How to Book Tickets Section](#how-to-book-tickets-section "How to Book Tickets Section")       
 			* [Footer](#footer "Footer")       
 			* [Tickets Sold Page](#tickets-sold-page "Tickets Sold Page")       
+			* [Profile](#profile "Profile")       
 
 \
 &nbsp;
@@ -363,7 +364,18 @@ As previously mentioned, the “Tickets Sold” page consists of the users’ ti
 At the base of the page, 3 cards per row and up to 6 per page, show each suitable ticket and the owners stand and seat, favourite team and nationality. This can be used to check what seats might be free and to see who is sitting nearby.
 
 ![Sample Ticket](documentation/show_tickets.png)
+\
+&nbsp;
 
-**Note:** The “My Tickets” Page is almost identical, but under each ticket that belongs to the logged in user, there is an “Edit” button and a “Delete” button, which allow the user to navigate to the specific form.
+### Profile
+The Profile page allows users to provide specific details about themselves which help influence data-driven decisions made by the race organisers. The user can fill in fields: First Name, Last Name, Email, Favourite Team and Nationality. This helps to create a data entry regarding the user into the [WebsiteUser](#websiteuser "WebsiteUser") table. This acts as an identifier as to who bought the tickets.
+
+![Profile on a Large Screen](documentation/profile_large.png)
+
+Similarly, the form narrows on smaller screens, but is stacked in the same manner, with a submit button at its base. 
+
+![Profile on a Mobile](documentation/profile_mobile.png)
+
+If the user has already created a profile, by opening the profile page, it will preload the information and enable the user to edit their previously entered details.
 \
 &nbsp;
