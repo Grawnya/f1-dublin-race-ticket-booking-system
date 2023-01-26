@@ -81,6 +81,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 		* [Responsiveness](#responsiveness "Responsiveness")
 		* [Web Aim Contrast Checker](#web-aim-contrast-checker "Web Aim Contrast Checker")
 		* [Browser Compatibility](#browser-compatibility "Browser Compatibility")
+		* [Manual Testing](#manual-testing "Manual Testing")
      
 
 \
@@ -597,7 +598,7 @@ I validated my CSS upon completion with [W3C CSS Validation Service]((https://ji
 #### First Attempt of CSS Files
 No issues arose on any of the personalised CSS files. 
 
-![W3C CSS Validator Test Result](documentation/final_attempt_css.png)
+> ![W3C CSS Validator Test Result](documentation/final_attempt_css.png)
 \
 &nbsp;
 
@@ -666,11 +667,11 @@ No issues arose, due to the responsive design of the website with rem and % valu
 ## Web Aim Contrast Checker
 The [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM") was used, as described in the [Colours](#colours "Colours") section.
 
-For the red and white, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below:
+For the red and white, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below, as no narrow font is used to contrast the red and white:
 
 > ![Web Aim Contrast Result for White and Red](documentation/colour_contrast.png)
 
-For the red and black, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below:
+For the red and black, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below, as no narrow font is used to contrast the red and black:
 
 > ![Web Aim Contrast Result for Black and Red](documentation/colour_contrast_black.png)
 \
@@ -686,3 +687,7 @@ On mobile, Google Chrome was utilised.
 The responsiveness and the appearance remained relatively the same across the various devices and browsers.
 \
 &nbsp;
+
+## Manual Testing
+As detailed above, the website was used on a variety of browsers and devices. It was tested by friends and family to catch any mistakes.
+The [User Stories](#user-stories "User Stories") and page elements are manual tested in this separate Markdown page:
