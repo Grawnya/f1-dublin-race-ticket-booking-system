@@ -79,6 +79,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 		* [Lighthouse](#lighthouse "Lighthouse")
 			* [Final Attempt for Lighthouse](#final-attempt-forlighthouse "Final Attempt for Lighthouse")
 		* [Responsiveness](#responsiveness "Responsiveness")
+		* [Web Aim Contrast Checker](#web-aim-contrast-checker "Web Aim Contrast Checker")
      
 
 \
@@ -658,5 +659,18 @@ I also opted to use the responsiveness option and checked the screens at the fol
 * 1400px
 
 No issues arose, due to the responsive design of the website with rem and % values.
+\
+&nbsp;
+
+## Web Aim Contrast Checker
+The [Web AIM](https://webaim.org/resources/contrastchecker/ "Web AIM") was used, as described in the [Colours](#colours "Colours") section.
+
+For the red and white, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below:
+
+> ![Web Aim Contrast Result for White and Red](documentation/colour_contrast.png)
+
+For the red and black, the contrast check between them passed, as it exceeded the contrast ratio criteria of 4.5, as seen below:
+
+> ![Web Aim Contrast Result for Black and Red](documentation/colour_contrast_black.png)
 \
 &nbsp;
