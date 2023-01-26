@@ -82,6 +82,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 		* [Web Aim Contrast Checker](#web-aim-contrast-checker "Web Aim Contrast Checker")
 		* [Browser Compatibility](#browser-compatibility "Browser Compatibility")
 		* [Manual Testing](#manual-testing "Manual Testing")
+		* [Automated Testing](#automated-testing "Automated Testing")
      
 
 \
@@ -694,3 +695,52 @@ As detailed above, the website was used on a variety of browsers and devices. It
 The [User Stories](#user-stories "User Stories") and page elements are manual tested in this separate Markdown page:
 
 [MANUAL_TESTS](MANUAL_TESTS.md)
+
+## Automated Testing 
+The automated testing is conducted using Django’s built-in `TestCase` class, which is an extension of the `unittest` Python library. 
+
+Tests were conducted for the following applications and related files:
+* race_details:
+	* urls.py
+	* views.py
+* show_attendees:
+	* urls.py
+	* views.py
+* booking:
+	* urls.py
+	* views.py
+	* models.p
+	* forms.py
+
+They were run by putting `python3 manage.py test` into the terminal.
+
+In order to check how much code is tested using the unit tests, coverage reports were generated.
+
+The following steps were conducted to obtain the coverage report for each application:
+* `pip3 install coverage` - to install `coverage`.
+* `coverage run --source=[type in application name] manage.py test` - to run the tests.
+* `coverage report` - to generate the report.
+* `coverage html` - to create a specific interactive report called `index.html` within a new folder called `htmlcov`.
+* `python3 -m http.server` - to view the special report when you click on the `htmlcov/` folder in the static website.
+
+The following reports were obtained:
+* race_details - **94% Coverage**
+
+> ![race_details coverage](documentation/race_details_coverage.png)
+\
+&nbsp;
+
+* show_attendees - **100% Coverage**
+
+> ![show_attendees coverage](documentation/show_attendees_coverage.png)
+\
+&nbsp;
+
+* booking - **80% Coverage**
+
+> ![booking coverage](documentation/booking_coverage.png)
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
