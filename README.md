@@ -47,6 +47,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Footer](#footer "Footer")       
 			* [Tickets Sold Page](#tickets-sold-page "Tickets Sold Page")       
 			* [Profile](#profile "Profile")       
+			* [My Tickets Page](#my-tickets-page "My Tickets Page")       
 
 \
 &nbsp;
@@ -377,5 +378,16 @@ Similarly, the form narrows on smaller screens, but is stacked in the same manne
 ![Profile on a Mobile](documentation/profile_mobile.png)
 
 If the user has already created a profile, by opening the profile page, it will preload the information and enable the user to edit their previously entered details.
+\
+&nbsp;
+
+### My Tickets Page
+The “My Tickets” Page is very similar in design to the [Tickets Sold Page](#tickets-sold-page "Tickets Sold Page") in which it contains an explanatory paragraph at the top of the page followed by a ticket prompting the user to buy a ticket, but instead it only displays the user’s own tickets. It also has an extra button for the profile in case the user forgot to fill in their profile beforehand.
+
+Below each ticket, there is a section with an edit and delete button. The “Edit” button allows the user to edit the ticket once it has been clicked. The ”Delete” button allows users to delete the ticket via a suitable form.
+
+On smaller screens, instead of lining up 3 in a row, tickets stack up on top of one another.
+
+![My Tickets Page on Large Screen](documentation/my_tickets_large.png)
 \
 &nbsp;
