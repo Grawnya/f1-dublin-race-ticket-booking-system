@@ -73,6 +73,9 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 				* [First Attempt of CSS Files](#first-attempt-of-css-files "First Attempt of CSS Files")
 			* [JSHint](#jshint "JSHint")
 				* [Final Attempt of JavaScript Files](#final-attempt-of-javascript-files "Final Attempt of JavaScript Files")
+			* [Python Syntax Checker PEP8 Validation](#python-syntax-checker-pep8-validation "Python Syntax Checker PEP8 Validation")
+				* [First Attempt of Python Files](#first-attempt-of-python-files "First Attempt of Python Files")
+				* [Final Attempt of Python Files](#final-attempt-of-python-files "Final Attempt of Python Files")
      
 
 \
@@ -600,5 +603,18 @@ The primary JavaScript document `script.js` was often run through [JSHint](https
 No issues arose. 
 
 ![JSHint Result](documentation/final_attempt_js_lint.png)
+\
+&nbsp;
+
+### Python Syntax Checker PEP8 Validation
+The [Python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") was used to check all the Django Python files – scanning for any syntax or declaration errors. Below contains the returned results of the scripts.
+
+#### First Attempt of Python Files
+Many warning and errors were obtained in the first run through the PEP8 linter. They mainly consisted of lines that were too long, over-indentation or under-indentation of items and then too many or too few blank lines. These were all easy to rectify quite quickly. 
+
+#### Final Attempt of Python Files
+No issues arose in any of the files and their accompanying `test_` files, as seen in the sample one below for the “Show Attendees” application’s `test_views.py` page.
+
+> ![Python Syntax Checker PEP8](documentation/show_attendees_test_views_pep8.png)
 \
 &nbsp;
