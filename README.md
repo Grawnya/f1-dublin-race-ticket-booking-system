@@ -69,6 +69,8 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 				* [Only Attempt of the Django Templates](#only-attempt-of-the-django-templates "Only Attempt of the Django Templates")
 				* [First Attempt of Ticket Sold Page](#first-attempt-of-tickets-sold-page "First Attempt of Ticket Sold Page")
 				* [Final Attempt of Ticket Sold Page](#final-attempt-html-of-tickets-sold-page "Final Attempt of Ticket Sold Page")
+			* [W3C CSS Validator](#w3c-css-validator "W3C CSS Validator")
+				* [First Attempt of CSS Files](#first-attempt-of-css-files "First Attempt of CSS Files")
      
 
 \
@@ -576,5 +578,15 @@ No issues arose.
 Note that the same result was obtained when validating the My Tickets page as the errors were due to the ticket card information one each page.
 
 > ![Final W3C HTML Validator Test Result of Show Tickets Page](documentation/final_attempt_show_tickets.png)
+\
+&nbsp;
+
+### W3C CSS Validator 
+I validated my CSS upon completion with [W3C CSS Validation Service]((https://jigsaw.w3.org/css-validator/ "W3C CCC"). The attempt for the [Website](#landing-page "Home Page") can be seen below. Note that the [Flag Icons](https://alexsobolenko.github.io/flag-icons/ "Flag Icons CSS") CSS file was not validated as it was not created by myself.
+
+#### First Attempt of CSS Files
+No issues arose on any of the personalised CSS files. 
+
+![W3C CSS Validator Test Result](documentation/final_attempt_css.png)
 \
 &nbsp;
