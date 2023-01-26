@@ -54,6 +54,7 @@ The project is very relevant as Formula 1 is an increasingly popular sport, freq
 			* [Flag Animation](#flag-animation "Flag Animation")       
 			* [Django Template Pages](#django-template-pages "Django Template Pages")       
 			* [Messages](#messages "Messages")       
+			* [Error Pages](#error-pages "Error Pages")       
 
 \
 &nbsp;
@@ -451,6 +452,19 @@ They are seen when the user has successfully created, edited or deleted either t
 ![Success Message](documentation/success_message.png)
 
 ![Error Message](documentation/error_message.png)
+\
+&nbsp;
+
+### Error Pages
+404 and 500 error pages have been created as they are the most common errors that users will come across that the messages cannot account for.
+
+This [404 template]( https://colorlib.com/wp/template/colorlib-error-404-15/) was copied and altered to fit the rest of the website’s style.
+
+![404 Page](documentation/404_page.png)
+\
+&nbsp;
+
+[Back to Top](#table-of-contents)
 \
 &nbsp;
 
